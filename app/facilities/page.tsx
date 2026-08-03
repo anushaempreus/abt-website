@@ -2,12 +2,12 @@
 import { useEffect, useRef, useState } from 'react'
 
 const GREEN = '#6b8f47'
-const BLACK = '#0a0a0a'
-const DARK = '#111'
-const CARD = '#161616'
-const BORDER = '#1e1e1e'
-const TEXT = '#cccccc'
-const MUTED = '#777'
+const BLACK = '#15171b'
+const DARK = '#1b1d22'
+const CARD = '#21242a'
+const BORDER = '#2d3037'
+const TEXT = '#d8d8d8'
+const MUTED = '#8c8c8c'
 const M: React.CSSProperties = { fontFamily: "'Montserrat', sans-serif" }
 
 function useInView(threshold = 0.1) {

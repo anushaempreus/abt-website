@@ -74,7 +74,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0a0a0a',
+  themeColor: '#15171b',
   width: 'device-width',
   initialScale: 1,
 }
@@ -109,7 +109,7 @@ const businessJsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${montserrat.variable} ${raleway.variable}`}>
-      <body style={{ margin: 0, padding: 0, background: '#0a0a0a', fontFamily: 'var(--font-montserrat), sans-serif', overflowX: 'hidden' }}>
+      <body style={{ margin: 0, padding: 0, background: '#15171b', fontFamily: 'var(--font-montserrat), sans-serif', overflowX: 'hidden' }}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(businessJsonLd) }}

@@ -19,7 +19,7 @@ export default function Intro() {
       position: 'fixed',
       inset: 0,
       zIndex: 9999,
-      background: '#0a0a0a',
+      background: '#15171b',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',

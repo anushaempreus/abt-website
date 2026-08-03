@@ -3,12 +3,12 @@ import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
 const GREEN = '#6b8f47'
-const BLACK = '#0a0a0a'
-const DARK = '#111'
-const CARD = '#161616'
-const BORDER = '#1e1e1e'
-const TEXT = '#cccccc'
-const MUTED = '#777'
+const BLACK = '#15171b'
+const DARK = '#1b1d22'
+const CARD = '#21242a'
+const BORDER = '#2d3037'
+const TEXT = '#d8d8d8'
+const MUTED = '#8c8c8c'
 const M: React.CSSProperties = { fontFamily: "'Montserrat', sans-serif" }
 
 function useInView(threshold = 0.15) {
@@ -69,7 +69,7 @@ const steps = [
 
 export default function About() {
   return (
-    <div style={{ ...M, background: '#0d0d0d', color: TEXT }}>
+    <div style={{ ...M, background: '#15171b', color: TEXT }}>
 
       {/* ── HERO ── */}
       <div style={{ position: 'relative', height: '60vh', minHeight: 420, overflow: 'hidden' }}>
@@ -96,7 +96,7 @@ export default function About() {
       </div>
 
       {/* GAP */}
-      <div style={{ height: 80, background: '#0d0d0d' }} />
+      <div style={{ height: 80, background: '#15171b' }} />
 
       {/* ── ABOUT US ── */}
       <div style={{ background: DARK, borderBottom: `1px solid ${BORDER}`, display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
@@ -106,7 +106,7 @@ export default function About() {
             alt="Auto body repair workshop"
             style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8, display: 'block' }}
           />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent 60%, #111 100%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent 60%, #1b1d22 100%)' }} />
         </SlideIn>
         <SlideIn from="right">
           <div style={{ padding: '70px 70px 70px 56px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -162,7 +162,7 @@ export default function About() {
       </div>
 
       {/* GAP */}
-      <div style={{ height: 40, background: '#0d0d0d' }} />
+      <div style={{ height: 40, background: '#15171b' }} />
 
       {/* ── REPAIR PROCESS ── */}
       <div style={{ background: DARK, padding: '100px 80px', borderBottom: `1px solid ${BORDER}` }}>
@@ -193,7 +193,7 @@ export default function About() {
       </div>
 
       {/* GAP */}
-      <div style={{ height: 80, background: '#0d0d0d' }} />
+      <div style={{ height: 80, background: '#15171b' }} />
 
       {/* ── IMAGE BREAK ── */}
       <div style={{ position: 'relative', height: 320, overflow: 'hidden' }}>
@@ -213,7 +213,7 @@ export default function About() {
       </div>
 
       {/* GAP */}
-      <div style={{ height: 80, background: '#0d0d0d' }} />
+      <div style={{ height: 80, background: '#15171b' }} />
 
       {/* ── WORKPLACE & COMPLIANCE ── */}
       <div style={{ background: BLACK, padding: '100px 80px' }}>

@@ -2,12 +2,12 @@
 
 :root {
   --green: #6b8f47;
-  --black: #0a0a0a;
-  --dark: #111111;
-  --card: #161616;
-  --border: #1e1e1e;
-  --text: #aaaaaa;
-  --muted: #444444;
+  --black: #15171b;
+  --dark: #1b1d22;
+  --card: #21242a;
+  --border: #2d3037;
+  --text: #c6c6c6;
+  --muted: #5a5a5a;
 }
 
 body {

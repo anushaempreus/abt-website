@@ -4,8 +4,8 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
 const GREEN = '#6b8f47'
-const BLACK = '#0a0a0a'
-const BORDER = '#1e1e1e'
+const BLACK = '#15171b'
+const BORDER = '#2d3037'
 
 const links = [
   { href: '/',             label: 'Home' },

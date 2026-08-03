@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 const GREEN = '#6b8f47'
-const BORDER = '#1e1e1e'
+const BORDER = '#2d3037'
 const M = "'Montserrat', sans-serif"
 
 const links = [
@@ -17,7 +17,7 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#060606', borderTop: `1px solid ${BORDER}`, fontFamily: M }}>
+    <footer style={{ background: '#101216', borderTop: `1px solid ${BORDER}`, fontFamily: M }}>
 
       {/* MAIN */}
       <div style={{ padding: '60px 80px', display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: 60, borderBottom: `1px solid ${BORDER}` }}>
@@ -26,7 +26,7 @@ export default function Footer() {
         <div>
           <div style={{ fontFamily: M, fontSize: '1.6rem', fontWeight: 900, color: '#fff', letterSpacing: '4px', marginBottom: 4 }}>ABT</div>
           <div style={{ fontFamily: M, fontSize: '.62rem', fontWeight: 700, color: GREEN, letterSpacing: '3px', textTransform: 'uppercase', marginBottom: 18 }}>Auto Body Technicians</div>
-          <p style={{ fontFamily: M, fontSize: '.82rem', color: '#777', lineHeight: 1.8, maxWidth: 280, marginBottom: 20 }}>
+          <p style={{ fontFamily: M, fontSize: '.82rem', color: '#8c8c8c', lineHeight: 1.8, maxWidth: 280, marginBottom: 20 }}>
             Canberra's trusted smash repairers since 1988.
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -36,7 +36,7 @@ export default function Footer() {
             ].map(([label, value]) => (
               <div key={label} style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
                 <span style={{ fontFamily: M, fontSize: '.58rem', fontWeight: 700, color: GREEN, textTransform: 'uppercase', letterSpacing: '1px', minWidth: 40 }}>{label}</span>
-                <span style={{ fontFamily: M, fontSize: '.82rem', color: '#777' }}>{value}</span>
+                <span style={{ fontFamily: M, fontSize: '.82rem', color: '#8c8c8c' }}>{value}</span>
               </div>
             ))}
           </div>
@@ -47,7 +47,7 @@ export default function Footer() {
           <p style={{ fontFamily: M, fontSize: '.62rem', fontWeight: 800, color: '#fff', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: 20 }}>Pages</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 11 }}>
             {links.map(({ href, label }) => (
-              <Link key={href} href={href} style={{ fontFamily: M, fontSize: '.82rem', fontWeight: 500, color: '#777', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 10 }}>
+              <Link key={href} href={href} style={{ fontFamily: M, fontSize: '.82rem', fontWeight: 500, color: '#8c8c8c', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 10 }}>
                 <span style={{ width: 12, height: 1, background: GREEN, display: 'inline-block', flexShrink: 0 }} />
                 {label}
               </Link>
@@ -67,7 +67,7 @@ export default function Footer() {
             ].map(([label, value]) => (
               <div key={label}>
                 <p style={{ fontFamily: M, fontSize: '.58rem', fontWeight: 700, color: GREEN, textTransform: 'uppercase', letterSpacing: '1.5px', margin: '0 0 3px' }}>{label}</p>
-                <p style={{ fontFamily: M, fontSize: '.82rem', color: '#777', margin: 0 }}>{value}</p>
+                <p style={{ fontFamily: M, fontSize: '.82rem', color: '#8c8c8c', margin: 0 }}>{value}</p>
               </div>
             ))}
           </div>

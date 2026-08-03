@@ -25,12 +25,12 @@ const services = [
 ]
 
 const GREEN = '#6b8f47'
-const BLACK = '#0a0a0a'
-const DARK = '#111'
-const CARD = '#161616'
-const BORDER = '#1e1e1e'
-const TEXT = '#cccccc'
-const MUTED = '#777'
+const BLACK = '#15171b'
+const DARK = '#1b1d22'
+const CARD = '#21242a'
+const BORDER = '#2d3037'
+const TEXT = '#d8d8d8'
+const MUTED = '#8c8c8c'
 const M: React.CSSProperties = { fontFamily: "'Montserrat', sans-serif" }
 
 function useInView(threshold = 0.15) {
@@ -157,7 +157,7 @@ export default function Home() {
             alt="Workshop"
             style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.75 }}
           />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent 70%, #0a0a0a 100%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent 70%, #15171b 100%)' }} />
         </SlideIn>
         <SlideIn from="right">
           <div style={{ padding: '60px 60px 60px 50px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
