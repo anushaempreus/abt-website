@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   color: var(--text);
   background: var(--black);
   font-size: 15px;
@@ -20,7 +20,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   letter-spacing: 1px;
   font-weight: 800;
   line-height: 1.2;
@@ -42,7 +42,7 @@ section { padding: 70px 60px; }
   background: var(--green);
 }
 .green-label {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-size: .6rem;
   font-weight: 600;
   letter-spacing: 3px;
