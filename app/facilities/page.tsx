@@ -142,7 +142,6 @@ export default function Facilities() {
       </div>
 
       {/* QUOTE BANNER */}
-      <div style={{ height: 60, background: BLACK }} />
       <div style={{ position: 'relative', height: 280, overflow: 'hidden' }}>
         <img
           src="/images/photo-1625047509248-ec889cbff17f.jpg"
@@ -161,7 +160,6 @@ export default function Facilities() {
       </div>
 
       {/* ASSOCIATIONS + GREEN STAMP */}
-      <div style={{ height: 80, background: BLACK }} />
       <div style={{ background: DARK, padding: '80px 80px', borderBottom: `1px solid ${BORDER}` }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80 }}>
           <SlideIn from="left">
@@ -205,7 +203,6 @@ export default function Facilities() {
       </div>
 
       {/* CHARITIES */}
-      <div style={{ height: 80, background: BLACK }} />
       <div style={{ background: BLACK, padding: '80px 80px' }}>
         <FadeUp>
           <Label text="Giving back" />

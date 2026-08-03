@@ -95,9 +95,6 @@ export default function About() {
         </div>
       </div>
 
-      {/* GAP */}
-      <div style={{ height: 80, background: '#15171b' }} />
-
       {/* ── ABOUT US ── */}
       <div style={{ background: DARK, borderBottom: `1px solid ${BORDER}`, display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
         <SlideIn from="left" style={{ height: 580, overflow: 'hidden', position: 'relative' }}>
@@ -161,9 +158,6 @@ export default function About() {
         </div>
       </div>
 
-      {/* GAP */}
-      <div style={{ height: 40, background: '#15171b' }} />
-
       {/* ── REPAIR PROCESS ── */}
       <div style={{ background: DARK, padding: '100px 80px', borderBottom: `1px solid ${BORDER}` }}>
         <FadeUp>
@@ -192,9 +186,6 @@ export default function About() {
         </div>
       </div>
 
-      {/* GAP */}
-      <div style={{ height: 80, background: '#15171b' }} />
-
       {/* ── IMAGE BREAK ── */}
       <div style={{ position: 'relative', height: 320, overflow: 'hidden' }}>
         <img
@@ -211,9 +202,6 @@ export default function About() {
           </FadeUp>
         </div>
       </div>
-
-      {/* GAP */}
-      <div style={{ height: 80, background: '#15171b' }} />
 
       {/* ── WORKPLACE & COMPLIANCE ── */}
       <div style={{ background: BLACK, padding: '100px 80px' }}>
