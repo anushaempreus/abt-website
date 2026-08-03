@@ -24,8 +24,8 @@ export async function POST(req: NextRequest) {
     } = body
 
     const { error } = await resend.emails.send({
-      from: 'ABT Website <onboarding@resend.dev>',
-      to: 'admin@autobodytech.net.au',
+      from: process.env.CONTACT_FROM ?? 'ABT Website <onboarding@resend.dev>',
+      to: process.env.CONTACT_RECIPIENT ?? 'admin@autobodytech.net.au',
       subject: `New Collision Form Submission`,
       html: `
         <h2 style="color:#6b8f47">New Collision Form Submission</h2>
