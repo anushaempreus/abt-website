@@ -1,5 +1,6 @@
 import { Resend } from 'resend'
 import { NextRequest, NextResponse } from 'next/server'
+import { sanitizeFormBody } from '../utils'
 
 export async function POST(req: NextRequest) {
   const apiKey = process.env.RESEND_API_KEY
@@ -8,7 +9,11 @@ export async function POST(req: NextRequest) {
   }
   const resend = new Resend(apiKey)
   try {
-    const body = await req.json()
+    const body = sanitizeFormBody(await req.json())
+    if (body.website) {
+      // honeypot filled — silently accept so bots don't learn
+      return NextResponse.json({ success: true })
+    }
     const {
       name, email, phone, mobile,
       make, model, year, colour, rego, vin,

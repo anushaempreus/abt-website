@@ -45,12 +45,21 @@ export const metadata: Metadata = {
     description:
       "Canberra's trusted smash repairers since 1988. Private, fleet, commercial and insurance work — all repairs guaranteed.",
     locale: 'en_AU',
+    images: [
+      {
+        url: '/og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'ABT Auto Body Technicians — Smash Repairs, Mitchell, Canberra',
+      },
+    ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'ABT Auto Body Technicians | Smash Repairs, Mitchell, Canberra ACT',
     description:
       "Canberra's trusted smash repairers since 1988. Private, fleet, commercial and insurance work — all repairs guaranteed.",
+    images: ['/og.jpg'],
   },
   robots: {
     index: true,

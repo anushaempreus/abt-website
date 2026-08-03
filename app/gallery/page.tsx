@@ -121,7 +121,7 @@ export default function Gallery() {
       {/* HERO */}
       <div style={{ position: 'relative', height: '60vh', minHeight: 420, overflow: 'hidden' }}>
         <img
-          src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1600&q=80"
+          src="/images/photo-1492144534655-ae79c964c9d7.jpg"
           alt="Car paint finish"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8, animation: 'zoomin 8s ease forwards' }}
         />

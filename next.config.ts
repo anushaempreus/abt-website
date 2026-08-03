@@ -8,8 +8,7 @@ const csp = [
   // Next.js requires inline scripts for hydration; Turbopack needs eval in dev
   `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''}`,
   "style-src 'self' 'unsafe-inline'",
-  // remote hosts stay until images are self-hosted (fix/api-route-and-local-images)
-  "img-src 'self' data: blob: https://images.pexels.com https://images.unsplash.com",
+  "img-src 'self' data: blob:",
   "font-src 'self' data:",
   "connect-src 'self'",
   "object-src 'none'",
@@ -40,12 +39,6 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   turbopack: {
     root: path.join(__dirname),
-  },
-  images: {
-    remotePatterns: [
-      { protocol: 'https', hostname: 'images.pexels.com' },
-      { protocol: 'https', hostname: 'images.unsplash.com' },
-    ],
   },
   async headers() {
     return [

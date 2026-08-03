@@ -51,16 +51,16 @@ const Label = ({ text }: { text: string }) => (
 )
 
 const facilities = [
-  { title: 'Panel Beating and Spray Painting', img: 'https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=400&q=80', desc: 'ABT Auto Body Technicians specialises in motor vehicle accident repairs and refinishing. We have the latest equipment available, including chassis alignment systems and inverter welding.' },
-  { title: 'Occupational Health and Safety', img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&q=80', desc: 'We have a strong commitment to safe work practices to ensure our experienced Sprayers and Panel Beaters are looked after. We use and endorse Ablaze Total Solutions.' },
-  { title: 'State of the Art Monarch Merlin Paint Booth', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80', desc: 'ABT Auto Body Technicians use a State-of-the-Art, High Performance environmentally friendly paint booth to ensure our customers receive the very best paint finish.' },
-  { title: 'Atlas Collision Repair Systems', img: 'https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=400&q=80', desc: 'When it comes to aligning and repairing modern vehicles, ABT Auto Body Technicians use Atlas universal systems for anchoring, measuring and holding.' },
-  { title: 'Careful Parts Storage and Reassembly', img: 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=400&q=80', desc: 'When your vehicle is stripped for repairs the parts removed are placed onto individual parts trolleys and stored in a safe and clean manner for reassembly.' },
-  { title: 'Latest Computer Technology', img: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&q=80', desc: 'Paint technology is constantly changing when it comes to the finishing process in automotive painting. Our team are all Highly Trained Professionals with up to date Industry Knowledge.' },
-  { title: 'Knowledge and Experience', img: 'https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=400&q=80', desc: '"The owner and his specialist technicians combined knowledge and experience immediately put us at ease with the often complicated process of car repairs."', isQuote: true },
-  { title: 'Paint Refinishing System', img: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&q=80', desc: 'We use Sikkens Paints, one of the best paints on the market. This paint is an innovative and environmentally responsible choice in vehicle refinishes and helps protect both the environment and our employees.' },
-  { title: 'Skilled Employees', img: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&q=80', desc: 'Here at ABT Auto Body Technicians our greatest resource is our employees. We are always on the lookout for people with a dedicated attitude and the ability to work in a team. Sound like you?' },
-  { title: 'How Long Will It Take?', img: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=400&q=80', desc: 'That depends on the extent of the damage. Our experienced estimators can give you an approximate repair time when they inspect your vehicle. 90% of our vehicles are completed as per the agreed client/repairer timeframes.' },
+  { title: 'Panel Beating and Spray Painting', img: '/images/photo-1625047509248-ec889cbff17f.jpg', desc: 'ABT Auto Body Technicians specialises in motor vehicle accident repairs and refinishing. We have the latest equipment available, including chassis alignment systems and inverter welding.' },
+  { title: 'Occupational Health and Safety', img: '/images/photo-1504328345606-18bbc8c9d7d1.jpg', desc: 'We have a strong commitment to safe work practices to ensure our experienced Sprayers and Panel Beaters are looked after. We use and endorse Ablaze Total Solutions.' },
+  { title: 'State of the Art Monarch Merlin Paint Booth', img: '/images/photo-1558618666-fcd25c85cd64.jpg', desc: 'ABT Auto Body Technicians use a State-of-the-Art, High Performance environmentally friendly paint booth to ensure our customers receive the very best paint finish.' },
+  { title: 'Atlas Collision Repair Systems', img: '/images/photo-1600880292089-90a7e086ee0c.jpg', desc: 'When it comes to aligning and repairing modern vehicles, ABT Auto Body Technicians use Atlas universal systems for anchoring, measuring and holding.' },
+  { title: 'Careful Parts Storage and Reassembly', img: '/images/photo-1586864387967-d02ef85d93e8.jpg', desc: 'When your vehicle is stripped for repairs the parts removed are placed onto individual parts trolleys and stored in a safe and clean manner for reassembly.' },
+  { title: 'Latest Computer Technology', img: '/images/photo-1531297484001-80022131f5a1.jpg', desc: 'Paint technology is constantly changing when it comes to the finishing process in automotive painting. Our team are all Highly Trained Professionals with up to date Industry Knowledge.' },
+  { title: 'Knowledge and Experience', img: '/images/photo-1615906655593-ad0386982a0f.jpg', desc: '"The owner and his specialist technicians combined knowledge and experience immediately put us at ease with the often complicated process of car repairs."', isQuote: true },
+  { title: 'Paint Refinishing System', img: '/images/photo-1492144534655-ae79c964c9d7.jpg', desc: 'We use Sikkens Paints, one of the best paints on the market. This paint is an innovative and environmentally responsible choice in vehicle refinishes and helps protect both the environment and our employees.' },
+  { title: 'Skilled Employees', img: '/images/photo-1537368910025-700350fe46c7.jpg', desc: 'Here at ABT Auto Body Technicians our greatest resource is our employees. We are always on the lookout for people with a dedicated attitude and the ability to work in a team. Sound like you?' },
+  { title: 'How Long Will It Take?', img: '/images/photo-1543466835-00a7907e9de1.jpg', desc: 'That depends on the extent of the damage. Our experienced estimators can give you an approximate repair time when they inspect your vehicle. 90% of our vehicles are completed as per the agreed client/repairer timeframes.' },
 ]
 
 const associations = [
@@ -82,7 +82,7 @@ export default function Facilities() {
       {/* HERO */}
       <div style={{ position: 'relative', height: '60vh', minHeight: 420, overflow: 'hidden' }}>
         <img
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80"
+          src="/images/photo-1558618666-fcd25c85cd64.jpg"
           alt="Facilities"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8, animation: 'zoomin 8s ease forwards' }}
         />
@@ -145,7 +145,7 @@ export default function Facilities() {
       <div style={{ height: 60, background: BLACK }} />
       <div style={{ position: 'relative', height: 280, overflow: 'hidden' }}>
         <img
-          src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=1600&q=80"
+          src="/images/photo-1625047509248-ec889cbff17f.jpg"
           alt="Workshop"
           style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', opacity: 0.2 }}
         />

@@ -103,7 +103,7 @@ export default function Home() {
       {/* ── 1. HERO ── */}
       <div style={{ position: 'relative', height: '100vh', minHeight: 600, overflow: 'hidden' }}>
         <img
-          src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1600&q=80"
+          src="/images/photo-1555215695-3004980ad54e.jpg"
           alt="Luxury car"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.45, animation: 'zoomin 8s ease forwards' }}
         />
@@ -153,7 +153,7 @@ export default function Home() {
       <div style={{ background: BLACK, borderBottom: `1px solid ${BORDER}`, display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
         <SlideIn from="left" style={{ height: 600, overflow: 'hidden', position: 'relative' }}>
           <img
-            src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=900&q=80"
+            src="/images/photo-1615906655593-ad0386982a0f.jpg"
             alt="Workshop"
             style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.75 }}
           />
@@ -247,7 +247,7 @@ export default function Home() {
       <FadeIn>
         <div style={{ position: 'relative', overflow: 'hidden' }}>
           <img
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80"
+            src="/images/photo-1558618666-fcd25c85cd64.jpg"
             alt="Spray painting"
             style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.18 }}
           />

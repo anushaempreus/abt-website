@@ -74,7 +74,7 @@ export default function About() {
       {/* ── HERO ── */}
       <div style={{ position: 'relative', height: '60vh', minHeight: 420, overflow: 'hidden' }}>
         <img
-          src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1600&q=80"
+          src="/images/photo-1568605117036-5fe5e7bab0b7.jpg"
           alt="Workshop"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.55, animation: 'zoomin 8s ease forwards' }}
         />
@@ -102,7 +102,7 @@ export default function About() {
       <div style={{ background: DARK, borderBottom: `1px solid ${BORDER}`, display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
         <SlideIn from="left" style={{ height: 580, overflow: 'hidden', position: 'relative' }}>
           <img
-            src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=900&q=80"
+            src="/images/photo-1507136566006-cfc505b114fc.jpg"
             alt="Auto body repair workshop"
             style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8, display: 'block' }}
           />
@@ -198,7 +198,7 @@ export default function About() {
       {/* ── IMAGE BREAK ── */}
       <div style={{ position: 'relative', height: 320, overflow: 'hidden' }}>
         <img
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80"
+          src="/images/photo-1558618666-fcd25c85cd64.jpg"
           alt="Spray painting"
           style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', opacity: 0.12 }}
         />

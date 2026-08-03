@@ -93,6 +93,7 @@ export default function Quote() {
   const insurerRef = useRef<HTMLInputElement>(null)
   const claimRef = useRef<HTMLInputElement>(null)
   const damageRef = useRef<HTMLTextAreaElement>(null)
+  const websiteRef = useRef<HTMLInputElement>(null) // honeypot — humans never see or fill this
 
   async function handleSubmit() {
     setError('')
@@ -115,6 +116,7 @@ export default function Quote() {
           insurer: insurerRef.current?.value,
           claimNumber: claimRef.current?.value,
           damage: damageRef.current?.value,
+          website: websiteRef.current?.value,
         }),
       })
       const data = await res.json()
@@ -144,7 +146,7 @@ export default function Quote() {
       {/* HERO */}
       <div style={{ position: 'relative', height: '60vh', minHeight: 420, overflow: 'hidden' }}>
         <img
-          src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80"
+          src="/images/photo-1450101499163-c8848c66ca85.jpg"
           alt="Mechanic writing quote"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8, animation: 'zoomin 8s ease forwards' }}
         />
@@ -188,6 +190,7 @@ export default function Quote() {
               </FadeUp>
 
               <Section num={1} title="Contact Details">
+                <input ref={websiteRef} type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: '-9999px', height: 0, width: 0, opacity: 0 }} />
                 <label style={labelStyle}>name: *</label>
                 <input ref={nameRef} type="text" placeholder="Full name" style={inputStyle} />
                 <label style={labelStyle}>email: *</label>
@@ -234,7 +237,7 @@ export default function Quote() {
                 </p>
                 <div style={{ height: 180, overflow: 'hidden', marginBottom: 24, border: `1px solid ${BORDER}` }}>
                   <img
-                    src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1200&q=80"
+                    src="/images/photo-1544636331-e26879cd4d9b.jpg"
                     alt="Damaged vehicle"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', opacity: 0.7 }}
                   />

@@ -99,6 +99,7 @@ export default function Collision() {
   const constableNameRef = useRef<HTMLInputElement>(null)
   const stationRef = useRef<HTMLInputElement>(null)
   const reportNumberRef = useRef<HTMLInputElement>(null)
+  const websiteRef = useRef<HTMLInputElement>(null) // honeypot — humans never see or fill this
 
   function validate() {
     const e: Record<string, string> = {}
@@ -141,6 +142,7 @@ export default function Collision() {
           constableName: constableNameRef.current?.value,
           station: stationRef.current?.value,
           reportNumber: reportNumberRef.current?.value,
+          website: websiteRef.current?.value,
         }),
       })
       const data = await res.json()
@@ -158,7 +160,7 @@ export default function Collision() {
       {/* HERO */}
       <div style={{ position: 'relative', height: '60vh', minHeight: 420, overflow: 'hidden' }}>
         <img
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80"
+          src="/images/photo-1558618666-fcd25c85cd64.jpg"
           alt="Collision Form"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8, animation: 'zoomin 8s ease forwards' }}
         />
@@ -230,6 +232,7 @@ export default function Collision() {
                     <div style={badgeStyle}>1</div>
                     <h2 style={{ ...M, fontSize: '1rem', fontWeight: 700, color: '#fff', margin: 0, letterSpacing: '1px', textTransform: 'uppercase' }}>Other Vehicle</h2>
                   </div>
+                  <input ref={websiteRef} type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: '-9999px', height: 0, width: 0, opacity: 0 }} />
                   <label style={labelStyle}>Driver's Name: *</label>
                   <input ref={driverNameRef} type="text" placeholder="Full name"
                     style={{ ...inputStyle, borderLeftColor: errors.driverName ? '#e55' : BORDER }} />

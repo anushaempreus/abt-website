@@ -108,6 +108,7 @@ export default function Contact() {
   const modelRef = useRef<HTMLInputElement>(null)
   const yearRef = useRef<HTMLSelectElement>(null)
   const messageRef = useRef<HTMLTextAreaElement>(null)
+  const websiteRef = useRef<HTMLInputElement>(null) // honeypot — humans never see or fill this
 
   function validate() {
     const e: Record<string, string> = {}
@@ -137,6 +138,7 @@ export default function Contact() {
           model: modelRef.current?.value,
           year: yearRef.current?.value,
           message: messageRef.current?.value,
+          website: websiteRef.current?.value,
         }),
       })
       const data = await res.json()
@@ -154,7 +156,7 @@ export default function Contact() {
       {/* HERO */}
       <div style={{ position: 'relative', height: '60vh', minHeight: 420, overflow: 'hidden' }}>
         <img
-          src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1600&q=80"
+          src="/images/photo-1486312338219-ce68d2c6f44d.jpg"
           alt="Contact ABT Auto Body Technicians"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8, animation: 'zoomin 8s ease forwards' }}
         />
@@ -225,6 +227,7 @@ export default function Contact() {
                     <div style={badgeStyle}>1</div>
                     <h2 style={{ ...M, fontSize: '1rem', fontWeight: 700, color: '#fff', margin: 0, letterSpacing: '1px', textTransform: 'uppercase' }}>Contact Details</h2>
                   </div>
+                  <input ref={websiteRef} type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: '-9999px', height: 0, width: 0, opacity: 0 }} />
                   <label style={labelStyle}>name: *</label>
                   <input ref={nameRef} type="text" placeholder="Full name"
                     style={{ ...inputStyle, borderLeftColor: errors.name ? '#e55' : BORDER }} />
