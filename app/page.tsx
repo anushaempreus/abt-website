@@ -105,9 +105,9 @@ export default function Home() {
         <img
           src="/images/photo-1555215695-3004980ad54e.jpg"
           alt="Luxury car"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.45, animation: 'zoomin 8s ease forwards' }}
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.35, animation: 'zoomin 8s ease forwards' }}
         />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(0,0,0,0.95) 40%, rgba(0,0,0,0.25) 100%)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(0,0,0,0.95) 40%, rgba(0,0,0,0.5) 100%)' }} />
         <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 80px', maxWidth: 660 }}>
           <div style={{ animation: 'fadeup 0.8s ease 0.2s both' }}>
             <Label text="Canberra's trusted smash repairers since 1988" />
