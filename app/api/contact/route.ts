@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
     const { name, email, phone, mobile, make, model, year, message } = body
 
     const { error } = await resend.emails.send({
-      from: process.env.CONTACT_FROM ?? 'ABT Website <onboarding@resend.dev>',
+      from: process.env.CONTACT_FROM ?? 'ABT Website <noreply@autobodytech.net.au>',
       to: process.env.CONTACT_RECIPIENT ?? 'admin@autobodytech.net.au',
       replyTo: email,
       subject: `New Contact Form Submission — ${name}`,
