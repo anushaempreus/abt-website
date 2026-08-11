@@ -110,7 +110,7 @@ export default function Home() {
 
       {/* ── 1. HERO ── */}
       <div style={{ background: BG, borderBottom: `1px solid ${BORDER}` }}>
-        <div style={{ height: 16, background: 'repeating-conic-gradient(#141813 0% 25%, #ffffff 0% 50%)', backgroundSize: '16px 16px' }} />
+        <div style={{ height: 12, background: 'repeating-conic-gradient(#141813 0% 25%, #ffffff 0% 50%)', backgroundSize: '12px 12px' }} />
         <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 1fr', gap: 56, alignItems: 'center', padding: '70px 80px 90px', minHeight: '76vh', boxSizing: 'border-box' }}>
           <div>
             <div style={{ animation: 'fadeup 0.8s ease 0.1s both' }}>
@@ -122,7 +122,7 @@ export default function Home() {
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.35s both' }}>
               <h1 style={{ ...M, fontSize: '2.1rem', fontWeight: 900, color: INK, lineHeight: 1.3, margin: '0 0 20px', textTransform: 'uppercase' }}>
-                Canberra's trusted smash repairers <span style={{ fontStyle: 'italic', color: GREEN, textShadow: '2px 2px 0 #141813' }}>since 1988</span>
+                Canberra's trusted smash repairers <span style={{ color: GREEN_DARK, fontWeight: 300 }}>since 1988</span>
               </h1>
               <div style={{ width: 50, height: 3, background: GREEN, marginBottom: 24 }} />
               <p style={{ ...M, fontSize: '1.02rem', fontWeight: 400, color: TEXT, lineHeight: 1.9, marginBottom: 36, maxWidth: 480 }}>
@@ -130,7 +130,7 @@ export default function Home() {
               </p>
             </div>
             <div style={{ display: 'flex', gap: 14, animation: 'fadeup 0.8s ease 0.6s both' }}>
-              <Link href="/quote" style={{ ...M, background: GREEN_DARK, color: '#fff', padding: '14px 34px', textDecoration: 'none', fontSize: '.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>
+              <Link href="/quote" style={{ ...M, background: GREEN_DARK, color: '#fff', padding: '14px 34px', textDecoration: 'none', fontSize: '.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', borderRadius: '2px' }}>
                 Request a Quote
               </Link>
               <Link href="/contact" style={{ ...M, background: 'transparent', color: INK, padding: '14px 34px', textDecoration: 'none', fontSize: '.68rem', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase', border: `1px solid ${INK}` }}>
@@ -139,8 +139,7 @@ export default function Home() {
             </div>
           </div>
           <div style={{ animation: 'fadeup 0.8s ease 0.45s both' }}>
-            <div style={{ border: `1px solid ${BORDER}`, boxShadow: '0 16px 48px rgba(20,24,19,0.12)' }}>
-              <div style={{ height: 12, background: 'repeating-conic-gradient(#141813 0% 25%, #ffffff 0% 50%)', backgroundSize: '12px 12px' }} />
+            <div style={{ border: `1px solid ${BORDER}`, borderTop: `3px solid ${GREEN}`, boxShadow: '0 16px 48px rgba(20,24,19,0.12)' }}>
               <img
                 src="/images/photo-1555215695-3004980ad54e.jpg"
                 alt="Repaired car on the road"
@@ -298,10 +297,10 @@ export default function Home() {
               </p>
             </div>
             <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', flexShrink: 0 }}>
-              <Link href="/quote" style={{ ...M, background: '#141813', color: '#fff', padding: '14px 36px', textDecoration: 'none', fontSize: '.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>
+              <Link href="/quote" style={{ ...M, background: '#141813', color: '#fff', padding: '14px 36px', textDecoration: 'none', fontSize: '.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', borderRadius: '2px' }}>
                 Request a Quote
               </Link>
-              <Link href="/contact" style={{ ...M, background: 'transparent', color: '#fff', padding: '14px 36px', textDecoration: 'none', fontSize: '.68rem', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase', border: '1px solid rgba(255,255,255,0.5)' }}>
+              <Link href="/contact" style={{ ...M, background: 'transparent', color: '#fff', padding: '14px 36px', textDecoration: 'none', fontSize: '.68rem', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase', border: '1px solid rgba(255,255,255,0.5)', borderRadius: '2px' }}>
                 Contact Us
               </Link>
             </div>

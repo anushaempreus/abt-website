@@ -15,7 +15,10 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#f3f6f2', borderTop: `1px solid ${BORDER}`, fontFamily: M }}>
+    <footer style={{ background: '#f3f6f2', fontFamily: M }}>
+
+      {/* CHECKERED BOOKEND */}
+      <div style={{ height: 12, background: 'repeating-conic-gradient(#141813 0% 25%, #ffffff 0% 50%)', backgroundSize: '12px 12px' }} />
 
       {/* MAIN */}
       <div style={{ padding: '60px 80px', display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: 60, borderBottom: `1px solid ${BORDER}` }}>

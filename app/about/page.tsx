@@ -82,7 +82,7 @@ export default function About() {
 
       {/* ── HERO ── */}
       <div style={{ background: BG, borderBottom: `1px solid ${BORDER}` }}>
-        <div style={{ height: 14, background: 'repeating-conic-gradient(#141813 0% 25%, #ffffff 0% 50%)', backgroundSize: '14px 14px' }} />
+        <div style={{ height: 12, background: 'repeating-conic-gradient(#141813 0% 25%, #ffffff 0% 50%)', backgroundSize: '12px 12px' }} />
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'center', padding: '80px 80px 70px' }}>
           <div>
             <div style={{ animation: 'fadeup 0.8s ease 0.2s both' }}>
@@ -90,15 +90,17 @@ export default function About() {
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.4s both' }}>
               <h1 style={{ ...M, fontSize: '4rem', fontWeight: 900, color: INK, lineHeight: 1, margin: '0 0 8px' }}>ABOUT</h1>
-              <h1 style={{ ...M, fontSize: '4rem', fontWeight: 900, fontStyle: 'italic', color: GREEN, textShadow: '3px 3px 0 #141813', lineHeight: 1.1, margin: '0 0 24px', letterSpacing: '2px' }}>ABT</h1>
+              <h1 style={{ ...M, fontSize: '4rem', fontWeight: 300, color: GREEN_DARK, lineHeight: 1.1, margin: '0 0 24px', letterSpacing: '4px' }}>ABT</h1>
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.6s both' }}>
-              <div style={{ width: 48, height: 3, background: GREEN }} />
+              <div style={{ width: 48, height: 3, background: GREEN, marginBottom: 20 }} />
+              <p style={{ ...M, fontSize: '.95rem', color: TEXT, lineHeight: 1.8, maxWidth: 460, margin: 0 }}>
+                A privately owned boutique smash repairs business, serving Canberra's motorists since October 1988.
+              </p>
             </div>
           </div>
           <div style={{ animation: 'fadeup 0.8s ease 0.5s both' }}>
-            <div style={{ border: `1px solid ${BORDER}`, boxShadow: '0 12px 40px rgba(20,24,19,0.10)' }}>
-              <div style={{ height: 10, background: 'repeating-conic-gradient(#141813 0% 25%, #ffffff 0% 50%)', backgroundSize: '10px 10px' }} />
+            <div style={{ border: `1px solid ${BORDER}`, borderTop: `3px solid ${GREEN}`, boxShadow: '0 12px 40px rgba(20,24,19,0.10)' }}>
               <img
                 src="/images/photo-1619642751034-765dfdf7c58e.jpg"
                 alt="Technician working on an engine"
