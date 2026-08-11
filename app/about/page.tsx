@@ -2,13 +2,16 @@
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
-const GREEN = '#6b8f47'
-const BLACK = '#15171b'
-const DARK = '#1b1d22'
-const CARD = '#21242a'
-const BORDER = '#2d3037'
-const TEXT = '#d8d8d8'
-const MUTED = '#8c8c8c'
+const GREEN = '#45d059'
+const GREEN_DARK = '#28a63c'
+const INK = '#141813'
+const HERO_BG = '#111511'
+const BG = '#ffffff'
+const BAND = '#f3f6f2'
+const CARD = '#ffffff'
+const BORDER = '#e2e7e1'
+const TEXT = '#41473f'
+const MUTED = '#79817a'
 const M: React.CSSProperties = { fontFamily: "'Montserrat', sans-serif" }
 
 function useInView(threshold = 0.15) {
@@ -44,10 +47,10 @@ function SlideIn({ children, from = 'left', delay = 0, style = {} }: { children:
   )
 }
 
-const Label = ({ text }: { text: string }) => (
+const Label = ({ text, light = false }: { text: string, light?: boolean }) => (
   <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
-    <div style={{ width: 28, height: 1, background: GREEN }} />
-    <p style={{ ...M, fontSize: '.6rem', fontWeight: 700, letterSpacing: '3px', color: GREEN, textTransform: 'uppercase', margin: 0 }}>{text}</p>
+    <div style={{ width: 28, height: 1, background: light ? GREEN : GREEN_DARK }} />
+    <p style={{ ...M, fontSize: '.6rem', fontWeight: 700, letterSpacing: '3px', color: light ? GREEN : GREEN_DARK, textTransform: 'uppercase', margin: 0 }}>{text}</p>
   </div>
 )
 
@@ -67,23 +70,28 @@ const steps = [
   { title: 'Vehicle Collection', desc: 'We will contact you by 1:30pm on the day of completion to organise collection or delivery of your vehicle.' },
 ]
 
+const workshopPhotos = [
+  { src: '/images/photo-1558618666-fcd25c85cd64.jpg', alt: 'Spray painting a vehicle' },
+  { src: '/images/photo-1615906655593-ad0386982a0f.jpg', alt: 'Technician diagnosing an engine' },
+  { src: '/images/photo-1530046339160-ce3e530c7d2f.jpg', alt: 'Workshop tool wall' },
+  { src: '/images/photo-1487754180451-c456f719a1fc.jpg', alt: 'Technician topping up engine oil' },
+]
+
 export default function About() {
   return (
-    <div style={{ ...M, background: '#15171b', color: TEXT }}>
+    <div style={{ ...M, background: BG, color: TEXT }}>
 
       {/* ── HERO ── */}
-      <div style={{ position: 'relative', height: '60vh', minHeight: 420, overflow: 'hidden' }}>
+      <div style={{ position: 'relative', height: '60vh', minHeight: 420, overflow: 'hidden', background: HERO_BG }}>
         <img
-          src="/images/photo-1568605117036-5fe5e7bab0b7.jpg"
-          alt="Workshop"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.55, animation: 'zoomin 8s ease forwards' }}
+          src="/images/photo-1619642751034-765dfdf7c58e.jpg"
+          alt="Technician working on an engine"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5, animation: 'zoomin 8s ease forwards' }}
         />
-        {/* LIGHT GLOW */}
-        <div style={{ position: 'absolute', top: '50%', left: '60%', transform: 'translate(-50%, -50%)', width: 600, height: 600, background: `radial-gradient(circle, ${GREEN}33 0%, transparent 70%)`, pointerEvents: 'none' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(0,0,0,0.88) 35%, rgba(0,0,0,0.3) 100%)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(10,14,10,0.9) 35%, rgba(10,14,10,0.25) 100%)' }} />
         <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 80px' }}>
           <div style={{ animation: 'fadeup 0.8s ease 0.2s both' }}>
-            <Label text="Who we are" />
+            <Label light text="Who we are" />
           </div>
           <div style={{ animation: 'fadeup 0.8s ease 0.4s both' }}>
             <h1 style={{ ...M, fontSize: '4rem', fontWeight: 900, color: '#fff', lineHeight: 1, margin: '0 0 8px' }}>ABOUT</h1>
@@ -96,21 +104,21 @@ export default function About() {
       </div>
 
       {/* ── ABOUT US ── */}
-      <div style={{ background: DARK, borderBottom: `1px solid ${BORDER}`, display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+      <div style={{ background: BAND, borderBottom: `1px solid ${BORDER}`, display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
         <SlideIn from="left" style={{ height: 580, overflow: 'hidden', position: 'relative' }}>
           <img
-            src="/images/photo-1507136566006-cfc505b114fc.jpg"
-            alt="Auto body repair workshop"
-            style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8, display: 'block' }}
+            src="/images/photo-1625047509248-ec889cbff17f.jpg"
+            alt="Technician working under a bonnet"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
           />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent 60%, #1b1d22 100%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent 60%, #f3f6f2 100%)' }} />
         </SlideIn>
         <SlideIn from="right">
           <div style={{ padding: '70px 70px 70px 56px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <FadeUp delay={0.2}><Label text="Est. October 1988" /></FadeUp>
             <FadeUp delay={0.3}>
-              <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 900, color: '#fff', margin: '0 0 4px' }}>ABOUT</h2>
-              <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 300, color: GREEN, margin: '0 0 24px', letterSpacing: '4px' }}>US</h2>
+              <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>ABOUT</h2>
+              <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: '0 0 24px', letterSpacing: '4px' }}>US</h2>
               <div style={{ width: 40, height: 3, background: GREEN, marginBottom: 36 }} />
             </FadeUp>
             <FadeUp delay={0.4}>
@@ -125,8 +133,8 @@ export default function About() {
               </p>
             </FadeUp>
             <FadeUp delay={0.5}>
-              <Link href="/contact" style={{ ...M, fontSize: '.65rem', fontWeight: 700, color: GREEN, textDecoration: 'none', letterSpacing: '2px', textTransform: 'uppercase', display: 'inline-flex', alignItems: 'center', gap: 10 }}>
-                <span style={{ width: 24, height: 1, background: GREEN, display: 'inline-block' }} />Get in touch
+              <Link href="/contact" style={{ ...M, fontSize: '.65rem', fontWeight: 700, color: GREEN_DARK, textDecoration: 'none', letterSpacing: '2px', textTransform: 'uppercase', display: 'inline-flex', alignItems: 'center', gap: 10 }}>
+                <span style={{ width: 24, height: 1, background: GREEN_DARK, display: 'inline-block' }} />Get in touch
               </Link>
             </FadeUp>
           </div>
@@ -134,22 +142,22 @@ export default function About() {
       </div>
 
       {/* ── AWARDS ── */}
-      <div style={{ background: BLACK, padding: '100px 80px 60px', borderBottom: `1px solid ${BORDER}` }}>
+      <div style={{ background: BG, padding: '100px 80px 60px', borderBottom: `1px solid ${BORDER}` }}>
         <FadeUp>
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 64, flexWrap: 'wrap', gap: 24 }}>
             <div>
               <Label text="Recognition" />
-              <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 900, color: '#fff', margin: '0 0 4px' }}>AWARDS &</h2>
-              <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 300, color: GREEN, margin: 0, letterSpacing: '3px' }}>ACHIEVEMENTS</h2>
+              <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>AWARDS &</h2>
+              <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: 0, letterSpacing: '3px' }}>ACHIEVEMENTS</h2>
             </div>
             <div style={{ width: 48, height: 3, background: GREEN }} />
           </div>
         </FadeUp>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1px', background: BORDER, border: `1px solid ${BORDER}` }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24, paddingBottom: 40 }}>
           {awards.map(({ num, text }, i) => (
             <FadeUp key={num} delay={i * 0.12}>
-              <div style={{ background: CARD, padding: '44px 36px', position: 'relative', overflow: 'hidden', height: '100%' }}>
-                <div style={{ ...M, position: 'absolute', top: -8, right: 16, fontSize: '7rem', fontWeight: 900, color: GREEN, opacity: 0.05, lineHeight: 1, userSelect: 'none' }}>{num}</div>
+              <div style={{ background: CARD, border: `1px solid ${BORDER}`, padding: '44px 36px', position: 'relative', overflow: 'hidden', height: '100%', boxSizing: 'border-box', boxShadow: '0 2px 12px rgba(20,24,19,0.04)' }}>
+                <div style={{ ...M, position: 'absolute', top: -8, right: 16, fontSize: '7rem', fontWeight: 900, color: GREEN, opacity: 0.07, lineHeight: 1, userSelect: 'none' }}>{num}</div>
                 <div style={{ width: 32, height: 2, background: GREEN, marginBottom: 24 }} />
                 <p style={{ ...M, fontSize: '.95rem', fontWeight: 500, color: TEXT, lineHeight: 1.9, margin: 0, position: 'relative' }}>{text}</p>
               </div>
@@ -159,26 +167,26 @@ export default function About() {
       </div>
 
       {/* ── REPAIR PROCESS ── */}
-      <div style={{ background: DARK, padding: '100px 80px', borderBottom: `1px solid ${BORDER}` }}>
+      <div style={{ background: BAND, padding: '100px 80px', borderBottom: `1px solid ${BORDER}` }}>
         <FadeUp>
           <div style={{ textAlign: 'center', marginBottom: 64 }}>
-            <Label text="Step by step" />
-            <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 900, color: '#fff', margin: '0 0 4px' }}>COLLISION REPAIR</h2>
-            <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 300, color: GREEN, margin: 0, letterSpacing: '3px' }}>PROCESS</h2>
+            <div style={{ display: 'flex', justifyContent: 'center' }}><Label text="Step by step" /></div>
+            <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>COLLISION REPAIR</h2>
+            <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: 0, letterSpacing: '3px' }}>PROCESS</h2>
           </div>
         </FadeUp>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1px', background: BORDER, border: `1px solid ${BORDER}` }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
           {steps.map(({ title, desc }, i) => (
             <FadeUp key={title} delay={i * 0.1}>
-              <div style={{ background: CARD, padding: '44px 36px', position: 'relative', overflow: 'hidden', height: '100%' }}>
-                <div style={{ ...M, position: 'absolute', top: -8, right: 16, fontSize: '6rem', fontWeight: 900, color: '#fff', opacity: 0.03, lineHeight: 1, userSelect: 'none' }}>
+              <div style={{ background: CARD, border: `1px solid ${BORDER}`, borderTop: `3px solid ${GREEN}`, padding: '44px 36px', position: 'relative', overflow: 'hidden', height: '100%', boxSizing: 'border-box', boxShadow: '0 2px 12px rgba(20,24,19,0.04)' }}>
+                <div style={{ ...M, position: 'absolute', top: -8, right: 16, fontSize: '6rem', fontWeight: 900, color: INK, opacity: 0.04, lineHeight: 1, userSelect: 'none' }}>
                   {String(i + 1).padStart(2, '0')}
                 </div>
-                <div style={{ ...M, fontSize: '.62rem', fontWeight: 700, color: GREEN, letterSpacing: '2px', marginBottom: 20 }}>
+                <div style={{ ...M, fontSize: '.62rem', fontWeight: 700, color: GREEN_DARK, letterSpacing: '2px', marginBottom: 20 }}>
                   {String(i + 1).padStart(2, '0')}
                 </div>
                 <div style={{ width: 28, height: 2, background: GREEN, marginBottom: 20 }} />
-                <h3 style={{ ...M, fontSize: '1rem', fontWeight: 800, color: '#fff', marginBottom: 16, textTransform: 'uppercase' }}>{title}</h3>
+                <h3 style={{ ...M, fontSize: '1rem', fontWeight: 800, color: INK, marginBottom: 16, textTransform: 'uppercase' }}>{title}</h3>
                 <p style={{ ...M, fontSize: '.88rem', color: MUTED, lineHeight: 1.9, margin: 0 }}>{desc}</p>
               </div>
             </FadeUp>
@@ -187,13 +195,12 @@ export default function About() {
       </div>
 
       {/* ── IMAGE BREAK ── */}
-      <div style={{ position: 'relative', height: 320, overflow: 'hidden' }}>
+      <div style={{ position: 'relative', height: 320, overflow: 'hidden', background: GREEN_DARK }}>
         <img
           src="/images/photo-1558618666-fcd25c85cd64.jpg"
           alt="Spray painting"
           style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', opacity: 0.12 }}
         />
-        <div style={{ position: 'absolute', inset: 0, background: `${GREEN}ee` }} />
         <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 80px' }}>
           <FadeUp>
             <h2 style={{ ...M, fontSize: '1.6rem', fontWeight: 300, color: '#fff', maxWidth: 620, lineHeight: 1.7, fontStyle: 'italic', textAlign: 'center' }}>
@@ -203,22 +210,42 @@ export default function About() {
         </div>
       </div>
 
+      {/* ── OUR WORKSHOP ── */}
+      <div style={{ background: BG, padding: '100px 80px', borderBottom: `1px solid ${BORDER}` }}>
+        <FadeUp>
+          <div style={{ textAlign: 'center', marginBottom: 56 }}>
+            <div style={{ display: 'flex', justifyContent: 'center' }}><Label text="Behind the scenes" /></div>
+            <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>OUR</h2>
+            <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: 0, letterSpacing: '3px' }}>WORKSHOP</h2>
+          </div>
+        </FadeUp>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 24 }}>
+          {workshopPhotos.map(({ src, alt }, i) => (
+            <FadeUp key={src} delay={i * 0.1}>
+              <div style={{ height: 260, overflow: 'hidden', border: `1px solid ${BORDER}`, boxShadow: '0 2px 12px rgba(20,24,19,0.04)' }}>
+                <img src={src} alt={alt} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+              </div>
+            </FadeUp>
+          ))}
+        </div>
+      </div>
+
       {/* ── WORKPLACE & COMPLIANCE ── */}
-      <div style={{ background: BLACK, padding: '100px 80px' }}>
+      <div style={{ background: BAND, padding: '100px 80px' }}>
         <FadeUp>
           <Label text="Our commitments" />
-          <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 900, color: '#fff', margin: '0 0 4px' }}>WORKPLACE &</h2>
-          <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 300, color: GREEN, margin: '0 0 56px', letterSpacing: '3px' }}>COMPLIANCE</h2>
+          <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>WORKPLACE &</h2>
+          <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: '0 0 56px', letterSpacing: '3px' }}>COMPLIANCE</h2>
         </FadeUp>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1px', background: BORDER, border: `1px solid ${BORDER}` }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
           {[
             {
-              title: 'OH&S Policies & Procedures',
-              body: 'Auto Body Technicians has all OH&S Policies and Procedures in place with a commitment to safe work practices. An assessment is undertaken every 6 months by an outside company to ensure they are up to date. We have a clean, safe and well maintained environment for our staff.',
+              title: 'WH&S Policies & Procedures',
+              body: 'Auto Body Technicians has all WH&S Policies and Procedures in place with a commitment to safe work practices. An assessment is undertaken every 6 months by an outside company to ensure they are up to date. We have a clean, safe and well maintained environment for our staff.',
             },
             {
               title: 'Ablaze Total Solutions',
-              body: 'Occupational Health & Safety laws are in place to prevent injuries and illness. We choose to use Ablaze Total Solutions to assist our business.\n\nCanberra Technology Park\n49 Phillip Ave, WATSON ACT 2602\n02 6262 2589',
+              body: 'Work Health & Safety laws are in place to prevent injuries and illness. We choose to use Ablaze Total Solutions to assist our business.\n\nCanberra Technology Park\n49 Phillip Ave, WATSON ACT 2602\n02 6262 2589',
             },
             {
               title: 'Privacy Policy',
@@ -227,11 +254,11 @@ export default function About() {
             },
           ].map(({ title, body, link }, i) => (
             <FadeUp key={title} delay={i * 0.12}>
-              <div style={{ background: CARD, padding: '44px 36px', borderTop: `3px solid ${GREEN}`, height: '100%' }}>
-                <h3 style={{ ...M, fontSize: '1rem', fontWeight: 800, color: '#fff', marginBottom: 20, textTransform: 'uppercase' }}>{title}</h3>
+              <div style={{ background: CARD, border: `1px solid ${BORDER}`, padding: '44px 36px', borderTop: `3px solid ${GREEN}`, height: '100%', boxSizing: 'border-box', boxShadow: '0 2px 12px rgba(20,24,19,0.04)' }}>
+                <h3 style={{ ...M, fontSize: '1rem', fontWeight: 800, color: INK, marginBottom: 20, textTransform: 'uppercase' }}>{title}</h3>
                 <p style={{ ...M, fontSize: '.9rem', color: MUTED, lineHeight: 1.9, marginBottom: link ? 28 : 0, whiteSpace: 'pre-line' }}>{body}</p>
                 {link && (
-                  <a href={link.href} target="_blank" rel="noopener noreferrer" style={{ ...M, fontSize: '.65rem', fontWeight: 700, color: GREEN, textDecoration: 'none', letterSpacing: '1.5px' }}>
+                  <a href={link.href} target="_blank" rel="noopener noreferrer" style={{ ...M, fontSize: '.65rem', fontWeight: 700, color: GREEN_DARK, textDecoration: 'none', letterSpacing: '1.5px' }}>
                     {link.label}
                   </a>
                 )}

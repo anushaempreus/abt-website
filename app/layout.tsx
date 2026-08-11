@@ -74,7 +74,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#15171b',
+  themeColor: '#ffffff',
   width: 'device-width',
   initialScale: 1,
 }
@@ -85,7 +85,6 @@ const businessJsonLd = {
   name: 'ABT Auto Body Technicians',
   url: SITE_URL,
   telephone: '+61 2 6241 3801',
-  faxNumber: '+61 2 6241 3275',
   email: 'admin@autobodytech.net.au',
   foundingDate: '1988-10',
   address: {
@@ -109,7 +108,7 @@ const businessJsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${montserrat.variable} ${raleway.variable}`}>
-      <body style={{ margin: 0, padding: 0, background: '#15171b', fontFamily: 'var(--font-montserrat), sans-serif', overflowX: 'hidden' }}>
+      <body style={{ margin: 0, padding: 0, background: '#ffffff', fontFamily: 'var(--font-montserrat), sans-serif', overflowX: 'hidden' }}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(businessJsonLd) }}

@@ -3,6 +3,9 @@ import { useEffect, useState } from 'react'
 
 type Phase = 'car' | 'logo' | 'done'
 
+const GREEN = '#28a63c'
+const INK = '#141813'
+
 export default function Intro() {
   const [phase, setPhase] = useState<Phase>('car')
 
@@ -19,7 +22,7 @@ export default function Intro() {
       position: 'fixed',
       inset: 0,
       zIndex: 9999,
-      background: '#15171b',
+      background: '#ffffff',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -33,7 +36,7 @@ export default function Intro() {
         left: 0,
         right: 0,
         height: '1px',
-        background: '#1a1a1a',
+        background: '#e2e7e1',
       }} />
 
       {/* CAR — drives across */}
@@ -45,16 +48,16 @@ export default function Intro() {
           animation: 'drivein 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
         }}>
           <svg width="320" height="140" viewBox="0 0 320 140" fill="none">
-            <rect x="20" y="70" width="280" height="55" rx="4" fill="#1a1a1a" />
-            <path d="M60 70 L90 30 L230 25 L265 70 Z" fill="#141414" />
-            <path d="M95 68 L115 35 L220 32 L245 68 Z" fill="#0d0d0d" opacity="0.8" />
-            <line x1="165" y1="70" x2="165" y2="120" stroke="#222" strokeWidth="1" />
-            <circle cx="75" cy="125" r="20" fill="#111" stroke="#2a2a2a" strokeWidth="4" />
-            <circle cx="75" cy="125" r="10" fill="#0a0a0a" stroke="#222" strokeWidth="2" />
-            <circle cx="245" cy="125" r="20" fill="#111" stroke="#2a2a2a" strokeWidth="4" />
-            <circle cx="245" cy="125" r="10" fill="#0a0a0a" stroke="#222" strokeWidth="2" />
-            <rect x="22" y="80" width="12" height="6" rx="1" fill="#6b8f47" opacity="0.6" />
-            <rect x="286" y="80" width="10" height="6" rx="1" fill="#6b8f47" opacity="0.3" />
+            <rect x="20" y="70" width="280" height="55" rx="4" fill="#20261f" />
+            <path d="M60 70 L90 30 L230 25 L265 70 Z" fill="#2c332b" />
+            <path d="M95 68 L115 35 L220 32 L245 68 Z" fill="#465045" opacity="0.8" />
+            <line x1="165" y1="70" x2="165" y2="120" stroke="#3a423a" strokeWidth="1" />
+            <circle cx="75" cy="125" r="20" fill="#20261f" stroke="#4a534a" strokeWidth="4" />
+            <circle cx="75" cy="125" r="10" fill="#141813" stroke="#3a423a" strokeWidth="2" />
+            <circle cx="245" cy="125" r="20" fill="#20261f" stroke="#4a534a" strokeWidth="4" />
+            <circle cx="245" cy="125" r="10" fill="#141813" stroke="#3a423a" strokeWidth="2" />
+            <rect x="22" y="80" width="12" height="6" rx="1" fill="#45d059" opacity="0.8" />
+            <rect x="286" y="80" width="10" height="6" rx="1" fill="#45d059" opacity="0.5" />
           </svg>
         </div>
       )}
@@ -66,15 +69,15 @@ export default function Intro() {
             fontFamily: "'Montserrat', sans-serif",
             fontSize: '3.5rem',
             fontWeight: 900,
-            color: '#fff',
+            color: INK,
             letterSpacing: '16px',
             lineHeight: 1,
           }}>ABT</div>
           <div style={{
             fontFamily: "'Montserrat', sans-serif",
             fontSize: '.6rem',
-            fontWeight: 600,
-            color: '#6b8f47',
+            fontWeight: 700,
+            color: GREEN,
             letterSpacing: '6px',
             textTransform: 'uppercase',
             marginTop: '8px',
@@ -82,7 +85,7 @@ export default function Intro() {
           <div style={{
             width: '40px',
             height: '1px',
-            background: '#6b8f47',
+            background: GREEN,
             margin: '16px auto 0',
           }} />
         </div>

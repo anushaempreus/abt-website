@@ -1,13 +1,16 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
 
-const GREEN = '#6b8f47'
-const BLACK = '#15171b'
-const DARK = '#1b1d22'
-const CARD = '#21242a'
-const BORDER = '#2d3037'
-const TEXT = '#d8d8d8'
-const MUTED = '#8c8c8c'
+const GREEN = '#45d059'
+const GREEN_DARK = '#28a63c'
+const INK = '#141813'
+const HERO_BG = '#111511'
+const BG = '#ffffff'
+const BAND = '#f3f6f2'
+const CARD = '#ffffff'
+const BORDER = '#e2e7e1'
+const TEXT = '#41473f'
+const MUTED = '#79817a'
 const M: React.CSSProperties = { fontFamily: "'Montserrat', sans-serif" }
 
 function useInView(threshold = 0.1) {
@@ -33,15 +36,15 @@ function FadeUp({ children, delay = 0, style = {} }: { children: React.ReactNode
   )
 }
 
-const Label = ({ text }: { text: string }) => (
+const Label = ({ text, light = false }: { text: string, light?: boolean }) => (
   <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
-    <div style={{ width: 28, height: 1, background: GREEN }} />
-    <p style={{ ...M, fontSize: '.6rem', fontWeight: 700, letterSpacing: '3px', color: GREEN, textTransform: 'uppercase', margin: 0 }}>{text}</p>
+    <div style={{ width: 28, height: 1, background: light ? GREEN : GREEN_DARK }} />
+    <p style={{ ...M, fontSize: '.6rem', fontWeight: 700, letterSpacing: '3px', color: light ? GREEN : GREEN_DARK, textTransform: 'uppercase', margin: 0 }}>{text}</p>
   </div>
 )
 
 const FieldError = ({ msg }: { msg?: string }) => msg
-  ? <p style={{ ...M, color: '#e55', fontSize: '.72rem', marginTop: '-14px', marginBottom: '16px', letterSpacing: '.5px' }}>⚠ {msg}</p>
+  ? <p style={{ ...M, color: '#c0392b', fontSize: '.72rem', marginTop: '-14px', marginBottom: '16px', letterSpacing: '.5px' }}>⚠ {msg}</p>
   : null
 
 const years = Array.from({ length: 2020 - 1900 + 1 }, (_, i) => 2020 - i)
@@ -52,10 +55,10 @@ const inputStyle: React.CSSProperties = {
   border: `1px solid ${BORDER}`,
   borderLeft: `3px solid ${BORDER}`,
   fontSize: '.88rem',
-  background: CARD,
+  background: BAND,
   outline: 'none',
   fontFamily: "'Montserrat', sans-serif",
-  color: TEXT,
+  color: INK,
   marginBottom: '20px',
   display: 'block',
   boxSizing: 'border-box',
@@ -75,7 +78,7 @@ const labelStyle: React.CSSProperties = {
 const badgeStyle: React.CSSProperties = {
   width: '28px',
   height: '28px',
-  background: GREEN,
+  background: GREEN_DARK,
   color: '#fff',
   display: 'flex',
   alignItems: 'center',
@@ -151,26 +154,25 @@ export default function Contact() {
   }
 
   return (
-    <div style={{ ...M, background: BLACK, color: TEXT }}>
+    <div style={{ ...M, background: BG, color: TEXT }}>
 
       {/* HERO */}
-      <div style={{ position: 'relative', height: '60vh', minHeight: 420, overflow: 'hidden' }}>
+      <div style={{ position: 'relative', height: '60vh', minHeight: 420, overflow: 'hidden', background: HERO_BG }}>
         <img
-          src="/images/photo-1486312338219-ce68d2c6f44d.jpg"
-          alt="Contact ABT Auto Body Technicians"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8, animation: 'zoomin 8s ease forwards' }}
+          src="/images/photo-1530046339160-ce3e530c7d2f.jpg"
+          alt="ABT workshop tool wall"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5, animation: 'zoomin 8s ease forwards' }}
         />
-        <div style={{ position: 'absolute', top: '50%', right: '20%', transform: 'translateY(-50%)', width: 500, height: 500, background: `radial-gradient(circle, ${GREEN}22 0%, transparent 70%)`, pointerEvents: 'none' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(0,0,0,0.85) 30%, rgba(0,0,0,0.05) 100%)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(10,14,10,0.9) 30%, rgba(10,14,10,0.25) 100%)' }} />
         <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 80px' }}>
-          <div style={{ animation: 'fadeup 0.8s ease 0.2s both' }}><Label text="Get in touch" /></div>
+          <div style={{ animation: 'fadeup 0.8s ease 0.2s both' }}><Label light text="Get in touch" /></div>
           <div style={{ animation: 'fadeup 0.8s ease 0.4s both' }}>
             <h1 style={{ ...M, fontSize: '4rem', fontWeight: 900, color: '#fff', lineHeight: 1, margin: '0 0 8px' }}>CONTACT</h1>
             <h1 style={{ ...M, fontSize: '4rem', fontWeight: 300, color: GREEN, lineHeight: 1, margin: '0 0 24px', letterSpacing: '6px' }}>ABT</h1>
           </div>
           <div style={{ animation: 'fadeup 0.8s ease 0.6s both' }}>
             <div style={{ width: 48, height: 3, background: GREEN, marginBottom: 20 }} />
-            <p style={{ ...M, fontSize: '.95rem', color: TEXT, lineHeight: 1.8, maxWidth: 480, margin: 0 }}>
+            <p style={{ ...M, fontSize: '.95rem', color: 'rgba(255,255,255,0.82)', lineHeight: 1.8, maxWidth: 480, margin: 0 }}>
               Please fill in the details below and we will contact you as soon as we can.
             </p>
           </div>
@@ -178,16 +180,16 @@ export default function Contact() {
       </div>
 
       {/* QUICK INFO STRIP */}
-      <div style={{ background: '#4a6332', padding: '0 80px', display: 'flex', flexWrap: 'wrap' }}>
+      <div style={{ background: GREEN_DARK, padding: '0 80px', display: 'flex', flexWrap: 'wrap' }}>
         {[
           { label: 'Trading Hours', value: 'Mon – Fri: 8:00am – 4:30pm' },
           { label: 'Phone', value: '02 6241 3801' },
           { label: 'Towing', value: 'Discount Towing Canberra · 0411 259 945' },
           { label: 'Guarantee', value: 'All Repairs Guaranteed' },
         ].map(({ label, value }, i) => (
-          <div key={label} style={{ padding: '20px 40px 20px 0', marginRight: '40px', borderRight: i < 3 ? '1px solid rgba(255,255,255,.2)' : 'none' }}>
-            <p style={{ ...M, fontSize: '.58rem', fontWeight: 700, color: 'rgba(255,255,255,.65)', letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 4px' }}>{label}</p>
-            <p style={{ ...M, fontSize: '.88rem', color: '#fff', fontWeight: 600, margin: 0 }}>{value}</p>
+          <div key={label} style={{ padding: '20px 40px 20px 0', marginRight: '40px', borderRight: i < 3 ? '1px solid rgba(255,255,255,.25)' : 'none' }}>
+            <p style={{ ...M, fontSize: '.58rem', fontWeight: 700, color: 'rgba(255,255,255,.75)', textTransform: 'uppercase', letterSpacing: '2px', margin: '0 0 4px' }}>{label}</p>
+            <p style={{ ...M, fontSize: '.85rem', fontWeight: 700, color: '#fff', margin: 0 }}>{value}</p>
           </div>
         ))}
       </div>
@@ -199,21 +201,21 @@ export default function Contact() {
         <div style={{ padding: '64px 80px', borderRight: `1px solid ${BORDER}` }}>
           <FadeUp>
             <Label text="Send us a message" />
-            <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 900, color: '#fff', marginBottom: 8, textTransform: 'uppercase' }}>
-              Get In <span style={{ color: GREEN, fontWeight: 300 }}>Touch</span>
+            <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 900, color: INK, marginBottom: 8, textTransform: 'uppercase' }}>
+              Get In <span style={{ color: GREEN_DARK, fontWeight: 300 }}>Touch</span>
             </h2>
             <div style={{ width: 48, height: 3, background: GREEN, marginBottom: 40 }} />
           </FadeUp>
 
           {submitted ? (
             <FadeUp>
-              <div style={{ padding: '48px 40px', background: CARD, border: `1px solid ${BORDER}`, borderTop: `4px solid ${GREEN}`, textAlign: 'center' }}>
-                <div style={{ width: '56px', height: '56px', background: GREEN, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px' }}>
+              <div style={{ padding: '48px 40px', background: BAND, border: `1px solid ${BORDER}`, borderTop: `4px solid ${GREEN}`, textAlign: 'center' }}>
+                <div style={{ width: '56px', height: '56px', background: GREEN_DARK, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px' }}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5">
                     <polyline points="20 6 9 17 4 12"/>
                   </svg>
                 </div>
-                <p style={{ ...M, fontSize: '1.2rem', fontWeight: 700, color: '#fff', marginBottom: '10px' }}>Message Sent!</p>
+                <p style={{ ...M, fontSize: '1.2rem', fontWeight: 700, color: INK, marginBottom: '10px' }}>Message Sent!</p>
                 <p style={{ ...M, color: MUTED, fontSize: '.9rem', lineHeight: 1.7, margin: 0 }}>Thank you for contacting us. We will get back to you as soon as possible.</p>
               </div>
             </FadeUp>
@@ -225,20 +227,20 @@ export default function Contact() {
                 <div style={{ marginBottom: '48px' }}>
                   <div style={sectionHeaderStyle}>
                     <div style={badgeStyle}>1</div>
-                    <h2 style={{ ...M, fontSize: '1rem', fontWeight: 700, color: '#fff', margin: 0, letterSpacing: '1px', textTransform: 'uppercase' }}>Contact Details</h2>
+                    <h2 style={{ ...M, fontSize: '1rem', fontWeight: 700, color: INK, margin: 0, letterSpacing: '1px', textTransform: 'uppercase' }}>Contact Details</h2>
                   </div>
                   <input ref={websiteRef} type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: '-9999px', height: 0, width: 0, opacity: 0 }} />
                   <label style={labelStyle}>name: *</label>
                   <input ref={nameRef} type="text" placeholder="Full name"
-                    style={{ ...inputStyle, borderLeftColor: errors.name ? '#e55' : BORDER }} />
+                    style={{ ...inputStyle, borderLeftColor: errors.name ? '#c0392b' : BORDER }} />
                   <FieldError msg={errors.name} />
                   <label style={labelStyle}>email: *</label>
                   <input ref={emailRef} type="email" placeholder="your@email.com"
-                    style={{ ...inputStyle, borderLeftColor: errors.email ? '#e55' : BORDER }} />
+                    style={{ ...inputStyle, borderLeftColor: errors.email ? '#c0392b' : BORDER }} />
                   <FieldError msg={errors.email} />
                   <label style={labelStyle}>Ph: *</label>
                   <input ref={phoneRef} type="tel" placeholder="Phone number"
-                    style={{ ...inputStyle, borderLeftColor: errors.phone ? '#e55' : BORDER }} />
+                    style={{ ...inputStyle, borderLeftColor: errors.phone ? '#c0392b' : BORDER }} />
                   <FieldError msg={errors.phone} />
                   <label style={labelStyle}>Mobile:</label>
                   <input ref={mobileRef} type="tel" placeholder="Mobile number" style={inputStyle} />
@@ -249,7 +251,7 @@ export default function Contact() {
                 <div style={{ marginBottom: '48px' }}>
                   <div style={sectionHeaderStyle}>
                     <div style={badgeStyle}>2</div>
-                    <h2 style={{ ...M, fontSize: '1rem', fontWeight: 700, color: '#fff', margin: 0, letterSpacing: '1px', textTransform: 'uppercase' }}>Vehicle Information</h2>
+                    <h2 style={{ ...M, fontSize: '1rem', fontWeight: 700, color: INK, margin: 0, letterSpacing: '1px', textTransform: 'uppercase' }}>Vehicle Information</h2>
                   </div>
                   <label style={labelStyle}>Make:</label>
                   <input ref={makeRef} type="text" placeholder="e.g. Toyota" style={inputStyle} />
@@ -267,24 +269,24 @@ export default function Contact() {
                 <div style={{ marginBottom: '40px' }}>
                   <div style={sectionHeaderStyle}>
                     <div style={badgeStyle}>3</div>
-                    <h2 style={{ ...M, fontSize: '1rem', fontWeight: 700, color: '#fff', margin: 0, letterSpacing: '1px', textTransform: 'uppercase' }}>Message</h2>
+                    <h2 style={{ ...M, fontSize: '1rem', fontWeight: 700, color: INK, margin: 0, letterSpacing: '1px', textTransform: 'uppercase' }}>Message</h2>
                   </div>
                   <label style={labelStyle}>Message: *</label>
                   <textarea ref={messageRef} placeholder="How can we help you?"
-                    style={{ ...inputStyle, minHeight: '140px', resize: 'vertical', borderLeftColor: errors.message ? '#e55' : BORDER }} />
+                    style={{ ...inputStyle, minHeight: '140px', resize: 'vertical', borderLeftColor: errors.message ? '#c0392b' : BORDER }} />
                   <FieldError msg={errors.message} />
                 </div>
               </FadeUp>
 
-              {error && <p style={{ ...M, color: '#e55', fontSize: '.85rem', marginBottom: '16px' }}>{error}</p>}
+              {error && <p style={{ ...M, color: '#c0392b', fontSize: '.85rem', marginBottom: '16px' }}>{error}</p>}
 
               <div style={{ display: 'flex', gap: '12px' }}>
                 <button type="button" onClick={handleSubmit} disabled={loading}
-                  style={{ ...M, background: GREEN, color: '#fff', padding: '16px 44px', border: 'none', fontSize: '.75rem', fontWeight: 700, cursor: loading ? 'not-allowed' : 'pointer', letterSpacing: '1.5px', textTransform: 'uppercase', opacity: loading ? 0.7 : 1, borderRadius: '2px' }}>
+                  style={{ ...M, background: GREEN_DARK, color: '#fff', padding: '16px 44px', border: 'none', fontSize: '.75rem', fontWeight: 700, cursor: loading ? 'not-allowed' : 'pointer', letterSpacing: '1.5px', textTransform: 'uppercase', opacity: loading ? 0.7 : 1, borderRadius: '2px' }}>
                   {loading ? 'Sending...' : 'Submit'}
                 </button>
                 <button type="button"
-                  style={{ ...M, background: 'transparent', color: TEXT, padding: '16px 32px', border: '1px solid #333', fontSize: '.75rem', fontWeight: 600, cursor: 'pointer', letterSpacing: '1.5px', textTransform: 'uppercase', borderRadius: '2px' }}>
+                  style={{ ...M, background: 'transparent', color: TEXT, padding: '16px 32px', border: `1px solid ${BORDER}`, fontSize: '.75rem', fontWeight: 600, cursor: 'pointer', letterSpacing: '1.5px', textTransform: 'uppercase', borderRadius: '2px' }}>
                   Reset
                 </button>
               </div>
@@ -293,30 +295,28 @@ export default function Contact() {
         </div>
 
         {/* SIDEBAR */}
-        <div style={{ background: DARK, position: 'sticky', top: 0, borderLeft: `1px solid ${BORDER}` }}>
+        <div style={{ background: BAND, position: 'sticky', top: 0, borderLeft: `1px solid ${BORDER}` }}>
           <div style={{ padding: '40px 32px', borderBottom: `1px solid ${BORDER}` }}>
             <Label text="Location & Details" />
-            <p style={{ ...M, fontSize: '.9rem', fontWeight: 700, color: '#fff', marginBottom: '20px' }}>ABT Auto Body Technicians</p>
+            <p style={{ ...M, fontSize: '.9rem', fontWeight: 700, color: INK, marginBottom: '20px' }}>ABT Auto Body Technicians</p>
             {[
               { label: 'Workshop', value: '25 Winchcombe Court\nMitchell ACT 2911' },
               { label: 'Postal', value: 'as above' },
-              { label: 'p', value: '02 6241 3801' },
-              { label: 'f', value: '02 6241 3275' },
-              { label: 'e', value: 'admin@autobodytech.net.au', green: true },
-              { label: 'Contact', value: 'Sheraz Khan' },
+              { label: 'Phone', value: '02 6241 3801' },
+              { label: 'Email', value: 'admin@autobodytech.net.au', green: true },
               { label: 'ABN', value: '78 685 130 090' },
               { label: 'Licence', value: '20000332' },
             ].map(({ label, value, green }) => (
               <div key={label} style={{ display: 'flex', gap: '10px', marginBottom: '12px', paddingBottom: '12px', borderBottom: `1px solid ${BORDER}` }}>
                 <p style={{ ...M, fontSize: '.6rem', fontWeight: 700, color: MUTED, textTransform: 'uppercase', letterSpacing: '1.5px', margin: 0, minWidth: '60px', flexShrink: 0, paddingTop: '2px' }}>{label}:</p>
-                <p style={{ ...M, fontSize: '.82rem', color: green ? GREEN : TEXT, whiteSpace: 'pre-line', lineHeight: 1.6, margin: 0 }}>{value}</p>
+                <p style={{ ...M, fontSize: '.82rem', color: green ? GREEN_DARK : TEXT, whiteSpace: 'pre-line', lineHeight: 1.6, margin: 0 }}>{value}</p>
               </div>
             ))}
           </div>
 
-          <div style={{ padding: '28px 32px', borderBottom: `1px solid ${BORDER}`, background: BLACK }}>
+          <div style={{ padding: '28px 32px', borderBottom: `1px solid ${BORDER}`, background: CARD }}>
             <Label text="Towing Service" />
-            <p style={{ ...M, fontSize: '.88rem', color: '#fff', fontWeight: 700, marginBottom: '4px' }}>Discount Towing Canberra</p>
+            <p style={{ ...M, fontSize: '.88rem', color: INK, fontWeight: 700, marginBottom: '4px' }}>Discount Towing Canberra</p>
             <p style={{ ...M, fontSize: '.8rem', color: MUTED, lineHeight: 1.7, margin: 0 }}>
               24 Hours a Day, 365 Days a Year<br />
               Phone: 0411 259 945
@@ -325,16 +325,9 @@ export default function Contact() {
 
           <div style={{ padding: '28px 32px' }}>
             <Label text="Trusted Brands" />
-            <p style={{ ...M, fontSize: '.8rem', color: MUTED, lineHeight: 1.7, marginBottom: 16 }}>
+            <p style={{ ...M, fontSize: '.8rem', color: MUTED, lineHeight: 1.7, margin: 0 }}>
               Auto Body Technicians use some of Australia's most recognised and trusted brands to deliver first class collision repairs.
             </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              {['Wurth', 'Snap-on'].map(brand => (
-                <div key={brand} style={{ padding: '10px 16px', background: CARD, border: `1px solid ${BORDER}`, borderLeft: `3px solid ${GREEN}` }}>
-                  <p style={{ ...M, color: TEXT, fontSize: '.82rem', fontWeight: 700, margin: 0, letterSpacing: '1px' }}>{brand}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
