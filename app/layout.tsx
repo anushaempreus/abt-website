@@ -84,6 +84,8 @@ const businessJsonLd = {
   '@type': 'AutoBodyShop',
   name: 'ABT Auto Body Technicians',
   url: SITE_URL,
+  logo: `${SITE_URL}/abt-logo.png`,
+  image: `${SITE_URL}/og.jpg`,
   telephone: '+61 2 6241 3801',
   email: 'admin@autobodytech.net.au',
   foundingDate: '1988-10',

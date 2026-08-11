@@ -30,10 +30,9 @@ const testimonials = [
   { quote: "From the quotation to the repairs, very short down time — and the finished product is 'WOW'.", sign: 'Satisfied customer' },
 ]
 
-const GREEN = '#45d059'
-const GREEN_DARK = '#28a63c'
+const GREEN = '#44b94a'
+const GREEN_DARK = '#2b8a34'
 const INK = '#141813'
-const HERO_BG = '#111511'
 const BG = '#ffffff'
 const BAND = '#f3f6f2'
 const CARD = '#ffffff'
@@ -110,39 +109,45 @@ export default function Home() {
     <div style={{ ...M, background: BG, color: TEXT }}>
 
       {/* ── 1. HERO ── */}
-      <div style={{ position: 'relative', height: '100vh', minHeight: 600, overflow: 'hidden', background: HERO_BG }}>
-        <img
-          src="/images/photo-1555215695-3004980ad54e.jpg"
-          alt="Repaired car on the road"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.55, animation: 'zoomin 8s ease forwards' }}
-        />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(10,14,10,0.94) 40%, rgba(10,14,10,0.2) 100%)' }} />
-        <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 80px', maxWidth: 660 }}>
-          <div style={{ animation: 'fadeup 0.8s ease 0.2s both' }}>
-            <Label light text="Canberra's trusted smash repairers since 1988" />
+      <div style={{ background: BG, borderBottom: `1px solid ${BORDER}` }}>
+        <div style={{ height: 16, background: 'repeating-conic-gradient(#141813 0% 25%, #ffffff 0% 50%)', backgroundSize: '16px 16px' }} />
+        <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 1fr', gap: 56, alignItems: 'center', padding: '70px 80px 90px', minHeight: '76vh', boxSizing: 'border-box' }}>
+          <div>
+            <div style={{ animation: 'fadeup 0.8s ease 0.1s both' }}>
+              <img
+                src="/abt-logo.png"
+                alt="ABT Auto Body Technicians"
+                style={{ width: 400, maxWidth: '100%', height: 'auto', display: 'block', marginBottom: 36 }}
+              />
+            </div>
+            <div style={{ animation: 'fadeup 0.8s ease 0.35s both' }}>
+              <h1 style={{ ...M, fontSize: '2.1rem', fontWeight: 900, color: INK, lineHeight: 1.3, margin: '0 0 20px', textTransform: 'uppercase' }}>
+                Canberra's trusted smash repairers <span style={{ fontStyle: 'italic', color: GREEN, textShadow: '2px 2px 0 #141813' }}>since 1988</span>
+              </h1>
+              <div style={{ width: 50, height: 3, background: GREEN, marginBottom: 24 }} />
+              <p style={{ ...M, fontSize: '1.02rem', fontWeight: 400, color: TEXT, lineHeight: 1.9, marginBottom: 36, maxWidth: 480 }}>
+                Serving Canberra's motorists since 1988 — private, fleet, commercial and insurance work. One of the most dependable smash repairers in the Northside.
+              </p>
+            </div>
+            <div style={{ display: 'flex', gap: 14, animation: 'fadeup 0.8s ease 0.6s both' }}>
+              <Link href="/quote" style={{ ...M, background: GREEN_DARK, color: '#fff', padding: '14px 34px', textDecoration: 'none', fontSize: '.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>
+                Request a Quote
+              </Link>
+              <Link href="/contact" style={{ ...M, background: 'transparent', color: INK, padding: '14px 34px', textDecoration: 'none', fontSize: '.68rem', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase', border: `1px solid ${INK}` }}>
+                Contact Us
+              </Link>
+            </div>
           </div>
-          <div style={{ animation: 'fadeup 0.8s ease 0.4s both' }}>
-            <h1 style={{ ...M, fontSize: '4.8rem', fontWeight: 900, color: '#fff', lineHeight: 1, margin: 0 }}>AUTO BODY</h1>
-            <h1 style={{ ...M, fontSize: '4.8rem', fontWeight: 300, color: GREEN, lineHeight: 1.1, margin: '0 0 28px', letterSpacing: '6px' }}>TECHNICIANS</h1>
+          <div style={{ animation: 'fadeup 0.8s ease 0.45s both' }}>
+            <div style={{ border: `1px solid ${BORDER}`, boxShadow: '0 16px 48px rgba(20,24,19,0.12)' }}>
+              <div style={{ height: 12, background: 'repeating-conic-gradient(#141813 0% 25%, #ffffff 0% 50%)', backgroundSize: '12px 12px' }} />
+              <img
+                src="/images/photo-1555215695-3004980ad54e.jpg"
+                alt="Repaired car on the road"
+                style={{ width: '100%', height: 460, objectFit: 'cover', display: 'block' }}
+              />
+            </div>
           </div>
-          <div style={{ animation: 'fadeup 0.8s ease 0.6s both' }}>
-            <div style={{ width: 50, height: 3, background: GREEN, marginBottom: 28 }} />
-            <p style={{ ...M, fontSize: '1.05rem', fontWeight: 400, color: 'rgba(255,255,255,0.82)', lineHeight: 1.9, marginBottom: 40, maxWidth: 460 }}>
-              Serving Canberra's motorists since 1988 — private, fleet, commercial and insurance work. One of the most dependable smash repairers in the Northside.
-            </p>
-          </div>
-          <div style={{ display: 'flex', gap: 14, animation: 'fadeup 0.8s ease 0.8s both' }}>
-            <Link href="/quote" style={{ ...M, background: GREEN_DARK, color: '#fff', padding: '14px 34px', textDecoration: 'none', fontSize: '.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>
-              Request a Quote
-            </Link>
-            <Link href="/contact" style={{ ...M, background: 'transparent', color: 'rgba(255,255,255,0.85)', padding: '14px 34px', textDecoration: 'none', fontSize: '.68rem', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase', border: '1px solid rgba(255,255,255,0.35)' }}>
-              Contact Us
-            </Link>
-          </div>
-        </div>
-        <div style={{ position: 'absolute', bottom: 32, left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, animation: 'fadeup 1s ease 1.2s both' }}>
-          <p style={{ ...M, fontSize: '.55rem', fontWeight: 700, color: 'rgba(255,255,255,0.5)', letterSpacing: '3px', textTransform: 'uppercase', margin: 0 }}>Scroll</p>
-          <div style={{ width: 1, height: 36, background: 'linear-gradient(to bottom, rgba(255,255,255,0.5), transparent)', animation: 'pulse 2s ease infinite' }} />
         </div>
       </div>
 

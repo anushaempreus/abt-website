@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
-const GREEN = '#28a63c'
+const GREEN = '#2b8a34'
 const INK = '#141813'
 const BORDER = '#e2e7e1'
 
@@ -65,10 +65,7 @@ export default function Navbar() {
 
         {/* CLOSE + LOGO */}
         <div style={{ padding: '28px 24px 22px', borderBottom: `1px solid ${BORDER}`, display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
-          <div>
-            <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '1.6rem', fontWeight: 900, color: INK, letterSpacing: '4px', lineHeight: 1 }}>ABT</div>
-            <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '.55rem', fontWeight: 700, color: GREEN, letterSpacing: '3px', textTransform: 'uppercase', marginTop: 5 }}>Auto Body Technicians</div>
-          </div>
+          <img src="/abt-logo.png" alt="ABT Auto Body Technicians" style={{ width: 140, height: 'auto', display: 'block' }} />
           <button
             onClick={() => setOpen(false)}
             style={{ background: 'transparent', border: 'none', color: '#9aa19a', cursor: 'pointer', fontSize: '1.2rem', padding: 0, marginTop: 4 }}
@@ -89,7 +86,7 @@ export default function Navbar() {
                 color: active ? GREEN : '#5a615a',
                 textDecoration: 'none',
                 borderLeft: active ? `2px solid ${GREEN}` : '2px solid transparent',
-                background: active ? 'rgba(40,166,60,0.07)' : 'transparent',
+                background: active ? 'rgba(43,138,52,0.07)' : 'transparent',
                 transition: 'color .2s',
               }}>
                 <span style={{ width: 4, height: 4, borderRadius: '50%', background: 'currentColor', flexShrink: 0 }} />

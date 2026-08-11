@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 
 type Phase = 'car' | 'logo' | 'done'
 
-const GREEN = '#28a63c'
+const GREEN = '#2b8a34'
 const INK = '#141813'
 
 export default function Intro() {
@@ -56,8 +56,8 @@ export default function Intro() {
             <circle cx="75" cy="125" r="10" fill="#141813" stroke="#3a423a" strokeWidth="2" />
             <circle cx="245" cy="125" r="20" fill="#20261f" stroke="#4a534a" strokeWidth="4" />
             <circle cx="245" cy="125" r="10" fill="#141813" stroke="#3a423a" strokeWidth="2" />
-            <rect x="22" y="80" width="12" height="6" rx="1" fill="#45d059" opacity="0.8" />
-            <rect x="286" y="80" width="10" height="6" rx="1" fill="#45d059" opacity="0.5" />
+            <rect x="22" y="80" width="12" height="6" rx="1" fill="#44b94a" opacity="0.8" />
+            <rect x="286" y="80" width="10" height="6" rx="1" fill="#44b94a" opacity="0.5" />
           </svg>
         </div>
       )}
@@ -65,28 +65,12 @@ export default function Intro() {
       {/* LOGO REVEAL */}
       {phase === 'logo' && (
         <div style={{ textAlign: 'center', animation: 'fadeup 0.6s ease forwards' }}>
-          <div style={{
-            fontFamily: "'Montserrat', sans-serif",
-            fontSize: '3.5rem',
-            fontWeight: 900,
-            color: INK,
-            letterSpacing: '16px',
-            lineHeight: 1,
-          }}>ABT</div>
-          <div style={{
-            fontFamily: "'Montserrat', sans-serif",
-            fontSize: '.6rem',
-            fontWeight: 700,
-            color: GREEN,
-            letterSpacing: '6px',
-            textTransform: 'uppercase',
-            marginTop: '8px',
-          }}>Auto Body Technicians</div>
+          <img src="/abt-logo.png" alt="ABT Auto Body Technicians" style={{ width: 320, maxWidth: '80vw', height: 'auto', display: 'block', margin: '0 auto' }} />
           <div style={{
             width: '40px',
             height: '1px',
             background: GREEN,
-            margin: '16px auto 0',
+            margin: '20px auto 0',
           }} />
         </div>
       )}

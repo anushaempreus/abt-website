@@ -2,10 +2,9 @@
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
-const GREEN = '#45d059'
-const GREEN_DARK = '#28a63c'
+const GREEN = '#44b94a'
+const GREEN_DARK = '#2b8a34'
 const INK = '#141813'
-const HERO_BG = '#111511'
 const BG = '#ffffff'
 const BAND = '#f3f6f2'
 const CARD = '#ffffff'
@@ -82,23 +81,30 @@ export default function About() {
     <div style={{ ...M, background: BG, color: TEXT }}>
 
       {/* ── HERO ── */}
-      <div style={{ position: 'relative', height: '60vh', minHeight: 420, overflow: 'hidden', background: HERO_BG }}>
-        <img
-          src="/images/photo-1619642751034-765dfdf7c58e.jpg"
-          alt="Technician working on an engine"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5, animation: 'zoomin 8s ease forwards' }}
-        />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(10,14,10,0.9) 35%, rgba(10,14,10,0.25) 100%)' }} />
-        <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 80px' }}>
-          <div style={{ animation: 'fadeup 0.8s ease 0.2s both' }}>
-            <Label light text="Who we are" />
+      <div style={{ background: BG, borderBottom: `1px solid ${BORDER}` }}>
+        <div style={{ height: 14, background: 'repeating-conic-gradient(#141813 0% 25%, #ffffff 0% 50%)', backgroundSize: '14px 14px' }} />
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'center', padding: '80px 80px 70px' }}>
+          <div>
+            <div style={{ animation: 'fadeup 0.8s ease 0.2s both' }}>
+              <Label text="Who we are" />
+            </div>
+            <div style={{ animation: 'fadeup 0.8s ease 0.4s both' }}>
+              <h1 style={{ ...M, fontSize: '4rem', fontWeight: 900, color: INK, lineHeight: 1, margin: '0 0 8px' }}>ABOUT</h1>
+              <h1 style={{ ...M, fontSize: '4rem', fontWeight: 900, fontStyle: 'italic', color: GREEN, textShadow: '3px 3px 0 #141813', lineHeight: 1.1, margin: '0 0 24px', letterSpacing: '2px' }}>ABT</h1>
+            </div>
+            <div style={{ animation: 'fadeup 0.8s ease 0.6s both' }}>
+              <div style={{ width: 48, height: 3, background: GREEN }} />
+            </div>
           </div>
-          <div style={{ animation: 'fadeup 0.8s ease 0.4s both' }}>
-            <h1 style={{ ...M, fontSize: '4rem', fontWeight: 900, color: '#fff', lineHeight: 1, margin: '0 0 8px' }}>ABOUT</h1>
-            <h1 style={{ ...M, fontSize: '4rem', fontWeight: 300, color: GREEN, lineHeight: 1, margin: '0 0 24px', letterSpacing: '6px' }}>ABT</h1>
-          </div>
-          <div style={{ animation: 'fadeup 0.8s ease 0.6s both' }}>
-            <div style={{ width: 48, height: 3, background: GREEN }} />
+          <div style={{ animation: 'fadeup 0.8s ease 0.5s both' }}>
+            <div style={{ border: `1px solid ${BORDER}`, boxShadow: '0 12px 40px rgba(20,24,19,0.10)' }}>
+              <div style={{ height: 10, background: 'repeating-conic-gradient(#141813 0% 25%, #ffffff 0% 50%)', backgroundSize: '10px 10px' }} />
+              <img
+                src="/images/photo-1619642751034-765dfdf7c58e.jpg"
+                alt="Technician working on an engine"
+                style={{ width: '100%', height: 340, objectFit: 'cover', display: 'block' }}
+              />
+            </div>
           </div>
         </div>
       </div>

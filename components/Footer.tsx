@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const GREEN = '#28a63c'
+const GREEN = '#2b8a34'
 const INK = '#141813'
 const BORDER = '#e2e7e1'
 const M = "'Montserrat', sans-serif"
@@ -22,8 +22,7 @@ export default function Footer() {
 
         {/* BRAND */}
         <div>
-          <div style={{ fontFamily: M, fontSize: '1.6rem', fontWeight: 900, color: INK, letterSpacing: '4px', marginBottom: 4 }}>ABT</div>
-          <div style={{ fontFamily: M, fontSize: '.62rem', fontWeight: 700, color: GREEN, letterSpacing: '3px', textTransform: 'uppercase', marginBottom: 18 }}>Auto Body Technicians</div>
+          <img src="/abt-logo.png" alt="ABT Auto Body Technicians" style={{ width: 190, height: 'auto', display: 'block', marginBottom: 16 }} />
           <p style={{ fontFamily: M, fontSize: '.82rem', color: '#5a615a', lineHeight: 1.8, maxWidth: 280, marginBottom: 20 }}>
             Canberra's trusted smash repairers since 1988.
           </p>
