@@ -122,19 +122,20 @@ export default function Home() {
               />
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.35s both' }}>
-              <h1 style={{ ...D, fontSize: '2.1rem', fontWeight: 900, color: INK, lineHeight: 1.3, margin: '0 0 20px', textTransform: 'uppercase' }}>
-                Canberra's trusted smash repairers <span style={{ color: GREEN_DARK, fontWeight: 300 }}>since 1988</span>
+              <h1 style={{ ...D, fontSize: '3.4rem', fontWeight: 800, color: INK, lineHeight: 1.12, margin: '0 0 22px', textTransform: 'uppercase' }}>
+                Canberra's trusted smash repairers<br />
+                <span style={{ color: GREEN_DARK, fontWeight: 300 }}>since 1988</span>
               </h1>
-              <div style={{ width: 50, height: 3, background: GREEN, marginBottom: 24 }} />
-              <p style={{ ...M, fontSize: '1.02rem', fontWeight: 400, color: TEXT, lineHeight: 1.9, marginBottom: 36, maxWidth: 480 }}>
+              <div style={{ width: 56, height: 4, background: GREEN, marginBottom: 26 }} />
+              <p style={{ ...M, fontSize: '1.1rem', fontWeight: 400, color: TEXT, lineHeight: 1.85, marginBottom: 38, maxWidth: 500 }}>
                 Serving Canberra's motorists since 1988 — private, fleet, commercial and insurance work. One of the most dependable smash repairers in the Northside.
               </p>
             </div>
             <div style={{ display: 'flex', gap: 14, animation: 'fadeup 0.8s ease 0.6s both' }}>
-              <Link href="/quote" style={{ ...M, background: GREEN_DARK, color: '#fff', padding: '14px 34px', textDecoration: 'none', fontSize: '.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', borderRadius: '2px' }}>
+              <Link href="/quote" style={{ ...M, background: GREEN_DARK, color: '#fff', padding: '16px 40px', textDecoration: 'none', fontSize: '.8rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', borderRadius: '2px' }}>
                 Request a Quote
               </Link>
-              <Link href="/contact" style={{ ...M, background: 'transparent', color: INK, padding: '14px 34px', textDecoration: 'none', fontSize: '.68rem', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase', border: `1px solid ${INK}` }}>
+              <Link href="/contact" style={{ ...M, background: 'transparent', color: INK, padding: '16px 40px', textDecoration: 'none', fontSize: '.8rem', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', border: `1.5px solid ${INK}`, borderRadius: '2px' }}>
                 Contact Us
               </Link>
             </div>
