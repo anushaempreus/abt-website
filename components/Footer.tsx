@@ -3,7 +3,7 @@ import Link from 'next/link'
 const GREEN = '#2b8a34'
 const INK = '#141813'
 const BORDER = '#e2e7e1'
-const M = "'Montserrat', sans-serif"
+const M = "var(--font-body), sans-serif"
 
 const links = [
   { href: '/',         label: 'Home' },

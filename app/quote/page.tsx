@@ -10,7 +10,8 @@ const CARD = '#ffffff'
 const BORDER = '#e2e7e1'
 const TEXT = '#41473f'
 const MUTED = '#79817a'
-const M: React.CSSProperties = { fontFamily: "'Montserrat', sans-serif" }
+const M: React.CSSProperties = { fontFamily: 'var(--font-body), sans-serif' }
+const D: React.CSSProperties = { fontFamily: 'var(--font-display), var(--font-body), sans-serif' }
 
 const years = Array.from({ length: 2021 - 1900 + 1 }, (_, i) => 2021 - i)
 
@@ -52,7 +53,7 @@ const inputStyle = {
   fontSize: '.85rem',
   background: BAND,
   outline: 'none',
-  fontFamily: "'Montserrat', sans-serif",
+  fontFamily: "var(--font-body), sans-serif",
   color: INK,
   marginBottom: '20px',
   display: 'block',
@@ -68,7 +69,7 @@ const labelStyle = {
   letterSpacing: '1.5px',
   textTransform: 'uppercase',
   marginBottom: '8px',
-  fontFamily: "'Montserrat', sans-serif",
+  fontFamily: "var(--font-body), sans-serif",
 } as React.CSSProperties
 
 const photoTips = [
@@ -136,7 +137,7 @@ export default function Quote() {
         <div style={{ ...M, width: 36, height: 36, background: GREEN_DARK, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '.68rem', fontWeight: 700, flexShrink: 0 }}>
           {String(num).padStart(2, '0')}
         </div>
-        <h2 style={{ ...M, fontSize: '1rem', fontWeight: 800, color: INK, margin: 0, textTransform: 'uppercase', letterSpacing: '1px' }}>{title}</h2>
+        <h2 style={{ ...D, fontSize: '1rem', fontWeight: 800, color: INK, margin: 0, textTransform: 'uppercase', letterSpacing: '1px' }}>{title}</h2>
       </div>
       {children}
     </FadeUp>
@@ -152,8 +153,8 @@ export default function Quote() {
           <div>
             <div style={{ animation: 'fadeup 0.8s ease 0.2s both' }}><Label text="Get started" /></div>
             <div style={{ animation: 'fadeup 0.8s ease 0.4s both' }}>
-              <h1 style={{ ...M, fontSize: '4rem', fontWeight: 900, color: INK, lineHeight: 1, margin: '0 0 8px' }}>NEED A</h1>
-              <h1 style={{ ...M, fontSize: '4rem', fontWeight: 300, color: GREEN_DARK, lineHeight: 1.1, margin: '0 0 24px', letterSpacing: '4px' }}>QUOTE?</h1>
+              <h1 style={{ ...D, fontSize: '4rem', fontWeight: 900, color: INK, lineHeight: 1, margin: '0 0 8px' }}>NEED A</h1>
+              <h1 style={{ ...D, fontSize: '4rem', fontWeight: 300, color: GREEN_DARK, lineHeight: 1.1, margin: '0 0 24px', letterSpacing: '4px' }}>QUOTE?</h1>
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.6s both' }}>
               <div style={{ width: 48, height: 3, background: GREEN, marginBottom: 20 }} />
@@ -186,7 +187,7 @@ export default function Quote() {
                 <div style={{ width: 64, height: 64, background: GREEN_DARK, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px' }}>
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
-                <h2 style={{ ...M, fontSize: '1.4rem', fontWeight: 900, color: INK, marginBottom: 12, textTransform: 'uppercase' }}>Quote Request Sent!</h2>
+                <h2 style={{ ...D, fontSize: '1.4rem', fontWeight: 900, color: INK, marginBottom: 12, textTransform: 'uppercase' }}>Quote Request Sent!</h2>
                 <p style={{ ...M, fontSize: '.9rem', color: MUTED, lineHeight: 1.8, margin: 0 }}>Thank you. We will be in touch with you as soon as possible.</p>
               </div>
             </FadeUp>

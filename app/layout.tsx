@@ -1,20 +1,20 @@
 import type { Metadata, Viewport } from 'next'
-import { Montserrat, Raleway } from 'next/font/google'
+import { Barlow, Barlow_Condensed } from 'next/font/google'
 import './globals.css'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Intro from '../components/Intro'
 
-const montserrat = Montserrat({
-  variable: '--font-montserrat',
+const barlow = Barlow({
+  variable: '--font-body',
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  weight: ['400', '500', '600', '700', '800'],
 })
 
-const raleway = Raleway({
-  variable: '--font-raleway',
+const barlowCondensed = Barlow_Condensed({
+  variable: '--font-display',
   subsets: ['latin'],
-  weight: ['400', '600', '700'],
+  weight: ['300', '500', '600', '700', '800', '900'],
 })
 
 const SITE_URL = 'https://autobodytech.net.au'
@@ -109,8 +109,8 @@ const businessJsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${raleway.variable}`}>
-      <body style={{ margin: 0, padding: 0, background: '#ffffff', fontFamily: 'var(--font-montserrat), sans-serif', overflowX: 'hidden' }}>
+    <html lang="en" className={`${barlow.variable} ${barlowCondensed.variable}`}>
+      <body style={{ margin: 0, padding: 0, background: '#ffffff', fontFamily: 'var(--font-body), sans-serif', overflowX: 'hidden' }}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(businessJsonLd) }}

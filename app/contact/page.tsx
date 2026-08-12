@@ -10,7 +10,8 @@ const CARD = '#ffffff'
 const BORDER = '#e2e7e1'
 const TEXT = '#41473f'
 const MUTED = '#79817a'
-const M: React.CSSProperties = { fontFamily: "'Montserrat', sans-serif" }
+const M: React.CSSProperties = { fontFamily: 'var(--font-body), sans-serif' }
+const D: React.CSSProperties = { fontFamily: 'var(--font-display), var(--font-body), sans-serif' }
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
@@ -56,7 +57,7 @@ const inputStyle: React.CSSProperties = {
   fontSize: '.88rem',
   background: BAND,
   outline: 'none',
-  fontFamily: "'Montserrat', sans-serif",
+  fontFamily: "var(--font-body), sans-serif",
   color: INK,
   marginBottom: '20px',
   display: 'block',
@@ -71,7 +72,7 @@ const labelStyle: React.CSSProperties = {
   letterSpacing: '2px',
   textTransform: 'uppercase',
   marginBottom: '8px',
-  fontFamily: "'Montserrat', sans-serif",
+  fontFamily: "var(--font-body), sans-serif",
 }
 
 const badgeStyle: React.CSSProperties = {
@@ -162,8 +163,8 @@ export default function Contact() {
           <div>
             <div style={{ animation: 'fadeup 0.8s ease 0.2s both' }}><Label text="Get in touch" /></div>
             <div style={{ animation: 'fadeup 0.8s ease 0.4s both' }}>
-              <h1 style={{ ...M, fontSize: '4rem', fontWeight: 900, color: INK, lineHeight: 1, margin: '0 0 8px' }}>CONTACT</h1>
-              <h1 style={{ ...M, fontSize: '4rem', fontWeight: 300, color: GREEN_DARK, lineHeight: 1.1, margin: '0 0 24px', letterSpacing: '4px' }}>ABT</h1>
+              <h1 style={{ ...D, fontSize: '4rem', fontWeight: 900, color: INK, lineHeight: 1, margin: '0 0 8px' }}>CONTACT</h1>
+              <h1 style={{ ...D, fontSize: '4rem', fontWeight: 300, color: GREEN_DARK, lineHeight: 1.1, margin: '0 0 24px', letterSpacing: '4px' }}>ABT</h1>
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.6s both' }}>
               <div style={{ width: 48, height: 3, background: GREEN, marginBottom: 20 }} />
@@ -206,7 +207,7 @@ export default function Contact() {
         <div style={{ padding: '64px 80px', borderRight: `1px solid ${BORDER}` }}>
           <FadeUp>
             <Label text="Send us a message" />
-            <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 900, color: INK, marginBottom: 8, textTransform: 'uppercase' }}>
+            <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 900, color: INK, marginBottom: 8, textTransform: 'uppercase' }}>
               Get In <span style={{ color: GREEN_DARK, fontWeight: 300 }}>Touch</span>
             </h2>
             <div style={{ width: 48, height: 3, background: GREEN, marginBottom: 40 }} />
@@ -232,7 +233,7 @@ export default function Contact() {
                 <div style={{ marginBottom: '48px' }}>
                   <div style={sectionHeaderStyle}>
                     <div style={badgeStyle}>1</div>
-                    <h2 style={{ ...M, fontSize: '1rem', fontWeight: 700, color: INK, margin: 0, letterSpacing: '1px', textTransform: 'uppercase' }}>Contact Details</h2>
+                    <h2 style={{ ...D, fontSize: '1rem', fontWeight: 700, color: INK, margin: 0, letterSpacing: '1px', textTransform: 'uppercase' }}>Contact Details</h2>
                   </div>
                   <input ref={websiteRef} type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: '-9999px', height: 0, width: 0, opacity: 0 }} />
                   <label style={labelStyle}>name: *</label>
@@ -256,7 +257,7 @@ export default function Contact() {
                 <div style={{ marginBottom: '48px' }}>
                   <div style={sectionHeaderStyle}>
                     <div style={badgeStyle}>2</div>
-                    <h2 style={{ ...M, fontSize: '1rem', fontWeight: 700, color: INK, margin: 0, letterSpacing: '1px', textTransform: 'uppercase' }}>Vehicle Information</h2>
+                    <h2 style={{ ...D, fontSize: '1rem', fontWeight: 700, color: INK, margin: 0, letterSpacing: '1px', textTransform: 'uppercase' }}>Vehicle Information</h2>
                   </div>
                   <label style={labelStyle}>Make:</label>
                   <input ref={makeRef} type="text" placeholder="e.g. Toyota" style={inputStyle} />
@@ -274,7 +275,7 @@ export default function Contact() {
                 <div style={{ marginBottom: '40px' }}>
                   <div style={sectionHeaderStyle}>
                     <div style={badgeStyle}>3</div>
-                    <h2 style={{ ...M, fontSize: '1rem', fontWeight: 700, color: INK, margin: 0, letterSpacing: '1px', textTransform: 'uppercase' }}>Message</h2>
+                    <h2 style={{ ...D, fontSize: '1rem', fontWeight: 700, color: INK, margin: 0, letterSpacing: '1px', textTransform: 'uppercase' }}>Message</h2>
                   </div>
                   <label style={labelStyle}>Message: *</label>
                   <textarea ref={messageRef} placeholder="How can we help you?"

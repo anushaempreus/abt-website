@@ -11,7 +11,8 @@ const CARD = '#ffffff'
 const BORDER = '#e2e7e1'
 const TEXT = '#41473f'
 const MUTED = '#79817a'
-const M: React.CSSProperties = { fontFamily: "'Montserrat', sans-serif" }
+const M: React.CSSProperties = { fontFamily: 'var(--font-body), sans-serif' }
+const D: React.CSSProperties = { fontFamily: 'var(--font-display), var(--font-body), sans-serif' }
 
 function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null)
@@ -89,8 +90,8 @@ export default function About() {
               <Label text="Who we are" />
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.4s both' }}>
-              <h1 style={{ ...M, fontSize: '4rem', fontWeight: 900, color: INK, lineHeight: 1, margin: '0 0 8px' }}>ABOUT</h1>
-              <h1 style={{ ...M, fontSize: '4rem', fontWeight: 300, color: GREEN_DARK, lineHeight: 1.1, margin: '0 0 24px', letterSpacing: '4px' }}>ABT</h1>
+              <h1 style={{ ...D, fontSize: '4rem', fontWeight: 900, color: INK, lineHeight: 1, margin: '0 0 8px' }}>ABOUT</h1>
+              <h1 style={{ ...D, fontSize: '4rem', fontWeight: 300, color: GREEN_DARK, lineHeight: 1.1, margin: '0 0 24px', letterSpacing: '4px' }}>ABT</h1>
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.6s both' }}>
               <div style={{ width: 48, height: 3, background: GREEN, marginBottom: 20 }} />
@@ -125,8 +126,8 @@ export default function About() {
           <div style={{ padding: '70px 70px 70px 56px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <FadeUp delay={0.2}><Label text="Est. October 1988" /></FadeUp>
             <FadeUp delay={0.3}>
-              <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>ABOUT</h2>
-              <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: '0 0 24px', letterSpacing: '4px' }}>US</h2>
+              <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>ABOUT</h2>
+              <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: '0 0 24px', letterSpacing: '4px' }}>US</h2>
               <div style={{ width: 40, height: 3, background: GREEN, marginBottom: 36 }} />
             </FadeUp>
             <FadeUp delay={0.4}>
@@ -155,8 +156,8 @@ export default function About() {
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 64, flexWrap: 'wrap', gap: 24 }}>
             <div>
               <Label text="Recognition" />
-              <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>AWARDS &</h2>
-              <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: 0, letterSpacing: '3px' }}>ACHIEVEMENTS</h2>
+              <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>AWARDS &</h2>
+              <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: 0, letterSpacing: '3px' }}>ACHIEVEMENTS</h2>
             </div>
             <div style={{ width: 48, height: 3, background: GREEN }} />
           </div>
@@ -179,8 +180,8 @@ export default function About() {
         <FadeUp>
           <div style={{ textAlign: 'center', marginBottom: 64 }}>
             <div style={{ display: 'flex', justifyContent: 'center' }}><Label text="Step by step" /></div>
-            <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>COLLISION REPAIR</h2>
-            <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: 0, letterSpacing: '3px' }}>PROCESS</h2>
+            <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>COLLISION REPAIR</h2>
+            <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: 0, letterSpacing: '3px' }}>PROCESS</h2>
           </div>
         </FadeUp>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
@@ -211,7 +212,7 @@ export default function About() {
         />
         <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 80px' }}>
           <FadeUp>
-            <h2 style={{ ...M, fontSize: '1.6rem', fontWeight: 300, color: '#fff', maxWidth: 620, lineHeight: 1.7, fontStyle: 'italic', textAlign: 'center' }}>
+            <h2 style={{ ...D, fontSize: '1.6rem', fontWeight: 300, color: '#fff', maxWidth: 620, lineHeight: 1.7, fontStyle: 'italic', textAlign: 'center' }}>
               "We are constantly working to finetune our already exceptional customer service and ensure your collision repair experience is a <span style={{ color: '#fff', fontWeight: 900, fontStyle: 'italic' }}>positive one.</span>"
             </h2>
           </FadeUp>
@@ -223,8 +224,8 @@ export default function About() {
         <FadeUp>
           <div style={{ textAlign: 'center', marginBottom: 56 }}>
             <div style={{ display: 'flex', justifyContent: 'center' }}><Label text="Behind the scenes" /></div>
-            <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>OUR</h2>
-            <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: 0, letterSpacing: '3px' }}>WORKSHOP</h2>
+            <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>OUR</h2>
+            <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: 0, letterSpacing: '3px' }}>WORKSHOP</h2>
           </div>
         </FadeUp>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 24 }}>
@@ -242,8 +243,8 @@ export default function About() {
       <div style={{ background: BAND, padding: '100px 80px' }}>
         <FadeUp>
           <Label text="Our commitments" />
-          <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>WORKPLACE &</h2>
-          <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: '0 0 56px', letterSpacing: '3px' }}>COMPLIANCE</h2>
+          <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>WORKPLACE &</h2>
+          <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: '0 0 56px', letterSpacing: '3px' }}>COMPLIANCE</h2>
         </FadeUp>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
           {[

@@ -39,7 +39,8 @@ const CARD = '#ffffff'
 const BORDER = '#e2e7e1'
 const TEXT = '#41473f'
 const MUTED = '#79817a'
-const M: React.CSSProperties = { fontFamily: "'Montserrat', sans-serif" }
+const M: React.CSSProperties = { fontFamily: 'var(--font-body), sans-serif' }
+const D: React.CSSProperties = { fontFamily: 'var(--font-display), var(--font-body), sans-serif' }
 
 function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null)
@@ -121,7 +122,7 @@ export default function Home() {
               />
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.35s both' }}>
-              <h1 style={{ ...M, fontSize: '2.1rem', fontWeight: 900, color: INK, lineHeight: 1.3, margin: '0 0 20px', textTransform: 'uppercase' }}>
+              <h1 style={{ ...D, fontSize: '2.1rem', fontWeight: 900, color: INK, lineHeight: 1.3, margin: '0 0 20px', textTransform: 'uppercase' }}>
                 Canberra's trusted smash repairers <span style={{ color: GREEN_DARK, fontWeight: 300 }}>since 1988</span>
               </h1>
               <div style={{ width: 50, height: 3, background: GREEN, marginBottom: 24 }} />
@@ -176,8 +177,8 @@ export default function Home() {
           <div style={{ padding: '60px 60px 60px 50px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
             <FadeUp delay={0.2}><Label text="Est. October 1988" /></FadeUp>
             <FadeUp delay={0.3}>
-              <h2 style={{ ...M, fontSize: '2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>ABOUT</h2>
-              <h2 style={{ ...M, fontSize: '2rem', fontWeight: 300, color: GREEN_DARK, margin: '0 0 20px', letterSpacing: '4px' }}>US</h2>
+              <h2 style={{ ...D, fontSize: '2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>ABOUT</h2>
+              <h2 style={{ ...D, fontSize: '2rem', fontWeight: 300, color: GREEN_DARK, margin: '0 0 20px', letterSpacing: '4px' }}>US</h2>
               <div style={{ width: 40, height: 3, background: GREEN, marginBottom: 24 }} />
             </FadeUp>
             <FadeUp delay={0.4}>
@@ -205,8 +206,8 @@ export default function Home() {
         <FadeUp>
           <div style={{ textAlign: 'center', marginBottom: 70 }}>
             <div style={{ display: 'flex', justifyContent: 'center' }}><Label text="Why choose us" /></div>
-            <h2 style={{ ...M, fontSize: '2.4rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>WHY GET YOUR VEHICLE</h2>
-            <h2 style={{ ...M, fontSize: '2.4rem', fontWeight: 300, color: GREEN_DARK, margin: 0, letterSpacing: '3px' }}>REPAIRED WITH US?</h2>
+            <h2 style={{ ...D, fontSize: '2.4rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>WHY GET YOUR VEHICLE</h2>
+            <h2 style={{ ...D, fontSize: '2.4rem', fontWeight: 300, color: GREEN_DARK, margin: 0, letterSpacing: '3px' }}>REPAIRED WITH US?</h2>
           </div>
         </FadeUp>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, justifyContent: 'center' }}>
@@ -233,7 +234,7 @@ export default function Home() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 56, flexWrap: 'wrap', gap: 24 }}>
             <div>
               <Label text="What we do" />
-              <h2 style={{ ...M, fontSize: '2.4rem', fontWeight: 900, color: INK, margin: 0 }}>OUR SERVICES</h2>
+              <h2 style={{ ...D, fontSize: '2.4rem', fontWeight: 900, color: INK, margin: 0 }}>OUR SERVICES</h2>
             </div>
             <Link href="/services" style={{ ...M, fontSize: '.65rem', fontWeight: 700, color: GREEN_DARK, textDecoration: 'none', letterSpacing: '2px', textTransform: 'uppercase', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
               <span style={{ width: 20, height: 1, background: GREEN_DARK, display: 'inline-block' }} />View all services
@@ -261,7 +262,7 @@ export default function Home() {
         <FadeUp>
           <div style={{ textAlign: 'center', marginBottom: 40, padding: '0 80px' }}>
             <div style={{ display: 'flex', justifyContent: 'center' }}><Label text="What our customers say" /></div>
-            <h2 style={{ ...M, fontSize: '1.8rem', fontWeight: 900, color: INK, margin: 0 }}>TESTIMONIALS</h2>
+            <h2 style={{ ...D, fontSize: '1.8rem', fontWeight: 900, color: INK, margin: 0 }}>TESTIMONIALS</h2>
           </div>
         </FadeUp>
         <div style={{ position: 'relative', width: '100%', overflow: 'hidden' }}>
@@ -291,7 +292,7 @@ export default function Home() {
                 <div style={{ width: 28, height: 1, background: '#fff' }} />
                 <p style={{ ...M, fontSize: '.65rem', fontWeight: 700, letterSpacing: '3px', color: '#fff', textTransform: 'uppercase', margin: 0 }}>Get in touch</p>
               </div>
-              <h2 style={{ ...M, fontSize: '2rem', fontWeight: 900, color: '#fff', margin: '0 0 8px', textTransform: 'uppercase' }}>Has your vehicle been damaged?</h2>
+              <h2 style={{ ...D, fontSize: '2rem', fontWeight: 900, color: '#fff', margin: '0 0 8px', textTransform: 'uppercase' }}>Has your vehicle been damaged?</h2>
               <p style={{ ...M, fontSize: '.9rem', fontWeight: 400, color: 'rgba(255,255,255,0.85)', margin: 0, lineHeight: 1.8 }}>
                 Contact us today — we make the repair process as simple as possible. All repairs are guaranteed.
               </p>

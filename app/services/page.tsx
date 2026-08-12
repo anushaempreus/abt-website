@@ -11,7 +11,8 @@ const CARD = '#ffffff'
 const BORDER = '#e2e7e1'
 const TEXT = '#41473f'
 const MUTED = '#79817a'
-const M: React.CSSProperties = { fontFamily: "'Montserrat', sans-serif" }
+const M: React.CSSProperties = { fontFamily: 'var(--font-body), sans-serif' }
+const D: React.CSSProperties = { fontFamily: 'var(--font-display), var(--font-body), sans-serif' }
 
 function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null)
@@ -79,8 +80,8 @@ export default function Services() {
               <Label text="What we do" />
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.4s both' }}>
-              <h1 style={{ ...M, fontSize: '4rem', fontWeight: 900, color: INK, lineHeight: 1, margin: '0 0 8px' }}>OUR</h1>
-              <h1 style={{ ...M, fontSize: '4rem', fontWeight: 300, color: GREEN_DARK, lineHeight: 1.1, margin: '0 0 24px', letterSpacing: '4px' }}>SERVICES</h1>
+              <h1 style={{ ...D, fontSize: '4rem', fontWeight: 900, color: INK, lineHeight: 1, margin: '0 0 8px' }}>OUR</h1>
+              <h1 style={{ ...D, fontSize: '4rem', fontWeight: 300, color: GREEN_DARK, lineHeight: 1.1, margin: '0 0 24px', letterSpacing: '4px' }}>SERVICES</h1>
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.6s both' }}>
               <div style={{ width: 48, height: 3, background: GREEN }} />
@@ -103,7 +104,7 @@ export default function Services() {
         <div style={{ maxWidth: 760, margin: '0 auto' }}>
           <FadeUp>
             <Label text="Quality repairs since 1988" />
-            <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 24px' }}>WHAT WE OFFER</h2>
+            <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 24px' }}>WHAT WE OFFER</h2>
             <p style={{ ...M, fontSize: '.95rem', color: TEXT, lineHeight: 1.9, marginBottom: 48 }}>
               Auto Body Technicians is a privately owned boutique smash repair business. We keep it simple: quality collision repairs, clear communication, and a process that inconveniences you as little as possible.
             </p>
@@ -128,7 +129,7 @@ export default function Services() {
         <FadeUp>
           <div style={{ textAlign: 'center', marginBottom: 56 }}>
             <div style={{ display: 'flex', justifyContent: 'center' }}><Label text="Making it easy" /></div>
-            <h2 style={{ ...M, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: 0 }}>HOW WE SUPPORT YOU</h2>
+            <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: 0 }}>HOW WE SUPPORT YOU</h2>
           </div>
         </FadeUp>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
@@ -152,7 +153,7 @@ export default function Services() {
         />
         <div style={{ position: 'relative', padding: '70px 80px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 32 }}>
           <div>
-            <h2 style={{ ...M, fontSize: '1.8rem', fontWeight: 900, color: '#fff', margin: '0 0 8px', textTransform: 'uppercase' }}>Ready to get started?</h2>
+            <h2 style={{ ...D, fontSize: '1.8rem', fontWeight: 900, color: '#fff', margin: '0 0 8px', textTransform: 'uppercase' }}>Ready to get started?</h2>
             <p style={{ ...M, fontSize: '.9rem', color: 'rgba(255,255,255,0.85)', margin: 0, lineHeight: 1.8 }}>
               Request a quote online or get in touch — we'll take it from there.
             </p>

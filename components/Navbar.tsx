@@ -60,7 +60,7 @@ export default function Navbar() {
         display: 'flex', flexDirection: 'column',
         transform: open ? 'translateX(0)' : 'translateX(-100%)',
         transition: 'transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
-        fontFamily: "'Raleway', sans-serif",
+        fontFamily: "var(--font-body), sans-serif",
       }}>
 
         {/* CLOSE + LOGO */}
@@ -80,7 +80,7 @@ export default function Navbar() {
               <Link key={href} href={href} onClick={() => setOpen(false)} style={{
                 display: 'flex', alignItems: 'center', gap: 12,
                 padding: '13px 24px',
-                fontFamily: "'Montserrat', sans-serif",
+                fontFamily: "var(--font-body), sans-serif",
                 fontSize: '.7rem', fontWeight: 700,
                 letterSpacing: '2px', textTransform: 'uppercase',
                 color: active ? GREEN : '#5a615a',
@@ -98,10 +98,10 @@ export default function Navbar() {
 
         {/* BOTTOM */}
         <div style={{ padding: '20px 24px', borderTop: `1px solid ${BORDER}` }}>
-          <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '.6rem', fontWeight: 500, color: '#79817a', lineHeight: 1.8, marginBottom: 8 }}>
+          <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: '.6rem', fontWeight: 500, color: '#79817a', lineHeight: 1.8, marginBottom: 8 }}>
             25 Winchcombe Court<br />Mitchell ACT 2911
           </p>
-          <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '.85rem', fontWeight: 800, color: GREEN, letterSpacing: '1px', margin: 0 }}>
+          <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: '.85rem', fontWeight: 800, color: GREEN, letterSpacing: '1px', margin: 0 }}>
             02 6241 3801
           </p>
         </div>
