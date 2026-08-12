@@ -176,8 +176,8 @@ export default function Contact() {
           <div style={{ animation: 'fadeup 0.8s ease 0.5s both' }}>
             <div className="hcard" style={{ border: `1px solid ${BORDER}`, borderTop: `3px solid ${GREEN}`, boxShadow: '0 12px 40px rgba(20,24,19,0.10)' }}>
               <img
-                src="/images/photo-1530046339160-ce3e530c7d2f.jpg"
-                alt="ABT workshop tool wall"
+                src="/images/photo-1625047509168-a7026f36de04.jpg"
+                alt="Technician inspecting a vehicle in the workshop"
                 style={{ width: '100%', height: 340, objectFit: 'cover', display: 'block' }}
               />
             </div>

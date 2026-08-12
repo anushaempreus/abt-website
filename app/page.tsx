@@ -291,11 +291,7 @@ export default function Home() {
       {/* ── 7. CTA ── */}
       <FadeIn>
         <div style={{ position: 'relative', overflow: 'hidden', background: GREEN_DARK }}>
-          <img
-            src="/images/photo-1558618666-fcd25c85cd64.jpg"
-            alt="Spray painting a vehicle"
-            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.12 }}
-          />
+          <div style={{ position: 'absolute', inset: 0, backgroundImage: 'repeating-linear-gradient(135deg, rgba(255,255,255,0.07) 0 14px, transparent 14px 28px)' }} />
           <div style={{ position: 'relative', padding: '70px 80px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 32 }}>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>

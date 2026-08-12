@@ -72,9 +72,9 @@ const steps = [
 
 const workshopPhotos = [
   { src: '/images/photo-1558618666-fcd25c85cd64.jpg', alt: 'Spray painting a vehicle' },
-  { src: '/images/photo-1615906655593-ad0386982a0f.jpg', alt: 'Technician diagnosing an engine' },
-  { src: '/images/photo-1530046339160-ce3e530c7d2f.jpg', alt: 'Workshop tool wall' },
   { src: '/images/photo-1487754180451-c456f719a1fc.jpg', alt: 'Technician topping up engine oil' },
+  { src: '/images/photo-1599256872237-5dcc0fbe9668.jpg', alt: 'Panel work with hand tools' },
+  { src: '/images/photo-1486262715619-67b85e0b08d3.jpg', alt: 'Engine belt and pulleys close up' },
 ]
 
 export default function About() {
@@ -205,11 +205,7 @@ export default function About() {
 
       {/* ── IMAGE BREAK ── */}
       <div style={{ position: 'relative', height: 320, overflow: 'hidden', background: GREEN_DARK }}>
-        <img
-          src="/images/photo-1558618666-fcd25c85cd64.jpg"
-          alt="Spray painting"
-          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', opacity: 0.12 }}
-        />
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'repeating-linear-gradient(135deg, rgba(255,255,255,0.07) 0 14px, transparent 14px 28px)' }} />
         <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 80px' }}>
           <FadeUp>
             <h2 style={{ ...D, fontSize: '1.6rem', fontWeight: 300, color: '#fff', maxWidth: 620, lineHeight: 1.7, fontStyle: 'italic', textAlign: 'center' }}>

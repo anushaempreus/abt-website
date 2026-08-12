@@ -166,8 +166,8 @@ export default function Quote() {
           <div style={{ animation: 'fadeup 0.8s ease 0.5s both' }}>
             <div className="hcard" style={{ border: `1px solid ${BORDER}`, borderTop: `3px solid ${GREEN}`, boxShadow: '0 12px 40px rgba(20,24,19,0.10)' }}>
               <img
-                src="/images/photo-1487754180451-c456f719a1fc.jpg"
-                alt="Technician topping up engine oil"
+                src="/images/photo-1530046339160-ce3e530c7d2f.jpg"
+                alt="Workshop tools ready for your repair"
                 style={{ width: '100%', height: 340, objectFit: 'cover', display: 'block' }}
               />
             </div>
@@ -245,8 +245,8 @@ export default function Quote() {
                 </p>
                 <div style={{ height: 180, overflow: 'hidden', marginBottom: 24, border: `1px solid ${BORDER}` }}>
                   <img
-                    src="/images/photo-1544636331-e26879cd4d9b.jpg"
-                    alt="Damaged vehicle"
+                    src="/images/photo-1580273916550-e323be2ae537.jpg"
+                    alt="Example photo — complete car in shot"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                   />
                 </div>
