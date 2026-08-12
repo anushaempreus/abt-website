@@ -159,12 +159,12 @@ export default function Contact() {
       {/* HERO */}
       <div style={{ background: BG, borderBottom: `1px solid ${BORDER}` }}>
         <div style={{ height: 12, background: 'repeating-conic-gradient(#141813 0% 25%, #ffffff 0% 50%)', backgroundSize: '12px 12px' }} />
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'center', padding: '80px 80px 70px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 460px), 1fr))', gap: 48, alignItems: 'center', padding: 'clamp(44px, 7vw, 80px) clamp(20px, 5vw, 80px) clamp(40px, 6vw, 70px)', maxWidth: 1440, margin: '0 auto' }}>
           <div>
             <div style={{ animation: 'fadeup 0.8s ease 0.2s both' }}><Label text="Get in touch" /></div>
             <div style={{ animation: 'fadeup 0.8s ease 0.4s both' }}>
-              <h1 style={{ ...D, fontSize: '4rem', fontWeight: 900, color: INK, lineHeight: 1, margin: '0 0 8px' }}>CONTACT</h1>
-              <h1 style={{ ...D, fontSize: '4rem', fontWeight: 300, color: GREEN_DARK, lineHeight: 1.1, margin: '0 0 24px', letterSpacing: '4px' }}>ABT</h1>
+              <h1 style={{ ...D, fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 900, color: INK, lineHeight: 1, margin: '0 0 8px' }}>CONTACT</h1>
+              <h1 style={{ ...D, fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 300, color: GREEN_DARK, lineHeight: 1.1, margin: '0 0 24px', letterSpacing: '4px' }}>ABT</h1>
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.6s both' }}>
               <div style={{ width: 48, height: 3, background: GREEN, marginBottom: 20 }} />
@@ -186,7 +186,7 @@ export default function Contact() {
       </div>
 
       {/* QUICK INFO STRIP */}
-      <div style={{ background: GREEN_DARK, padding: '0 80px', display: 'flex', flexWrap: 'wrap' }}>
+      <div style={{ background: GREEN_DARK, padding: '0 clamp(20px, 5vw, 80px)', display: 'flex', flexWrap: 'wrap' }}>
         {[
           { label: 'Trading Hours', value: 'Mon – Fri: 8:00am – 4:30pm' },
           { label: 'Phone', value: '02 6241 3801' },
@@ -201,13 +201,13 @@ export default function Contact() {
       </div>
 
       {/* MAIN GRID */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 320px', alignItems: 'start' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'stretch' }}>
 
         {/* FORM */}
-        <div style={{ padding: '64px 80px', borderRight: `1px solid ${BORDER}` }}>
+        <div style={{ flex: '1 1 560px', minWidth: 0, padding: 'clamp(40px, 6vw, 64px) clamp(20px, 5vw, 80px)', borderRight: `1px solid ${BORDER}` }}>
           <FadeUp>
             <Label text="Send us a message" />
-            <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 900, color: INK, marginBottom: 8, textTransform: 'uppercase' }}>
+            <h2 style={{ ...D, fontSize: 'clamp(1.75rem, 4vw, 2.2rem)', fontWeight: 900, color: INK, marginBottom: 8, textTransform: 'uppercase' }}>
               Get In <span style={{ color: GREEN_DARK, fontWeight: 300 }}>Touch</span>
             </h2>
             <div style={{ width: 48, height: 3, background: GREEN, marginBottom: 40 }} />
@@ -301,7 +301,7 @@ export default function Contact() {
         </div>
 
         {/* SIDEBAR */}
-        <div style={{ background: BAND, position: 'sticky', top: 0, borderLeft: `1px solid ${BORDER}` }}>
+        <div style={{ flex: '1 1 300px', background: BAND, position: 'sticky', top: 0, borderLeft: `1px solid ${BORDER}` }}>
           <div style={{ padding: '40px 32px', borderBottom: `1px solid ${BORDER}` }}>
             <Label text="Location & Details" />
             <p style={{ ...M, fontSize: '.96rem', fontWeight: 700, color: INK, marginBottom: '20px' }}>ABT Auto Body Technicians</p>

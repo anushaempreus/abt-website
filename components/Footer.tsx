@@ -21,7 +21,7 @@ export default function Footer() {
       <div style={{ height: 12, background: 'repeating-conic-gradient(#141813 0% 25%, #ffffff 0% 50%)', backgroundSize: '12px 12px' }} />
 
       {/* MAIN */}
-      <div style={{ padding: '60px 80px', display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: 60, borderBottom: `1px solid ${BORDER}` }}>
+      <div style={{ padding: 'clamp(40px, 6vw, 60px) clamp(20px, 5vw, 80px)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 230px), 1fr))', gap: 48, borderBottom: `1px solid ${BORDER}` }}>
 
         {/* BRAND */}
         <div>
@@ -74,7 +74,7 @@ export default function Footer() {
       </div>
 
       {/* BOTTOM BAR */}
-      <div style={{ padding: '18px 80px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
+      <div style={{ padding: '18px clamp(20px, 5vw, 80px)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
         <p style={{ fontFamily: M, fontSize: '.78rem', color: '#79827a', margin: 0 }}>
           © {new Date().getFullYear()} ABT Auto Body Technicians. All rights reserved.
         </p>

@@ -113,7 +113,7 @@ export default function Home() {
       <div style={{ background: BG, borderBottom: `1px solid ${BORDER}`, position: 'relative', overflow: 'hidden' }}>
         <div style={{ height: 12, background: 'repeating-conic-gradient(#141813 0% 25%, #ffffff 0% 50%)', backgroundSize: '12px 12px' }} />
         <div style={{ position: 'absolute', top: 0, right: 0, width: '55%', height: '100%', background: 'radial-gradient(circle at 68% 42%, rgba(68,185,74,0.09), transparent 62%)', pointerEvents: 'none' }} />
-        <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 1fr', gap: 56, alignItems: 'center', padding: '70px 80px 90px', minHeight: '76vh', boxSizing: 'border-box', position: 'relative' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 460px), 1fr))', gap: 56, alignItems: 'center', padding: 'clamp(44px, 7vw, 70px) clamp(20px, 5vw, 80px) clamp(48px, 7vw, 90px)', minHeight: '76vh', boxSizing: 'border-box', position: 'relative', maxWidth: 1440, margin: '0 auto' }}>
           <div>
             <div style={{ animation: 'fadeup 0.8s ease 0.1s both' }}>
               <img
@@ -123,7 +123,7 @@ export default function Home() {
               />
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.35s both' }}>
-              <h1 style={{ ...D, fontSize: '3.4rem', fontWeight: 800, color: INK, lineHeight: 1.12, margin: '0 0 22px', textTransform: 'uppercase' }}>
+              <h1 style={{ ...D, fontSize: 'clamp(2.1rem, 5vw, 3.4rem)', fontWeight: 800, color: INK, lineHeight: 1.12, margin: '0 0 22px', textTransform: 'uppercase' }}>
                 Canberra's trusted smash repairers<br />
                 <span style={{ color: GREEN_DARK, fontWeight: 300 }}>since 1988</span>
               </h1>
@@ -132,7 +132,7 @@ export default function Home() {
                 Serving Canberra's motorists since 1988 — private, fleet, commercial and insurance work. One of the most dependable smash repairers in the Northside.
               </p>
             </div>
-            <div style={{ display: 'flex', gap: 14, animation: 'fadeup 0.8s ease 0.6s both' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, animation: 'fadeup 0.8s ease 0.6s both' }}>
               <Link href="/quote" className="btn-lift" style={{ ...M, background: GREEN_DARK, color: '#fff', padding: '16px 40px', textDecoration: 'none', fontSize: '.8rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', borderRadius: '2px' }}>
                 Request a Quote
               </Link>
@@ -162,7 +162,7 @@ export default function Home() {
       </div>
 
       {/* ── 2. STATS BAR ── */}
-      <div style={{ background: BAND, borderBottom: `1px solid ${BORDER}`, display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>
+      <div style={{ background: BAND, borderBottom: `1px solid ${BORDER}`, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 160px), 1fr))' }}>
         {stats.map(({ value, label }, i) => (
           <FadeUp key={label} delay={i * 0.1}>
             <div style={{ padding: '30px 20px', textAlign: 'center', borderRight: i < 3 ? `1px solid ${BORDER}` : 'none' }}>
@@ -174,7 +174,7 @@ export default function Home() {
       </div>
 
       {/* ── 3. ABOUT US ── */}
-      <div style={{ background: BG, borderBottom: `1px solid ${BORDER}`, display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+      <div style={{ background: BG, borderBottom: `1px solid ${BORDER}`, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 460px), 1fr))', overflow: 'hidden' }}>
         <SlideIn from="left" style={{ height: 600, overflow: 'hidden', position: 'relative' }}>
           <img
             src="/images/photo-1615906655593-ad0386982a0f.jpg"
@@ -187,8 +187,8 @@ export default function Home() {
           <div style={{ padding: '60px 60px 60px 50px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
             <FadeUp delay={0.2}><Label text="Est. October 1988" /></FadeUp>
             <FadeUp delay={0.3}>
-              <h2 style={{ ...D, fontSize: '2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>ABOUT</h2>
-              <h2 style={{ ...D, fontSize: '2rem', fontWeight: 300, color: GREEN_DARK, margin: '0 0 20px', letterSpacing: '4px' }}>US</h2>
+              <h2 style={{ ...D, fontSize: 'clamp(1.7rem, 3.8vw, 2rem)', fontWeight: 900, color: INK, margin: '0 0 4px' }}>ABOUT</h2>
+              <h2 style={{ ...D, fontSize: 'clamp(1.7rem, 3.8vw, 2rem)', fontWeight: 300, color: GREEN_DARK, margin: '0 0 20px', letterSpacing: '4px' }}>US</h2>
               <div style={{ width: 40, height: 3, background: GREEN, marginBottom: 24 }} />
             </FadeUp>
             <FadeUp delay={0.4}>
@@ -212,12 +212,12 @@ export default function Home() {
       </div>
 
       {/* ── 4. WHY CHOOSE US ── */}
-      <div style={{ background: BAND, padding: '90px 80px', borderBottom: `1px solid ${BORDER}`, overflow: 'hidden' }}>
+      <div style={{ background: BAND, padding: 'clamp(52px, 7.5vw, 90px) clamp(20px, 5vw, 80px)', borderBottom: `1px solid ${BORDER}`, overflow: 'hidden' }}>
         <FadeUp>
           <div style={{ textAlign: 'center', marginBottom: 70 }}>
             <div style={{ display: 'flex', justifyContent: 'center' }}><Label text="Why choose us" /></div>
-            <h2 style={{ ...D, fontSize: '2.4rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>WHY GET YOUR VEHICLE</h2>
-            <h2 style={{ ...D, fontSize: '2.4rem', fontWeight: 300, color: GREEN_DARK, margin: 0, letterSpacing: '3px' }}>REPAIRED WITH US?</h2>
+            <h2 style={{ ...D, fontSize: 'clamp(1.85rem, 4.2vw, 2.4rem)', fontWeight: 900, color: INK, margin: '0 0 4px' }}>WHY GET YOUR VEHICLE</h2>
+            <h2 style={{ ...D, fontSize: 'clamp(1.85rem, 4.2vw, 2.4rem)', fontWeight: 300, color: GREEN_DARK, margin: 0, letterSpacing: '3px' }}>REPAIRED WITH US?</h2>
           </div>
         </FadeUp>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, justifyContent: 'center' }}>
@@ -239,12 +239,12 @@ export default function Home() {
       </div>
 
       {/* ── 5. SERVICES ── */}
-      <div style={{ background: BG, padding: '90px 80px', borderBottom: `1px solid ${BORDER}` }}>
+      <div style={{ background: BG, padding: 'clamp(52px, 7.5vw, 90px) clamp(20px, 5vw, 80px)', borderBottom: `1px solid ${BORDER}` }}>
         <FadeUp>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 56, flexWrap: 'wrap', gap: 24 }}>
             <div>
               <Label text="What we do" />
-              <h2 style={{ ...D, fontSize: '2.4rem', fontWeight: 900, color: INK, margin: 0 }}>OUR SERVICES</h2>
+              <h2 style={{ ...D, fontSize: 'clamp(1.85rem, 4.2vw, 2.4rem)', fontWeight: 900, color: INK, margin: 0 }}>OUR SERVICES</h2>
             </div>
             <Link href="/services" style={{ ...M, fontSize: '.72rem', fontWeight: 700, color: GREEN_DARK, textDecoration: 'none', letterSpacing: '2px', textTransform: 'uppercase', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
               <span style={{ width: 20, height: 1, background: GREEN_DARK, display: 'inline-block' }} />View all services
@@ -270,16 +270,16 @@ export default function Home() {
       {/* ── 6. TESTIMONIALS BELT ── */}
       <div style={{ background: BAND, borderBottom: `1px solid ${BORDER}`, padding: '56px 0', overflow: 'hidden' }}>
         <FadeUp>
-          <div style={{ textAlign: 'center', marginBottom: 40, padding: '0 80px' }}>
+          <div style={{ textAlign: 'center', marginBottom: 40, padding: '0 clamp(20px, 5vw, 80px)' }}>
             <div style={{ display: 'flex', justifyContent: 'center' }}><Label text="What our customers say" /></div>
-            <h2 style={{ ...D, fontSize: '1.8rem', fontWeight: 900, color: INK, margin: 0 }}>TESTIMONIALS</h2>
+            <h2 style={{ ...D, fontSize: 'clamp(1.55rem, 3.5vw, 1.8rem)', fontWeight: 900, color: INK, margin: 0 }}>TESTIMONIALS</h2>
           </div>
         </FadeUp>
         <div style={{ position: 'relative', width: '100%', overflow: 'hidden' }}>
           <div style={{ display: 'flex', gap: 24, width: 'max-content', animation: 'belt 45s linear infinite' }}>
             {[...testimonials, ...testimonials].map(({ quote, sign }, i) => (
-              <div key={i} style={{ width: 420, flexShrink: 0, background: CARD, border: `1px solid ${BORDER}`, borderTop: `3px solid ${GREEN}`, padding: '32px 34px', boxSizing: 'border-box', boxShadow: '0 2px 12px rgba(20,24,19,0.04)' }}>
-                <div style={{ ...M, fontSize: '2rem', fontWeight: 900, color: GREEN, lineHeight: 1, marginBottom: 12 }}>"</div>
+              <div key={i} style={{ width: 'min(420px, 84vw)', flexShrink: 0, background: CARD, border: `1px solid ${BORDER}`, borderTop: `3px solid ${GREEN}`, padding: '32px 34px', boxSizing: 'border-box', boxShadow: '0 2px 12px rgba(20,24,19,0.04)' }}>
+                <div style={{ ...M, fontSize: 'clamp(1.7rem, 3.8vw, 2rem)', fontWeight: 900, color: GREEN, lineHeight: 1, marginBottom: 12 }}>"</div>
                 <p style={{ ...M, fontSize: '.96rem', fontWeight: 400, color: TEXT, lineHeight: 1.9, margin: '0 0 18px', fontStyle: 'italic' }}>{quote}</p>
                 <p style={{ ...M, fontSize: '.74rem', fontWeight: 800, color: GREEN_DARK, letterSpacing: '2px', textTransform: 'uppercase', margin: 0 }}>— {sign}</p>
               </div>
@@ -292,13 +292,13 @@ export default function Home() {
       <FadeIn>
         <div style={{ position: 'relative', overflow: 'hidden', background: GREEN_DARK }}>
           <div style={{ position: 'absolute', inset: 0, backgroundImage: 'repeating-linear-gradient(135deg, rgba(255,255,255,0.07) 0 14px, transparent 14px 28px)' }} />
-          <div style={{ position: 'relative', padding: '70px 80px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 32 }}>
+          <div style={{ position: 'relative', padding: 'clamp(44px, 6.5vw, 70px) clamp(20px, 5vw, 80px)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 32 }}>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
                 <div style={{ width: 28, height: 1, background: '#fff' }} />
                 <p style={{ ...M, fontSize: '.72rem', fontWeight: 700, letterSpacing: '3px', color: '#fff', textTransform: 'uppercase', margin: 0 }}>Get in touch</p>
               </div>
-              <h2 style={{ ...D, fontSize: '2rem', fontWeight: 900, color: '#fff', margin: '0 0 8px', textTransform: 'uppercase' }}>Has your vehicle been damaged?</h2>
+              <h2 style={{ ...D, fontSize: 'clamp(1.7rem, 3.8vw, 2rem)', fontWeight: 900, color: '#fff', margin: '0 0 8px', textTransform: 'uppercase' }}>Has your vehicle been damaged?</h2>
               <p style={{ ...M, fontSize: '.96rem', fontWeight: 400, color: 'rgba(255,255,255,0.85)', margin: 0, lineHeight: 1.8 }}>
                 Contact us today — we make the repair process as simple as possible. All repairs are guaranteed.
               </p>

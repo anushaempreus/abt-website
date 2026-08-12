@@ -74,14 +74,14 @@ export default function Services() {
       {/* ── HERO ── */}
       <div style={{ background: BG, borderBottom: `1px solid ${BORDER}` }}>
         <div style={{ height: 12, background: 'repeating-conic-gradient(#141813 0% 25%, #ffffff 0% 50%)', backgroundSize: '12px 12px' }} />
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'center', padding: '80px 80px 70px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 460px), 1fr))', gap: 48, alignItems: 'center', padding: 'clamp(44px, 7vw, 80px) clamp(20px, 5vw, 80px) clamp(40px, 6vw, 70px)', maxWidth: 1440, margin: '0 auto' }}>
           <div>
             <div style={{ animation: 'fadeup 0.8s ease 0.2s both' }}>
               <Label text="What we do" />
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.4s both' }}>
-              <h1 style={{ ...D, fontSize: '4rem', fontWeight: 900, color: INK, lineHeight: 1, margin: '0 0 8px' }}>OUR</h1>
-              <h1 style={{ ...D, fontSize: '4rem', fontWeight: 300, color: GREEN_DARK, lineHeight: 1.1, margin: '0 0 24px', letterSpacing: '4px' }}>SERVICES</h1>
+              <h1 style={{ ...D, fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 900, color: INK, lineHeight: 1, margin: '0 0 8px' }}>OUR</h1>
+              <h1 style={{ ...D, fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 300, color: GREEN_DARK, lineHeight: 1.1, margin: '0 0 24px', letterSpacing: '4px' }}>SERVICES</h1>
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.6s both' }}>
               <div style={{ width: 48, height: 3, background: GREEN }} />
@@ -100,11 +100,11 @@ export default function Services() {
       </div>
 
       {/* ── WHAT WE OFFER ── */}
-      <div style={{ background: BG, padding: '100px 80px', borderBottom: `1px solid ${BORDER}` }}>
+      <div style={{ background: BG, padding: 'clamp(56px, 8vw, 100px) clamp(20px, 5vw, 80px)', borderBottom: `1px solid ${BORDER}` }}>
         <div style={{ maxWidth: 760, margin: '0 auto' }}>
           <FadeUp>
             <Label text="Quality repairs since 1988" />
-            <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 24px' }}>WHAT WE OFFER</h2>
+            <h2 style={{ ...D, fontSize: 'clamp(1.75rem, 4vw, 2.2rem)', fontWeight: 900, color: INK, margin: '0 0 24px' }}>WHAT WE OFFER</h2>
             <p style={{ ...M, fontSize: '1.02rem', color: TEXT, lineHeight: 1.9, marginBottom: 48 }}>
               Auto Body Technicians is a privately owned boutique smash repair business. We keep it simple: quality collision repairs, clear communication, and a process that inconveniences you as little as possible.
             </p>
@@ -125,11 +125,11 @@ export default function Services() {
       </div>
 
       {/* ── HOW WE SUPPORT YOU ── */}
-      <div style={{ background: BAND, padding: '100px 80px', borderBottom: `1px solid ${BORDER}` }}>
+      <div style={{ background: BAND, padding: 'clamp(56px, 8vw, 100px) clamp(20px, 5vw, 80px)', borderBottom: `1px solid ${BORDER}` }}>
         <FadeUp>
           <div style={{ textAlign: 'center', marginBottom: 56 }}>
             <div style={{ display: 'flex', justifyContent: 'center' }}><Label text="Making it easy" /></div>
-            <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: 0 }}>HOW WE SUPPORT YOU</h2>
+            <h2 style={{ ...D, fontSize: 'clamp(1.75rem, 4vw, 2.2rem)', fontWeight: 900, color: INK, margin: 0 }}>HOW WE SUPPORT YOU</h2>
           </div>
         </FadeUp>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
@@ -147,9 +147,9 @@ export default function Services() {
       {/* ── CTA ── */}
       <div style={{ position: 'relative', overflow: 'hidden', background: GREEN_DARK }}>
         <div style={{ position: 'absolute', inset: 0, backgroundImage: 'repeating-linear-gradient(135deg, rgba(255,255,255,0.07) 0 14px, transparent 14px 28px)' }} />
-        <div style={{ position: 'relative', padding: '70px 80px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 32 }}>
+        <div style={{ position: 'relative', padding: 'clamp(44px, 6.5vw, 70px) clamp(20px, 5vw, 80px)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 32 }}>
           <div>
-            <h2 style={{ ...D, fontSize: '1.8rem', fontWeight: 900, color: '#fff', margin: '0 0 8px', textTransform: 'uppercase' }}>Ready to get started?</h2>
+            <h2 style={{ ...D, fontSize: 'clamp(1.55rem, 3.5vw, 1.8rem)', fontWeight: 900, color: '#fff', margin: '0 0 8px', textTransform: 'uppercase' }}>Ready to get started?</h2>
             <p style={{ ...M, fontSize: '.96rem', color: 'rgba(255,255,255,0.85)', margin: 0, lineHeight: 1.8 }}>
               Request a quote online or get in touch — we'll take it from there.
             </p>

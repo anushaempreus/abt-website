@@ -84,14 +84,14 @@ export default function About() {
       {/* ── HERO ── */}
       <div style={{ background: BG, borderBottom: `1px solid ${BORDER}` }}>
         <div style={{ height: 12, background: 'repeating-conic-gradient(#141813 0% 25%, #ffffff 0% 50%)', backgroundSize: '12px 12px' }} />
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'center', padding: '80px 80px 70px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 460px), 1fr))', gap: 48, alignItems: 'center', padding: 'clamp(44px, 7vw, 80px) clamp(20px, 5vw, 80px) clamp(40px, 6vw, 70px)', maxWidth: 1440, margin: '0 auto' }}>
           <div>
             <div style={{ animation: 'fadeup 0.8s ease 0.2s both' }}>
               <Label text="Who we are" />
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.4s both' }}>
-              <h1 style={{ ...D, fontSize: '4rem', fontWeight: 900, color: INK, lineHeight: 1, margin: '0 0 8px' }}>ABOUT</h1>
-              <h1 style={{ ...D, fontSize: '4rem', fontWeight: 300, color: GREEN_DARK, lineHeight: 1.1, margin: '0 0 24px', letterSpacing: '4px' }}>ABT</h1>
+              <h1 style={{ ...D, fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 900, color: INK, lineHeight: 1, margin: '0 0 8px' }}>ABOUT</h1>
+              <h1 style={{ ...D, fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 300, color: GREEN_DARK, lineHeight: 1.1, margin: '0 0 24px', letterSpacing: '4px' }}>ABT</h1>
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.6s both' }}>
               <div style={{ width: 48, height: 3, background: GREEN, marginBottom: 20 }} />
@@ -113,7 +113,7 @@ export default function About() {
       </div>
 
       {/* ── ABOUT US ── */}
-      <div style={{ background: BAND, borderBottom: `1px solid ${BORDER}`, display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+      <div style={{ background: BAND, borderBottom: `1px solid ${BORDER}`, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 460px), 1fr))', overflow: 'hidden' }}>
         <SlideIn from="left" style={{ height: 580, overflow: 'hidden', position: 'relative' }}>
           <img
             src="/images/photo-1625047509248-ec889cbff17f.jpg"
@@ -126,8 +126,8 @@ export default function About() {
           <div style={{ padding: '70px 70px 70px 56px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <FadeUp delay={0.2}><Label text="Est. October 1988" /></FadeUp>
             <FadeUp delay={0.3}>
-              <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>ABOUT</h2>
-              <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: '0 0 24px', letterSpacing: '4px' }}>US</h2>
+              <h2 style={{ ...D, fontSize: 'clamp(1.75rem, 4vw, 2.2rem)', fontWeight: 900, color: INK, margin: '0 0 4px' }}>ABOUT</h2>
+              <h2 style={{ ...D, fontSize: 'clamp(1.75rem, 4vw, 2.2rem)', fontWeight: 300, color: GREEN_DARK, margin: '0 0 24px', letterSpacing: '4px' }}>US</h2>
               <div style={{ width: 40, height: 3, background: GREEN, marginBottom: 36 }} />
             </FadeUp>
             <FadeUp delay={0.4}>
@@ -151,13 +151,13 @@ export default function About() {
       </div>
 
       {/* ── AWARDS ── */}
-      <div style={{ background: BG, padding: '100px 80px 60px', borderBottom: `1px solid ${BORDER}` }}>
+      <div style={{ background: BG, padding: 'clamp(56px, 8vw, 100px) clamp(20px, 5vw, 80px) 60px', borderBottom: `1px solid ${BORDER}` }}>
         <FadeUp>
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 64, flexWrap: 'wrap', gap: 24 }}>
             <div>
               <Label text="Recognition" />
-              <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>AWARDS &</h2>
-              <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: 0, letterSpacing: '3px' }}>ACHIEVEMENTS</h2>
+              <h2 style={{ ...D, fontSize: 'clamp(1.75rem, 4vw, 2.2rem)', fontWeight: 900, color: INK, margin: '0 0 4px' }}>AWARDS &</h2>
+              <h2 style={{ ...D, fontSize: 'clamp(1.75rem, 4vw, 2.2rem)', fontWeight: 300, color: GREEN_DARK, margin: 0, letterSpacing: '3px' }}>ACHIEVEMENTS</h2>
             </div>
             <div style={{ width: 48, height: 3, background: GREEN }} />
           </div>
@@ -176,12 +176,12 @@ export default function About() {
       </div>
 
       {/* ── REPAIR PROCESS ── */}
-      <div style={{ background: BAND, padding: '100px 80px', borderBottom: `1px solid ${BORDER}` }}>
+      <div style={{ background: BAND, padding: 'clamp(56px, 8vw, 100px) clamp(20px, 5vw, 80px)', borderBottom: `1px solid ${BORDER}` }}>
         <FadeUp>
           <div style={{ textAlign: 'center', marginBottom: 64 }}>
             <div style={{ display: 'flex', justifyContent: 'center' }}><Label text="Step by step" /></div>
-            <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>COLLISION REPAIR</h2>
-            <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: 0, letterSpacing: '3px' }}>PROCESS</h2>
+            <h2 style={{ ...D, fontSize: 'clamp(1.75rem, 4vw, 2.2rem)', fontWeight: 900, color: INK, margin: '0 0 4px' }}>COLLISION REPAIR</h2>
+            <h2 style={{ ...D, fontSize: 'clamp(1.75rem, 4vw, 2.2rem)', fontWeight: 300, color: GREEN_DARK, margin: 0, letterSpacing: '3px' }}>PROCESS</h2>
           </div>
         </FadeUp>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
@@ -216,12 +216,12 @@ export default function About() {
       </div>
 
       {/* ── OUR WORKSHOP ── */}
-      <div style={{ background: BG, padding: '100px 80px', borderBottom: `1px solid ${BORDER}` }}>
+      <div style={{ background: BG, padding: 'clamp(56px, 8vw, 100px) clamp(20px, 5vw, 80px)', borderBottom: `1px solid ${BORDER}` }}>
         <FadeUp>
           <div style={{ textAlign: 'center', marginBottom: 56 }}>
             <div style={{ display: 'flex', justifyContent: 'center' }}><Label text="Behind the scenes" /></div>
-            <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>OUR</h2>
-            <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: 0, letterSpacing: '3px' }}>WORKSHOP</h2>
+            <h2 style={{ ...D, fontSize: 'clamp(1.75rem, 4vw, 2.2rem)', fontWeight: 900, color: INK, margin: '0 0 4px' }}>OUR</h2>
+            <h2 style={{ ...D, fontSize: 'clamp(1.75rem, 4vw, 2.2rem)', fontWeight: 300, color: GREEN_DARK, margin: 0, letterSpacing: '3px' }}>WORKSHOP</h2>
           </div>
         </FadeUp>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 24 }}>
@@ -236,11 +236,11 @@ export default function About() {
       </div>
 
       {/* ── WORKPLACE & COMPLIANCE ── */}
-      <div style={{ background: BAND, padding: '100px 80px' }}>
+      <div style={{ background: BAND, padding: 'clamp(56px, 8vw, 100px) clamp(20px, 5vw, 80px)' }}>
         <FadeUp>
           <Label text="Our commitments" />
-          <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 4px' }}>WORKPLACE &</h2>
-          <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 300, color: GREEN_DARK, margin: '0 0 56px', letterSpacing: '3px' }}>COMPLIANCE</h2>
+          <h2 style={{ ...D, fontSize: 'clamp(1.75rem, 4vw, 2.2rem)', fontWeight: 900, color: INK, margin: '0 0 4px' }}>WORKPLACE &</h2>
+          <h2 style={{ ...D, fontSize: 'clamp(1.75rem, 4vw, 2.2rem)', fontWeight: 300, color: GREEN_DARK, margin: '0 0 56px', letterSpacing: '3px' }}>COMPLIANCE</h2>
         </FadeUp>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
           {[
@@ -255,7 +255,7 @@ export default function About() {
             {
               title: 'Privacy Policy',
               body: 'Auto Body Technicians (ABT) is committed to providing quality services to you and this policy outlines our ongoing obligations to you in respect of how we manage your Personal Information.',
-              link: { label: 'Read Privacy Policy →', href: 'https://autobodytech.net.au/files/PrivacyPolicyClientsInformation.pdf' },
+              link: { label: 'Read Privacy Policy →', href: '/files/privacy-policy.pdf' },
             },
           ].map(({ title, body, link }, i) => (
             <FadeUp key={title} delay={i * 0.12}>

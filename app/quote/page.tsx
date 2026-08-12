@@ -149,12 +149,12 @@ export default function Quote() {
       {/* HERO */}
       <div style={{ background: BG, borderBottom: `1px solid ${BORDER}` }}>
         <div style={{ height: 12, background: 'repeating-conic-gradient(#141813 0% 25%, #ffffff 0% 50%)', backgroundSize: '12px 12px' }} />
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'center', padding: '80px 80px 70px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 460px), 1fr))', gap: 48, alignItems: 'center', padding: 'clamp(44px, 7vw, 80px) clamp(20px, 5vw, 80px) clamp(40px, 6vw, 70px)', maxWidth: 1440, margin: '0 auto' }}>
           <div>
             <div style={{ animation: 'fadeup 0.8s ease 0.2s both' }}><Label text="Get started" /></div>
             <div style={{ animation: 'fadeup 0.8s ease 0.4s both' }}>
-              <h1 style={{ ...D, fontSize: '4rem', fontWeight: 900, color: INK, lineHeight: 1, margin: '0 0 8px' }}>NEED A</h1>
-              <h1 style={{ ...D, fontSize: '4rem', fontWeight: 300, color: GREEN_DARK, lineHeight: 1.1, margin: '0 0 24px', letterSpacing: '4px' }}>QUOTE?</h1>
+              <h1 style={{ ...D, fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 900, color: INK, lineHeight: 1, margin: '0 0 8px' }}>NEED A</h1>
+              <h1 style={{ ...D, fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 300, color: GREEN_DARK, lineHeight: 1.1, margin: '0 0 24px', letterSpacing: '4px' }}>QUOTE?</h1>
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.6s both' }}>
               <div style={{ width: 48, height: 3, background: GREEN, marginBottom: 20 }} />
@@ -176,10 +176,10 @@ export default function Quote() {
       </div>
 
       {/* MAIN CONTENT */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', alignItems: 'start' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'stretch' }}>
 
         {/* FORM */}
-        <div style={{ padding: '70px 70px 70px 80px', borderRight: `1px solid ${BORDER}` }}>
+        <div style={{ flex: '1 1 560px', minWidth: 0, padding: 'clamp(40px, 6vw, 70px) clamp(20px, 5vw, 70px) clamp(40px, 6vw, 70px) clamp(20px, 5vw, 80px)', borderRight: `1px solid ${BORDER}` }}>
 
           {submitted ? (
             <FadeUp>
@@ -275,7 +275,7 @@ export default function Quote() {
         </div>
 
         {/* SIDEBAR */}
-        <div style={{ background: BAND, position: 'sticky', top: 0, borderLeft: `1px solid ${BORDER}`, minHeight: '100vh' }}>
+        <div style={{ flex: '1 1 300px', background: BAND, position: 'sticky', top: 0, borderLeft: `1px solid ${BORDER}`, minHeight: '100vh' }}>
 
           {/* LOCATION */}
           <div style={{ padding: '40px 32px', borderBottom: `1px solid ${BORDER}` }}>
