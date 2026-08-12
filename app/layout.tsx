@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from 'next'
-import { Barlow, Barlow_Condensed } from 'next/font/google'
+import { Inter, Barlow_Condensed } from 'next/font/google'
 import './globals.css'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Intro from '../components/Intro'
 
-const barlow = Barlow({
+const inter = Inter({
   variable: '--font-body',
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
@@ -109,7 +109,7 @@ const businessJsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${barlow.variable} ${barlowCondensed.variable}`}>
+    <html lang="en" className={`${inter.variable} ${barlowCondensed.variable}`}>
       <body style={{ margin: 0, padding: 0, background: '#ffffff', fontFamily: 'var(--font-body), sans-serif', overflowX: 'hidden' }}>
         <script
           type="application/ld+json"

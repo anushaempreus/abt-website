@@ -68,7 +68,7 @@ export default function Navbar() {
           <img src="/abt-logo.png" alt="ABT Auto Body Technicians" style={{ width: 140, height: 'auto', display: 'block' }} />
           <button
             onClick={() => setOpen(false)}
-            style={{ background: 'transparent', border: 'none', color: '#9aa19a', cursor: 'pointer', fontSize: '1.2rem', padding: 0, marginTop: 4 }}
+            style={{ background: 'transparent', border: 'none', color: '#79827a', cursor: 'pointer', fontSize: '1.2rem', padding: 0, marginTop: 4 }}
           >✕</button>
         </div>
 
@@ -83,7 +83,7 @@ export default function Navbar() {
                 fontFamily: "var(--font-body), sans-serif",
                 fontSize: '.7rem', fontWeight: 700,
                 letterSpacing: '2px', textTransform: 'uppercase',
-                color: active ? GREEN : '#5a615a',
+                color: active ? GREEN : '#454c45',
                 textDecoration: 'none',
                 borderLeft: active ? `2px solid ${GREEN}` : '2px solid transparent',
                 background: active ? 'rgba(43,138,52,0.07)' : 'transparent',
@@ -98,10 +98,10 @@ export default function Navbar() {
 
         {/* BOTTOM */}
         <div style={{ padding: '20px 24px', borderTop: `1px solid ${BORDER}` }}>
-          <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: '.6rem', fontWeight: 500, color: '#79817a', lineHeight: 1.8, marginBottom: 8 }}>
+          <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: '.68rem', fontWeight: 500, color: '#79817a', lineHeight: 1.8, marginBottom: 8 }}>
             25 Winchcombe Court<br />Mitchell ACT 2911
           </p>
-          <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: '.85rem', fontWeight: 800, color: GREEN, letterSpacing: '1px', margin: 0 }}>
+          <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: '.9rem', fontWeight: 800, color: GREEN, letterSpacing: '1px', margin: 0 }}>
             02 6241 3801
           </p>
         </div>

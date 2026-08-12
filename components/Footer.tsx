@@ -26,7 +26,7 @@ export default function Footer() {
         {/* BRAND */}
         <div>
           <img src="/abt-logo.png" alt="ABT Auto Body Technicians" style={{ width: 190, height: 'auto', display: 'block', marginBottom: 16 }} />
-          <p style={{ fontFamily: M, fontSize: '.82rem', color: '#5a615a', lineHeight: 1.8, maxWidth: 280, marginBottom: 20 }}>
+          <p style={{ fontFamily: M, fontSize: '.88rem', color: '#454c45', lineHeight: 1.8, maxWidth: 280, marginBottom: 20 }}>
             Canberra's trusted smash repairers since 1988.
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -35,8 +35,8 @@ export default function Footer() {
               ['Email', 'admin@autobodytech.net.au'],
             ].map(([label, value]) => (
               <div key={label} style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-                <span style={{ fontFamily: M, fontSize: '.58rem', fontWeight: 700, color: GREEN, textTransform: 'uppercase', letterSpacing: '1px', minWidth: 40 }}>{label}</span>
-                <span style={{ fontFamily: M, fontSize: '.82rem', color: '#5a615a' }}>{value}</span>
+                <span style={{ fontFamily: M, fontSize: '.66rem', fontWeight: 700, color: GREEN, textTransform: 'uppercase', letterSpacing: '1px', minWidth: 40 }}>{label}</span>
+                <span style={{ fontFamily: M, fontSize: '.88rem', color: '#454c45' }}>{value}</span>
               </div>
             ))}
           </div>
@@ -44,10 +44,10 @@ export default function Footer() {
 
         {/* NAV */}
         <div>
-          <p style={{ fontFamily: M, fontSize: '.62rem', fontWeight: 800, color: INK, letterSpacing: '3px', textTransform: 'uppercase', marginBottom: 20 }}>Pages</p>
+          <p style={{ fontFamily: M, fontSize: '.7rem', fontWeight: 800, color: INK, letterSpacing: '3px', textTransform: 'uppercase', marginBottom: 20 }}>Pages</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 11 }}>
             {links.map(({ href, label }) => (
-              <Link key={href} href={href} style={{ fontFamily: M, fontSize: '.82rem', fontWeight: 500, color: '#5a615a', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 10 }}>
+              <Link key={href} href={href} style={{ fontFamily: M, fontSize: '.88rem', fontWeight: 500, color: '#454c45', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 10 }}>
                 <span style={{ width: 12, height: 1, background: GREEN, display: 'inline-block', flexShrink: 0 }} />
                 {label}
               </Link>
@@ -57,7 +57,7 @@ export default function Footer() {
 
         {/* DETAILS */}
         <div>
-          <p style={{ fontFamily: M, fontSize: '.62rem', fontWeight: 800, color: INK, letterSpacing: '3px', textTransform: 'uppercase', marginBottom: 20 }}>Details</p>
+          <p style={{ fontFamily: M, fontSize: '.7rem', fontWeight: 800, color: INK, letterSpacing: '3px', textTransform: 'uppercase', marginBottom: 20 }}>Details</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
             {[
               ['Hours', 'Mon–Fri 8:00am – 4:30pm'],
@@ -65,8 +65,8 @@ export default function Footer() {
               ['Licence', '20000332'],
             ].map(([label, value]) => (
               <div key={label}>
-                <p style={{ fontFamily: M, fontSize: '.58rem', fontWeight: 700, color: GREEN, textTransform: 'uppercase', letterSpacing: '1.5px', margin: '0 0 3px' }}>{label}</p>
-                <p style={{ fontFamily: M, fontSize: '.82rem', color: '#5a615a', margin: 0 }}>{value}</p>
+                <p style={{ fontFamily: M, fontSize: '.66rem', fontWeight: 700, color: GREEN, textTransform: 'uppercase', letterSpacing: '1.5px', margin: '0 0 3px' }}>{label}</p>
+                <p style={{ fontFamily: M, fontSize: '.88rem', color: '#454c45', margin: 0 }}>{value}</p>
               </div>
             ))}
           </div>
@@ -75,10 +75,10 @@ export default function Footer() {
 
       {/* BOTTOM BAR */}
       <div style={{ padding: '18px 80px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
-        <p style={{ fontFamily: M, fontSize: '.72rem', color: '#9aa19a', margin: 0 }}>
+        <p style={{ fontFamily: M, fontSize: '.78rem', color: '#79827a', margin: 0 }}>
           © {new Date().getFullYear()} ABT Auto Body Technicians. All rights reserved.
         </p>
-        <p style={{ fontFamily: M, fontSize: '.72rem', color: '#9aa19a', margin: 0 }}>
+        <p style={{ fontFamily: M, fontSize: '.78rem', color: '#79827a', margin: 0 }}>
           Managed by{' '}
           <a href="https://empreusitsupport.com.au" target="_blank" rel="noopener noreferrer"
             style={{ color: GREEN, textDecoration: 'none', fontWeight: 700 }}>

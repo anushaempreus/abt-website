@@ -8,8 +8,8 @@ const BG = '#ffffff'
 const BAND = '#f3f6f2'
 const CARD = '#ffffff'
 const BORDER = '#e2e7e1'
-const TEXT = '#41473f'
-const MUTED = '#79817a'
+const TEXT = '#2e342e'
+const MUTED = '#5d655d'
 const M: React.CSSProperties = { fontFamily: 'var(--font-body), sans-serif' }
 const D: React.CSSProperties = { fontFamily: 'var(--font-display), var(--font-body), sans-serif' }
 
@@ -39,12 +39,12 @@ function FadeUp({ children, delay = 0, style = {} }: { children: React.ReactNode
 const Label = ({ text, light = false }: { text: string, light?: boolean }) => (
   <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
     <div style={{ width: 28, height: 1, background: light ? GREEN : GREEN_DARK }} />
-    <p style={{ ...M, fontSize: '.6rem', fontWeight: 700, letterSpacing: '3px', color: light ? GREEN : GREEN_DARK, textTransform: 'uppercase', margin: 0 }}>{text}</p>
+    <p style={{ ...M, fontSize: '.68rem', fontWeight: 700, letterSpacing: '3px', color: light ? GREEN : GREEN_DARK, textTransform: 'uppercase', margin: 0 }}>{text}</p>
   </div>
 )
 
 const FieldError = ({ msg }: { msg?: string }) => msg
-  ? <p style={{ ...M, color: '#c0392b', fontSize: '.72rem', marginTop: '-14px', marginBottom: '16px', letterSpacing: '.5px' }}>⚠ {msg}</p>
+  ? <p style={{ ...M, color: '#c0392b', fontSize: '.78rem', marginTop: '-14px', marginBottom: '16px', letterSpacing: '.5px' }}>⚠ {msg}</p>
   : null
 
 const years = Array.from({ length: 2020 - 1900 + 1 }, (_, i) => 2020 - i)
@@ -54,7 +54,7 @@ const inputStyle: React.CSSProperties = {
   padding: '12px 16px',
   border: `1px solid ${BORDER}`,
   borderLeft: `3px solid ${BORDER}`,
-  fontSize: '.88rem',
+  fontSize: '.94rem',
   background: BAND,
   outline: 'none',
   fontFamily: "var(--font-body), sans-serif",
@@ -66,7 +66,7 @@ const inputStyle: React.CSSProperties = {
 
 const labelStyle: React.CSSProperties = {
   display: 'block',
-  fontSize: '.6rem',
+  fontSize: '.68rem',
   fontWeight: 700,
   color: MUTED,
   letterSpacing: '2px',
@@ -83,7 +83,7 @@ const badgeStyle: React.CSSProperties = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  fontSize: '.72rem',
+  fontSize: '.78rem',
   fontWeight: 700,
   flexShrink: 0,
 }
@@ -168,13 +168,13 @@ export default function Contact() {
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.6s both' }}>
               <div style={{ width: 48, height: 3, background: GREEN, marginBottom: 20 }} />
-              <p style={{ ...M, fontSize: '.95rem', color: TEXT, lineHeight: 1.8, maxWidth: 480, margin: 0 }}>
+              <p style={{ ...M, fontSize: '1.02rem', color: TEXT, lineHeight: 1.8, maxWidth: 480, margin: 0 }}>
                 Please fill in the details below and we will contact you as soon as we can.
               </p>
             </div>
           </div>
           <div style={{ animation: 'fadeup 0.8s ease 0.5s both' }}>
-            <div style={{ border: `1px solid ${BORDER}`, borderTop: `3px solid ${GREEN}`, boxShadow: '0 12px 40px rgba(20,24,19,0.10)' }}>
+            <div className="hcard" style={{ border: `1px solid ${BORDER}`, borderTop: `3px solid ${GREEN}`, boxShadow: '0 12px 40px rgba(20,24,19,0.10)' }}>
               <img
                 src="/images/photo-1530046339160-ce3e530c7d2f.jpg"
                 alt="ABT workshop tool wall"
@@ -194,8 +194,8 @@ export default function Contact() {
           { label: 'Guarantee', value: 'All Repairs Guaranteed' },
         ].map(({ label, value }, i) => (
           <div key={label} style={{ padding: '20px 40px 20px 0', marginRight: '40px', borderRight: i < 3 ? '1px solid rgba(255,255,255,.25)' : 'none' }}>
-            <p style={{ ...M, fontSize: '.58rem', fontWeight: 700, color: 'rgba(255,255,255,.75)', textTransform: 'uppercase', letterSpacing: '2px', margin: '0 0 4px' }}>{label}</p>
-            <p style={{ ...M, fontSize: '.85rem', fontWeight: 700, color: '#fff', margin: 0 }}>{value}</p>
+            <p style={{ ...M, fontSize: '.66rem', fontWeight: 700, color: 'rgba(255,255,255,.75)', textTransform: 'uppercase', letterSpacing: '2px', margin: '0 0 4px' }}>{label}</p>
+            <p style={{ ...M, fontSize: '.9rem', fontWeight: 700, color: '#fff', margin: 0 }}>{value}</p>
           </div>
         ))}
       </div>
@@ -222,12 +222,12 @@ export default function Contact() {
                   </svg>
                 </div>
                 <p style={{ ...M, fontSize: '1.2rem', fontWeight: 700, color: INK, marginBottom: '10px' }}>Message Sent!</p>
-                <p style={{ ...M, color: MUTED, fontSize: '.9rem', lineHeight: 1.7, margin: 0 }}>Thank you for contacting us. We will get back to you as soon as possible.</p>
+                <p style={{ ...M, color: MUTED, fontSize: '.96rem', lineHeight: 1.7, margin: 0 }}>Thank you for contacting us. We will get back to you as soon as possible.</p>
               </div>
             </FadeUp>
           ) : (
             <>
-              <p style={{ ...M, color: MUTED, fontSize: '.78rem', fontStyle: 'italic', marginBottom: '40px' }}>* details must be entered</p>
+              <p style={{ ...M, color: MUTED, fontSize: '.84rem', fontStyle: 'italic', marginBottom: '40px' }}>* details must be entered</p>
 
               <FadeUp delay={0.1}>
                 <div style={{ marginBottom: '48px' }}>
@@ -284,15 +284,15 @@ export default function Contact() {
                 </div>
               </FadeUp>
 
-              {error && <p style={{ ...M, color: '#c0392b', fontSize: '.85rem', marginBottom: '16px' }}>{error}</p>}
+              {error && <p style={{ ...M, color: '#c0392b', fontSize: '.9rem', marginBottom: '16px' }}>{error}</p>}
 
               <div style={{ display: 'flex', gap: '12px' }}>
-                <button type="button" onClick={handleSubmit} disabled={loading}
-                  style={{ ...M, background: GREEN_DARK, color: '#fff', padding: '16px 44px', border: 'none', fontSize: '.75rem', fontWeight: 700, cursor: loading ? 'not-allowed' : 'pointer', letterSpacing: '1.5px', textTransform: 'uppercase', opacity: loading ? 0.7 : 1, borderRadius: '2px' }}>
+                <button type="button" className="btn-lift" onClick={handleSubmit} disabled={loading}
+                  style={{ ...M, background: GREEN_DARK, color: '#fff', padding: '16px 44px', border: 'none', fontSize: '.8rem', fontWeight: 700, cursor: loading ? 'not-allowed' : 'pointer', letterSpacing: '1.5px', textTransform: 'uppercase', opacity: loading ? 0.7 : 1, borderRadius: '2px' }}>
                   {loading ? 'Sending...' : 'Submit'}
                 </button>
                 <button type="button"
-                  style={{ ...M, background: 'transparent', color: TEXT, padding: '16px 32px', border: `1px solid ${BORDER}`, fontSize: '.75rem', fontWeight: 600, cursor: 'pointer', letterSpacing: '1.5px', textTransform: 'uppercase', borderRadius: '2px' }}>
+                  style={{ ...M, background: 'transparent', color: TEXT, padding: '16px 32px', border: `1px solid ${BORDER}`, fontSize: '.8rem', fontWeight: 600, cursor: 'pointer', letterSpacing: '1.5px', textTransform: 'uppercase', borderRadius: '2px' }}>
                   Reset
                 </button>
               </div>
@@ -304,7 +304,7 @@ export default function Contact() {
         <div style={{ background: BAND, position: 'sticky', top: 0, borderLeft: `1px solid ${BORDER}` }}>
           <div style={{ padding: '40px 32px', borderBottom: `1px solid ${BORDER}` }}>
             <Label text="Location & Details" />
-            <p style={{ ...M, fontSize: '.9rem', fontWeight: 700, color: INK, marginBottom: '20px' }}>ABT Auto Body Technicians</p>
+            <p style={{ ...M, fontSize: '.96rem', fontWeight: 700, color: INK, marginBottom: '20px' }}>ABT Auto Body Technicians</p>
             {[
               { label: 'Workshop', value: '25 Winchcombe Court\nMitchell ACT 2911' },
               { label: 'Postal', value: 'as above' },
@@ -314,15 +314,15 @@ export default function Contact() {
               { label: 'Licence', value: '20000332' },
             ].map(({ label, value, green }) => (
               <div key={label} style={{ display: 'flex', gap: '10px', marginBottom: '12px', paddingBottom: '12px', borderBottom: `1px solid ${BORDER}` }}>
-                <p style={{ ...M, fontSize: '.6rem', fontWeight: 700, color: MUTED, textTransform: 'uppercase', letterSpacing: '1.5px', margin: 0, minWidth: '60px', flexShrink: 0, paddingTop: '2px' }}>{label}:</p>
-                <p style={{ ...M, fontSize: '.82rem', color: green ? GREEN_DARK : TEXT, whiteSpace: 'pre-line', lineHeight: 1.6, margin: 0 }}>{value}</p>
+                <p style={{ ...M, fontSize: '.68rem', fontWeight: 700, color: MUTED, textTransform: 'uppercase', letterSpacing: '1.5px', margin: 0, minWidth: '60px', flexShrink: 0, paddingTop: '2px' }}>{label}:</p>
+                <p style={{ ...M, fontSize: '.88rem', color: green ? GREEN_DARK : TEXT, whiteSpace: 'pre-line', lineHeight: 1.6, margin: 0 }}>{value}</p>
               </div>
             ))}
           </div>
 
           <div style={{ padding: '28px 32px', borderBottom: `1px solid ${BORDER}`, background: CARD }}>
             <Label text="Towing Service" />
-            <p style={{ ...M, fontSize: '.88rem', color: INK, fontWeight: 700, marginBottom: '4px' }}>Discount Towing Canberra</p>
+            <p style={{ ...M, fontSize: '.94rem', color: INK, fontWeight: 700, marginBottom: '4px' }}>Discount Towing Canberra</p>
             <p style={{ ...M, fontSize: '.8rem', color: MUTED, lineHeight: 1.7, margin: 0 }}>
               24 Hours a Day, 365 Days a Year<br />
               Phone: 0411 259 945

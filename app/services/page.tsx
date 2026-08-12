@@ -9,8 +9,8 @@ const BG = '#ffffff'
 const BAND = '#f3f6f2'
 const CARD = '#ffffff'
 const BORDER = '#e2e7e1'
-const TEXT = '#41473f'
-const MUTED = '#79817a'
+const TEXT = '#2e342e'
+const MUTED = '#5d655d'
 const M: React.CSSProperties = { fontFamily: 'var(--font-body), sans-serif' }
 const D: React.CSSProperties = { fontFamily: 'var(--font-display), var(--font-body), sans-serif' }
 
@@ -40,7 +40,7 @@ function FadeUp({ children, delay = 0, style = {} }: { children: React.ReactNode
 const Label = ({ text, light = false }: { text: string, light?: boolean }) => (
   <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
     <div style={{ width: 28, height: 1, background: light ? GREEN : GREEN_DARK }} />
-    <p style={{ ...M, fontSize: '.6rem', fontWeight: 700, letterSpacing: '3px', color: light ? GREEN : GREEN_DARK, textTransform: 'uppercase', margin: 0 }}>{text}</p>
+    <p style={{ ...M, fontSize: '.68rem', fontWeight: 700, letterSpacing: '3px', color: light ? GREEN : GREEN_DARK, textTransform: 'uppercase', margin: 0 }}>{text}</p>
   </div>
 )
 
@@ -88,7 +88,7 @@ export default function Services() {
             </div>
           </div>
           <div style={{ animation: 'fadeup 0.8s ease 0.5s both' }}>
-            <div style={{ border: `1px solid ${BORDER}`, borderTop: `3px solid ${GREEN}`, boxShadow: '0 12px 40px rgba(20,24,19,0.10)' }}>
+            <div className="hcard" style={{ border: `1px solid ${BORDER}`, borderTop: `3px solid ${GREEN}`, boxShadow: '0 12px 40px rgba(20,24,19,0.10)' }}>
               <img
                 src="/images/photo-1615906655593-ad0386982a0f.jpg"
                 alt="Technician working on a vehicle"
@@ -105,7 +105,7 @@ export default function Services() {
           <FadeUp>
             <Label text="Quality repairs since 1988" />
             <h2 style={{ ...D, fontSize: '2.2rem', fontWeight: 900, color: INK, margin: '0 0 24px' }}>WHAT WE OFFER</h2>
-            <p style={{ ...M, fontSize: '.95rem', color: TEXT, lineHeight: 1.9, marginBottom: 48 }}>
+            <p style={{ ...M, fontSize: '1.02rem', color: TEXT, lineHeight: 1.9, marginBottom: 48 }}>
               Auto Body Technicians is a privately owned boutique smash repair business. We keep it simple: quality collision repairs, clear communication, and a process that inconveniences you as little as possible.
             </p>
           </FadeUp>
@@ -135,9 +135,9 @@ export default function Services() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
           {support.map(({ title, body }, i) => (
             <FadeUp key={title} delay={i * 0.12}>
-              <div style={{ background: CARD, border: `1px solid ${BORDER}`, borderTop: `3px solid ${GREEN}`, padding: '44px 36px', height: '100%', boxSizing: 'border-box', boxShadow: '0 2px 12px rgba(20,24,19,0.04)' }}>
+              <div className="hcard" style={{ background: CARD, border: `1px solid ${BORDER}`, borderTop: `3px solid ${GREEN}`, padding: '44px 36px', height: '100%', boxSizing: 'border-box', boxShadow: '0 2px 12px rgba(20,24,19,0.04)' }}>
                 <h3 style={{ ...M, fontSize: '1rem', fontWeight: 800, color: INK, marginBottom: 18, textTransform: 'uppercase' }}>{title}</h3>
-                <p style={{ ...M, fontSize: '.9rem', color: MUTED, lineHeight: 1.9, margin: 0 }}>{body}</p>
+                <p style={{ ...M, fontSize: '.96rem', color: MUTED, lineHeight: 1.9, margin: 0 }}>{body}</p>
               </div>
             </FadeUp>
           ))}
@@ -154,15 +154,15 @@ export default function Services() {
         <div style={{ position: 'relative', padding: '70px 80px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 32 }}>
           <div>
             <h2 style={{ ...D, fontSize: '1.8rem', fontWeight: 900, color: '#fff', margin: '0 0 8px', textTransform: 'uppercase' }}>Ready to get started?</h2>
-            <p style={{ ...M, fontSize: '.9rem', color: 'rgba(255,255,255,0.85)', margin: 0, lineHeight: 1.8 }}>
+            <p style={{ ...M, fontSize: '.96rem', color: 'rgba(255,255,255,0.85)', margin: 0, lineHeight: 1.8 }}>
               Request a quote online or get in touch — we'll take it from there.
             </p>
           </div>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', flexShrink: 0 }}>
-            <Link href="/quote" style={{ ...M, background: '#141813', color: '#fff', padding: '14px 36px', textDecoration: 'none', fontSize: '.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', borderRadius: '2px' }}>
+            <Link href="/quote" className="btn-lift" style={{ ...M, background: '#141813', color: '#fff', padding: '14px 36px', textDecoration: 'none', fontSize: '.74rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', borderRadius: '2px' }}>
               Request a Quote
             </Link>
-            <Link href="/contact" style={{ ...M, background: 'transparent', color: '#fff', padding: '14px 36px', textDecoration: 'none', fontSize: '.68rem', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase', border: '1px solid rgba(255,255,255,0.5)', borderRadius: '2px' }}>
+            <Link href="/contact" className="btn-lift" style={{ ...M, background: 'transparent', color: '#fff', padding: '14px 36px', textDecoration: 'none', fontSize: '.74rem', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase', border: '1px solid rgba(255,255,255,0.5)', borderRadius: '2px' }}>
               Contact Us
             </Link>
           </div>

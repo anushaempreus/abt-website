@@ -57,6 +57,23 @@ section { padding: 70px 60px; }
   text-transform: uppercase;
 }
 
+.hcard {
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.hcard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(20, 24, 19, 0.12);
+  border-color: rgba(68, 185, 74, 0.45);
+}
+
+.btn-lift {
+  transition: transform .18s ease, filter .18s ease;
+}
+.btn-lift:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.07);
+}
+
 .section-divider {
   width: 40px;
   height: 2px;

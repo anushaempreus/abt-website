@@ -9,8 +9,8 @@ const BG = '#ffffff'
 const BAND = '#f3f6f2'
 const CARD = '#ffffff'
 const BORDER = '#e2e7e1'
-const TEXT = '#41473f'
-const MUTED = '#79817a'
+const TEXT = '#2e342e'
+const MUTED = '#5d655d'
 const M: React.CSSProperties = { fontFamily: 'var(--font-body), sans-serif' }
 const D: React.CSSProperties = { fontFamily: 'var(--font-display), var(--font-body), sans-serif' }
 
@@ -50,7 +50,7 @@ function SlideIn({ children, from = 'left', delay = 0, style = {} }: { children:
 const Label = ({ text, light = false }: { text: string, light?: boolean }) => (
   <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
     <div style={{ width: 28, height: 1, background: light ? GREEN : GREEN_DARK }} />
-    <p style={{ ...M, fontSize: '.6rem', fontWeight: 700, letterSpacing: '3px', color: light ? GREEN : GREEN_DARK, textTransform: 'uppercase', margin: 0 }}>{text}</p>
+    <p style={{ ...M, fontSize: '.68rem', fontWeight: 700, letterSpacing: '3px', color: light ? GREEN : GREEN_DARK, textTransform: 'uppercase', margin: 0 }}>{text}</p>
   </div>
 )
 
@@ -95,13 +95,13 @@ export default function About() {
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.6s both' }}>
               <div style={{ width: 48, height: 3, background: GREEN, marginBottom: 20 }} />
-              <p style={{ ...M, fontSize: '.95rem', color: TEXT, lineHeight: 1.8, maxWidth: 460, margin: 0 }}>
+              <p style={{ ...M, fontSize: '1.02rem', color: TEXT, lineHeight: 1.8, maxWidth: 460, margin: 0 }}>
                 A privately owned boutique smash repairs business, serving Canberra's motorists since October 1988.
               </p>
             </div>
           </div>
           <div style={{ animation: 'fadeup 0.8s ease 0.5s both' }}>
-            <div style={{ border: `1px solid ${BORDER}`, borderTop: `3px solid ${GREEN}`, boxShadow: '0 12px 40px rgba(20,24,19,0.10)' }}>
+            <div className="hcard" style={{ border: `1px solid ${BORDER}`, borderTop: `3px solid ${GREEN}`, boxShadow: '0 12px 40px rgba(20,24,19,0.10)' }}>
               <img
                 src="/images/photo-1619642751034-765dfdf7c58e.jpg"
                 alt="Technician working on an engine"
@@ -131,18 +131,18 @@ export default function About() {
               <div style={{ width: 40, height: 3, background: GREEN, marginBottom: 36 }} />
             </FadeUp>
             <FadeUp delay={0.4}>
-              <p style={{ ...M, fontSize: '.95rem', color: TEXT, lineHeight: 1.9, marginBottom: 16 }}>
+              <p style={{ ...M, fontSize: '1.02rem', color: TEXT, lineHeight: 1.9, marginBottom: 16 }}>
                 Auto Body Technicians has been operating in Canberra since October 1988. We are a privately owned boutique smash repairs business specialising in quality repairs.
               </p>
-              <p style={{ ...M, fontSize: '.95rem', color: TEXT, lineHeight: 1.9, marginBottom: 16 }}>
+              <p style={{ ...M, fontSize: '1.02rem', color: TEXT, lineHeight: 1.9, marginBottom: 16 }}>
                 Customer service is a priority for our company and we are proud of the strong relationships we have with our clients, insurance companies, fleet companies and suppliers.
               </p>
-              <p style={{ ...M, fontSize: '.95rem', color: TEXT, lineHeight: 1.9, marginBottom: 32 }}>
+              <p style={{ ...M, fontSize: '1.02rem', color: TEXT, lineHeight: 1.9, marginBottom: 32 }}>
                 Auto Body Technicians carry out repairs for all major insurance companies.
               </p>
             </FadeUp>
             <FadeUp delay={0.5}>
-              <Link href="/contact" style={{ ...M, fontSize: '.65rem', fontWeight: 700, color: GREEN_DARK, textDecoration: 'none', letterSpacing: '2px', textTransform: 'uppercase', display: 'inline-flex', alignItems: 'center', gap: 10 }}>
+              <Link href="/contact" style={{ ...M, fontSize: '.72rem', fontWeight: 700, color: GREEN_DARK, textDecoration: 'none', letterSpacing: '2px', textTransform: 'uppercase', display: 'inline-flex', alignItems: 'center', gap: 10 }}>
                 <span style={{ width: 24, height: 1, background: GREEN_DARK, display: 'inline-block' }} />Get in touch
               </Link>
             </FadeUp>
@@ -165,10 +165,10 @@ export default function About() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24, paddingBottom: 40 }}>
           {awards.map(({ num, text }, i) => (
             <FadeUp key={num} delay={i * 0.12}>
-              <div style={{ background: CARD, border: `1px solid ${BORDER}`, padding: '44px 36px', position: 'relative', overflow: 'hidden', height: '100%', boxSizing: 'border-box', boxShadow: '0 2px 12px rgba(20,24,19,0.04)' }}>
+              <div className="hcard" style={{ background: CARD, border: `1px solid ${BORDER}`, padding: '44px 36px', position: 'relative', overflow: 'hidden', height: '100%', boxSizing: 'border-box', boxShadow: '0 2px 12px rgba(20,24,19,0.04)' }}>
                 <div style={{ ...M, position: 'absolute', top: -8, right: 16, fontSize: '7rem', fontWeight: 900, color: GREEN, opacity: 0.07, lineHeight: 1, userSelect: 'none' }}>{num}</div>
                 <div style={{ width: 32, height: 2, background: GREEN, marginBottom: 24 }} />
-                <p style={{ ...M, fontSize: '.95rem', fontWeight: 500, color: TEXT, lineHeight: 1.9, margin: 0, position: 'relative' }}>{text}</p>
+                <p style={{ ...M, fontSize: '1.02rem', fontWeight: 500, color: TEXT, lineHeight: 1.9, margin: 0, position: 'relative' }}>{text}</p>
               </div>
             </FadeUp>
           ))}
@@ -187,16 +187,16 @@ export default function About() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
           {steps.map(({ title, desc }, i) => (
             <FadeUp key={title} delay={i * 0.1}>
-              <div style={{ background: CARD, border: `1px solid ${BORDER}`, borderTop: `3px solid ${GREEN}`, padding: '44px 36px', position: 'relative', overflow: 'hidden', height: '100%', boxSizing: 'border-box', boxShadow: '0 2px 12px rgba(20,24,19,0.04)' }}>
+              <div className="hcard" style={{ background: CARD, border: `1px solid ${BORDER}`, borderTop: `3px solid ${GREEN}`, padding: '44px 36px', position: 'relative', overflow: 'hidden', height: '100%', boxSizing: 'border-box', boxShadow: '0 2px 12px rgba(20,24,19,0.04)' }}>
                 <div style={{ ...M, position: 'absolute', top: -8, right: 16, fontSize: '6rem', fontWeight: 900, color: INK, opacity: 0.04, lineHeight: 1, userSelect: 'none' }}>
                   {String(i + 1).padStart(2, '0')}
                 </div>
-                <div style={{ ...M, fontSize: '.62rem', fontWeight: 700, color: GREEN_DARK, letterSpacing: '2px', marginBottom: 20 }}>
+                <div style={{ ...M, fontSize: '.7rem', fontWeight: 700, color: GREEN_DARK, letterSpacing: '2px', marginBottom: 20 }}>
                   {String(i + 1).padStart(2, '0')}
                 </div>
                 <div style={{ width: 28, height: 2, background: GREEN, marginBottom: 20 }} />
                 <h3 style={{ ...M, fontSize: '1rem', fontWeight: 800, color: INK, marginBottom: 16, textTransform: 'uppercase' }}>{title}</h3>
-                <p style={{ ...M, fontSize: '.88rem', color: MUTED, lineHeight: 1.9, margin: 0 }}>{desc}</p>
+                <p style={{ ...M, fontSize: '.94rem', color: MUTED, lineHeight: 1.9, margin: 0 }}>{desc}</p>
               </div>
             </FadeUp>
           ))}
@@ -263,11 +263,11 @@ export default function About() {
             },
           ].map(({ title, body, link }, i) => (
             <FadeUp key={title} delay={i * 0.12}>
-              <div style={{ background: CARD, border: `1px solid ${BORDER}`, padding: '44px 36px', borderTop: `3px solid ${GREEN}`, height: '100%', boxSizing: 'border-box', boxShadow: '0 2px 12px rgba(20,24,19,0.04)' }}>
+              <div className="hcard" style={{ background: CARD, border: `1px solid ${BORDER}`, padding: '44px 36px', borderTop: `3px solid ${GREEN}`, height: '100%', boxSizing: 'border-box', boxShadow: '0 2px 12px rgba(20,24,19,0.04)' }}>
                 <h3 style={{ ...M, fontSize: '1rem', fontWeight: 800, color: INK, marginBottom: 20, textTransform: 'uppercase' }}>{title}</h3>
-                <p style={{ ...M, fontSize: '.9rem', color: MUTED, lineHeight: 1.9, marginBottom: link ? 28 : 0, whiteSpace: 'pre-line' }}>{body}</p>
+                <p style={{ ...M, fontSize: '.96rem', color: MUTED, lineHeight: 1.9, marginBottom: link ? 28 : 0, whiteSpace: 'pre-line' }}>{body}</p>
                 {link && (
-                  <a href={link.href} target="_blank" rel="noopener noreferrer" style={{ ...M, fontSize: '.65rem', fontWeight: 700, color: GREEN_DARK, textDecoration: 'none', letterSpacing: '1.5px' }}>
+                  <a href={link.href} target="_blank" rel="noopener noreferrer" style={{ ...M, fontSize: '.72rem', fontWeight: 700, color: GREEN_DARK, textDecoration: 'none', letterSpacing: '1.5px' }}>
                     {link.label}
                   </a>
                 )}

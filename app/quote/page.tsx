@@ -8,8 +8,8 @@ const BG = '#ffffff'
 const BAND = '#f3f6f2'
 const CARD = '#ffffff'
 const BORDER = '#e2e7e1'
-const TEXT = '#41473f'
-const MUTED = '#79817a'
+const TEXT = '#2e342e'
+const MUTED = '#5d655d'
 const M: React.CSSProperties = { fontFamily: 'var(--font-body), sans-serif' }
 const D: React.CSSProperties = { fontFamily: 'var(--font-display), var(--font-body), sans-serif' }
 
@@ -41,7 +41,7 @@ function FadeUp({ children, delay = 0, style = {} }: { children: React.ReactNode
 const Label = ({ text, light = false }: { text: string, light?: boolean }) => (
   <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
     <div style={{ width: 28, height: 1, background: light ? GREEN : GREEN_DARK }} />
-    <p style={{ ...M, fontSize: '.6rem', fontWeight: 700, letterSpacing: '3px', color: light ? GREEN : GREEN_DARK, textTransform: 'uppercase', margin: 0 }}>{text}</p>
+    <p style={{ ...M, fontSize: '.68rem', fontWeight: 700, letterSpacing: '3px', color: light ? GREEN : GREEN_DARK, textTransform: 'uppercase', margin: 0 }}>{text}</p>
   </div>
 )
 
@@ -50,7 +50,7 @@ const inputStyle = {
   padding: '13px 16px',
   border: `1px solid ${BORDER}`,
   borderLeft: `3px solid ${BORDER}`,
-  fontSize: '.85rem',
+  fontSize: '.9rem',
   background: BAND,
   outline: 'none',
   fontFamily: "var(--font-body), sans-serif",
@@ -63,7 +63,7 @@ const inputStyle = {
 
 const labelStyle = {
   display: 'block',
-  fontSize: '.62rem',
+  fontSize: '.7rem',
   fontWeight: 700,
   color: MUTED,
   letterSpacing: '1.5px',
@@ -134,7 +134,7 @@ export default function Quote() {
   const Section = ({ num, title, children }: { num: number, title: string, children: React.ReactNode }) => (
     <FadeUp style={{ marginBottom: 40 }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 28, paddingBottom: 16, borderBottom: `1px solid ${BORDER}` }}>
-        <div style={{ ...M, width: 36, height: 36, background: GREEN_DARK, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '.68rem', fontWeight: 700, flexShrink: 0 }}>
+        <div style={{ ...M, width: 36, height: 36, background: GREEN_DARK, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '.74rem', fontWeight: 700, flexShrink: 0 }}>
           {String(num).padStart(2, '0')}
         </div>
         <h2 style={{ ...D, fontSize: '1rem', fontWeight: 800, color: INK, margin: 0, textTransform: 'uppercase', letterSpacing: '1px' }}>{title}</h2>
@@ -158,13 +158,13 @@ export default function Quote() {
             </div>
             <div style={{ animation: 'fadeup 0.8s ease 0.6s both' }}>
               <div style={{ width: 48, height: 3, background: GREEN, marginBottom: 20 }} />
-              <p style={{ ...M, fontSize: '.9rem', color: TEXT, lineHeight: 1.8, maxWidth: 500, margin: 0 }}>
+              <p style={{ ...M, fontSize: '.96rem', color: TEXT, lineHeight: 1.8, maxWidth: 500, margin: 0 }}>
                 Currently only for insurance claims when clients have their relevant claim numbers. Submitting this form does not bind you into a formal agreement.
               </p>
             </div>
           </div>
           <div style={{ animation: 'fadeup 0.8s ease 0.5s both' }}>
-            <div style={{ border: `1px solid ${BORDER}`, borderTop: `3px solid ${GREEN}`, boxShadow: '0 12px 40px rgba(20,24,19,0.10)' }}>
+            <div className="hcard" style={{ border: `1px solid ${BORDER}`, borderTop: `3px solid ${GREEN}`, boxShadow: '0 12px 40px rgba(20,24,19,0.10)' }}>
               <img
                 src="/images/photo-1487754180451-c456f719a1fc.jpg"
                 alt="Technician topping up engine oil"
@@ -188,13 +188,13 @@ export default function Quote() {
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
                 <h2 style={{ ...D, fontSize: '1.4rem', fontWeight: 900, color: INK, marginBottom: 12, textTransform: 'uppercase' }}>Quote Request Sent!</h2>
-                <p style={{ ...M, fontSize: '.9rem', color: MUTED, lineHeight: 1.8, margin: 0 }}>Thank you. We will be in touch with you as soon as possible.</p>
+                <p style={{ ...M, fontSize: '.96rem', color: MUTED, lineHeight: 1.8, margin: 0 }}>Thank you. We will be in touch with you as soon as possible.</p>
               </div>
             </FadeUp>
           ) : (
             <>
               <FadeUp style={{ marginBottom: 40 }}>
-                <p style={{ ...M, fontSize: '.72rem', fontWeight: 600, color: MUTED, letterSpacing: '1px' }}>* details must be entered</p>
+                <p style={{ ...M, fontSize: '.78rem', fontWeight: 600, color: MUTED, letterSpacing: '1px' }}>* details must be entered</p>
               </FadeUp>
 
               <Section num={1} title="Contact Details">
@@ -232,7 +232,7 @@ export default function Quote() {
                 <input ref={insurerRef} type="text" placeholder="e.g. NRMA, AAMI, Allianz" style={inputStyle} />
                 <label style={labelStyle}>Claim Number:</label>
                 <input ref={claimRef} type="text" placeholder="Your claim number" style={inputStyle} />
-                <p style={{ ...M, fontSize: '.75rem', color: MUTED, marginBottom: 16, marginTop: -10, lineHeight: 1.7 }}>
+                <p style={{ ...M, fontSize: '.8rem', color: MUTED, marginBottom: 16, marginTop: -10, lineHeight: 1.7 }}>
                   If unsure how to obtain a claim number, contact our friendly office staff and they will help.
                 </p>
                 <label style={labelStyle}>Description of Damage:</label>
@@ -240,7 +240,7 @@ export default function Quote() {
               </Section>
 
               <Section num={4} title="Photos — Optional">
-                <p style={{ ...M, fontSize: '.82rem', color: MUTED, lineHeight: 1.8, marginBottom: 20 }}>
+                <p style={{ ...M, fontSize: '.88rem', color: MUTED, lineHeight: 1.8, marginBottom: 20 }}>
                   Sending suitable photos will give us the ability to quote your job immediately.
                 </p>
                 <div style={{ height: 180, overflow: 'hidden', marginBottom: 24, border: `1px solid ${BORDER}` }}>
@@ -258,15 +258,15 @@ export default function Quote() {
                 ))}
               </Section>
 
-              {error && <p style={{ ...M, color: '#c0392b', fontSize: '.85rem', marginBottom: 16 }}>{error}</p>}
+              {error && <p style={{ ...M, color: '#c0392b', fontSize: '.9rem', marginBottom: 16 }}>{error}</p>}
 
               <FadeUp style={{ display: 'flex', gap: 12, marginTop: 8 }}>
-                <button type="button" onClick={handleSubmit} disabled={loading}
-                  style={{ ...M, background: GREEN_DARK, color: '#fff', padding: '16px 44px', border: 'none', fontSize: '.75rem', fontWeight: 700, cursor: loading ? 'not-allowed' : 'pointer', letterSpacing: '1.5px', textTransform: 'uppercase', opacity: loading ? 0.7 : 1, borderRadius: '2px' }}>
+                <button type="button" className="btn-lift" onClick={handleSubmit} disabled={loading}
+                  style={{ ...M, background: GREEN_DARK, color: '#fff', padding: '16px 44px', border: 'none', fontSize: '.8rem', fontWeight: 700, cursor: loading ? 'not-allowed' : 'pointer', letterSpacing: '1.5px', textTransform: 'uppercase', opacity: loading ? 0.7 : 1, borderRadius: '2px' }}>
                   {loading ? 'Sending...' : 'Request Quote'}
                 </button>
                 <button type="button"
-                  style={{ ...M, background: 'transparent', color: TEXT, padding: '16px 32px', border: `1px solid ${BORDER}`, fontSize: '.75rem', fontWeight: 600, cursor: 'pointer', letterSpacing: '1.5px', textTransform: 'uppercase', borderRadius: '2px' }}>
+                  style={{ ...M, background: 'transparent', color: TEXT, padding: '16px 32px', border: `1px solid ${BORDER}`, fontSize: '.8rem', fontWeight: 600, cursor: 'pointer', letterSpacing: '1.5px', textTransform: 'uppercase', borderRadius: '2px' }}>
                   Reset
                 </button>
               </FadeUp>
@@ -288,8 +288,8 @@ export default function Quote() {
               { label: 'Repair Licence', value: '20000332' },
             ].map(({ label, value }) => (
               <div key={label} style={{ marginBottom: 14, paddingBottom: 14, borderBottom: `1px solid ${BORDER}` }}>
-                <p style={{ ...M, fontSize: '.6rem', fontWeight: 700, color: MUTED, textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: 3 }}>{label}</p>
-                <p style={{ ...M, fontSize: '.85rem', color: INK, whiteSpace: 'pre-line', lineHeight: 1.6, margin: 0 }}>{value}</p>
+                <p style={{ ...M, fontSize: '.68rem', fontWeight: 700, color: MUTED, textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: 3 }}>{label}</p>
+                <p style={{ ...M, fontSize: '.9rem', color: INK, whiteSpace: 'pre-line', lineHeight: 1.6, margin: 0 }}>{value}</p>
               </div>
             ))}
           </div>
@@ -301,18 +301,18 @@ export default function Quote() {
               <div key={title} style={{ marginBottom: 20, paddingBottom: 20, borderBottom: i < photoTips.length - 1 ? `1px solid ${BORDER}` : 'none' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
                   <div style={{ width: 6, height: 6, background: GREEN_DARK, borderRadius: '50%', flexShrink: 0 }} />
-                  <h4 style={{ ...M, fontSize: '.75rem', fontWeight: 800, color: INK, margin: 0, textTransform: 'uppercase', letterSpacing: '1px' }}>{title}</h4>
+                  <h4 style={{ ...M, fontSize: '.8rem', fontWeight: 800, color: INK, margin: 0, textTransform: 'uppercase', letterSpacing: '1px' }}>{title}</h4>
                 </div>
-                <p style={{ ...M, fontSize: '.78rem', color: MUTED, lineHeight: 1.7, margin: 0, paddingLeft: 16 }}>{desc}</p>
+                <p style={{ ...M, fontSize: '.84rem', color: MUTED, lineHeight: 1.7, margin: 0, paddingLeft: 16 }}>{desc}</p>
               </div>
             ))}
           </div>
 
           {/* TOWING */}
           <div style={{ margin: '0 32px 32px', padding: '20px 24px', background: CARD, border: `1px solid ${BORDER}`, borderLeft: `3px solid ${GREEN}` }}>
-            <p style={{ ...M, fontSize: '.6rem', fontWeight: 700, color: GREEN_DARK, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: 10 }}>Towing</p>
-            <p style={{ ...M, fontSize: '.88rem', color: INK, fontWeight: 700, marginBottom: 4 }}>Discount Towing Canberra</p>
-            <p style={{ ...M, fontSize: '.78rem', color: MUTED, lineHeight: 1.6, margin: 0 }}>24 Hours a Day, 365 Days a Year<br />Phone: 0411 259 945</p>
+            <p style={{ ...M, fontSize: '.68rem', fontWeight: 700, color: GREEN_DARK, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: 10 }}>Towing</p>
+            <p style={{ ...M, fontSize: '.94rem', color: INK, fontWeight: 700, marginBottom: 4 }}>Discount Towing Canberra</p>
+            <p style={{ ...M, fontSize: '.84rem', color: MUTED, lineHeight: 1.6, margin: 0 }}>24 Hours a Day, 365 Days a Year<br />Phone: 0411 259 945</p>
           </div>
         </div>
       </div>
