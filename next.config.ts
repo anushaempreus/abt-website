@@ -40,6 +40,22 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.join(__dirname),
   },
+  // old-site URLs (indexed by Google / bookmarked) → new equivalents at cutover
+  async redirects() {
+    return [
+      { source: '/index.php', destination: '/', permanent: true },
+      { source: '/about.php', destination: '/about', permanent: true },
+      { source: '/services.php', destination: '/services', permanent: true },
+      { source: '/quote.php', destination: '/quote', permanent: true },
+      { source: '/contact.php', destination: '/contact', permanent: true },
+      { source: '/location.php', destination: '/contact', permanent: true },
+      { source: '/facilities.php', destination: '/about', permanent: true },
+      { source: '/gallery.php', destination: '/about', permanent: true },
+      { source: '/testimonials.php', destination: '/', permanent: true },
+      { source: '/files/accidentChecklist.pdf', destination: '/quote', permanent: true },
+      { source: '/files/PrivacyPolicyClientsInformation.pdf', destination: '/files/privacy-policy.pdf', permanent: true },
+    ]
+  },
   async headers() {
     return [
       {
